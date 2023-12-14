@@ -1,2 +1,2 @@
-# TankTrouble - Tank-Randomizer 1.3-
-Let your tank have some fun.
+# TankTrouble-Tank-Randomizer
+Let your tank have some fun! Give your tank a fresh and unique look in just one click!
