@@ -1,4 +1,4 @@
-**ClassicTankTrouble-V2**
+**TankTroubleClassic-V2**
 
 The ClassicTankTrouble-V2 project is a nostalgic journey into the past, aiming to breathe new life into the iconic TankTrouble game by restoring its vintage graphics to the modern multiplayer online platform. This endeavor involves the resurrection of old paint versions, timeless tank sprites, and the revival of weapon sprites that once adorned the classic TankTrouble gaming experience.
 ****
