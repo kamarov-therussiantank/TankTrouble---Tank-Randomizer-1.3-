@@ -1,0 +1,52 @@
+{
+	"name": "ClassicTankTrouble-V2",
+	"author": "Kamarov",
+	"version": "16.12.2023.01",
+	"manifest_version": 3,
+	"description": "Feel the old days, once again with ClassicTanktrouble-V2.",
+  
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "1",
+				"enabled": true,
+				"path": "tab5@2x_icon.json"
+			},
+			{
+				"id": "2",
+				"enabled": true,
+				"path": "tab5Selected@2x_icon.json"
+			},
+			{
+				"id": "3",
+				"enabled": true,
+				"path": "tab5_icon.json"
+			},
+			{
+				"id": "4",
+				"enabled": true,
+				"path": "tab5Selected_icon.json"
+			}
+		]
+	},
+  
+	"permissions": [
+		"declarativeNetRequest",
+		"declarativeNetRequestFeedback",
+		"declarativeNetRequestWithHostAccess"
+	],
+  
+	"host_permissions": [
+		"*://*.tanktrouble.com/",
+		"*://*.github.com/"
+	],
+
+	"icons": {
+		"16": "icon/16.png",
+		"32": "icon/32.png",
+		"48": "icon/48.png",
+		"128": "icon/128.png",
+		"256": "icon/256.png"
+	}
+  
+}
