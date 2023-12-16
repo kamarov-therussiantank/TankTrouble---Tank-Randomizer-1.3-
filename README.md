@@ -24,3 +24,7 @@ And you are ready to go!
 `Goal:`
 
 This project leverages cutting-edge technologies to seamlessly integrate classic graphics into the TankTrouble Multiplayer Online platform, combining nostalgia with modern multiplayer gaming.
+****
+`Editors note:`
+
+This project is still not functioning. Please wait...
