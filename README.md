@@ -6,11 +6,11 @@ The ClassicTankTrouble-V2 project is a nostalgic journey into the past, aiming t
 
 - **Classic Paint Versions:** Immerse yourself in the aesthetics of the past with meticulously restored classic paint versions, bringing back the charm of the original TankTrouble.
 - **Remastered Old Tank Sprites:** Witness the resurrection of classic tanks in a contemporary light. The project meticulously updates tank sprites, ensuring they seamlessly integrate into the modern TankTrouble experience while preserving the essence of the originals.
-- **Revitalized Old Weapon Sprites:** Immerse yourself in the excitement of battle with revitalized weapon sprites. Each weapon is reimagined to meet the standards of modern gaming, offering a visually stunning and engaging combat experience.
+- **Remastwred Old Weapon Crate Sprites:** Immerse yourself in the excitement of battle with revitalized weapon crate sprites. Each crate is reimagined to meet the standards of modern gaming, offering a visually stunning and engaging combat experience.
 ****
 
 `Installation:`
-1. [Download the latest source code](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.zip)
+1. [Download the source](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.zip)
 2. Extract the ZIP folder to a location of your choice.  
 3. Navigate to your browser's extension menu.  
 4. Find the "Developer mode" button and turn it on.  
@@ -18,6 +18,8 @@ The ClassicTankTrouble-V2 project is a nostalgic journey into the past, aiming t
 6. In the pop-up window, navigate to the folder you extracted.  
 7. Open it and click "ClassicTankTrouble-V2-main"  
 8. Click "Select Folder"
+
+And you are ready to go!
 ****
 `Goal:`
 
