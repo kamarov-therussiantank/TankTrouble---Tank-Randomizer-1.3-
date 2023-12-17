@@ -1,16 +1,103 @@
 {
-	"name": "ClassicTankTrouble-V2",
+
+	"name": "TankTroubleClassic-V2",
+
 	"author": "Kamarov",
-	"version": "16.12.2023.01",
+
+	"version": "15.12.2023.01",
+
 	"manifest_version": 3,
-	"description": "Feel the old days, once again with ClassicTanktrouble-V2.",
+
+	"description": "TankTroubleClassic-V2 (aka TTCV2) is an extension for TankTrouble. It brings all nostalgia back to the game within the blink of an eye.",
+
   
+
+	"declarative_net_request": {
+
+		"rule_resources": [
+
+			{
+
+				"id": "",
+
+				"enabled": true,
+
+				"path": ""
+
+			},
+
+			{
+
+				"id": "",
+
+				"enabled": true,
+
+				"path": ""
+
+			},
+
+			{
+
+				"id": "",
+
+				"enabled": true,
+
+				"path": ""
+
+			},
+
+			{
+
+				"id": "",
+
+				"enabled": true,
+
+				"path": ""
+
+			}
+
+		]
+
+	},
+
+  
+
+	"permissions": [
+
+		"declarativeNetRequest",
+
+		"declarativeNetRequestFeedback",
+
+		"declarativeNetRequestWithHostAccess"
+
+	],
+
+  
+
+	"host_permissions": [
+
+		"*://*.tanktrouble.com/",
+
+		"*://*.ttcv2.pages.dev/"
+
+	],
+
+
+
 	"icons": {
+
 		"16": "icon/16.png",
+
 		"32": "icon/32.png",
+
 		"48": "icon/48.png",
+
 		"128": "icon/128.png",
+
 		"256": "icon/256.png"
+
 	}
+
   
+
 }
