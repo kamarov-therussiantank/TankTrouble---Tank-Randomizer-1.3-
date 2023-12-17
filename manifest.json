@@ -18,11 +18,21 @@
 
 			{
 
-				"id": "",
+				"id": "1",
 
 				"enabled": true,
 
-				"path": ""
+				"path": "colours/colour42-140.json"
+
+			},
+
+			{
+
+				"id": "2",
+
+				"enabled": true,
+
+				"path": "colours/colour42-200.json"
 
 			},
 
@@ -32,27 +42,7 @@
 
 				"enabled": true,
 
-				"path": ""
-
-			},
-
-			{
-
-				"id": "",
-
-				"enabled": true,
-
-				"path": ""
-
-			},
-
-			{
-
-				"id": "",
-
-				"enabled": true,
-
-				"path": ""
+				"path": "colours/colour42-320.json"
 
 			}
 
@@ -78,7 +68,9 @@
 
 		"*://*.tanktrouble.com/",
 
-		"*://*.ttcv2.pages.dev/"
+		"*://*.ttcv2.pages.dev/",
+
+		"*://*.raw.githubusercontent.com/"
 
 	],
 
