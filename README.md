@@ -1,6 +1,6 @@
-**TankTroubleClassic-V2**
+**TTCV2**
 
-The TankTroubleClassic-V2 extension is a nostalgic journey into the past, aiming to breathe new life into the iconic TankTrouble game by restoring its vintage graphics to the modern multiplayer online platform. This endeavor involves the resurrection of old paint versions, timeless tank sprites, and the revival of weapon crate sprites that once adorned the classic TankTrouble gaming experience.
+The TTCV2 extension (aka TankTroubleClassic-V2) is a nostalgic journey into the past, aiming to breathe new life into the iconic Classic TankTrouble game by restoring its vintage graphics to the modern multiplayer online platform. This endeavor involves the resurrection of old paint versions, timeless tank sprites, and the revival of weapon crate sprites that once adorned the Classic TankTrouble gaming experience.
 ****
 `Features:`
 
@@ -16,7 +16,7 @@ The TankTroubleClassic-V2 extension is a nostalgic journey into the past, aiming
 4. Find the "Developer mode" button and turn it on.  
 5. Click the "Load unpacked" button.  
 6. In the pop-up window, navigate to the folder you extracted.  
-7. Open it and click "TankTroubleClassic-V2-main"  
+7. Open it and click "TTCV2-main"  
 8. Click "Select Folder"
 
 And you are ready to go!
@@ -28,3 +28,4 @@ This extension leverages cutting-edge technologies to seamlessly integrate class
 `Editors note:`
 
 This extension is still not functioning. Please wait...
+(27.12.2023) - First test run have been done. Successful!
