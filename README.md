@@ -16,7 +16,7 @@ The TTCV2 extension (aka TankTroubleClassic-V2) is a nostalgic journey into the 
 4. Find the "Developer mode" button and turn it on.  
 5. Click the "Load unpacked" button.  
 6. In the pop-up window, navigate to the folder you extracted.  
-7. Open it and click "TTCV2-main"  
+7. Open it and click "TTCV2-Extension-main"  
 8. Click "Select Folder"
 
 And you are ready to go!
