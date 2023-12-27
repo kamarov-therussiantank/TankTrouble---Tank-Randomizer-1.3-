@@ -28,4 +28,5 @@ This extension leverages cutting-edge technologies to seamlessly integrate class
 `Editors note:`
 
 This extension is still not functioning. Please wait...
+
 (27.12.2023) - First test run have been done. Successful!
