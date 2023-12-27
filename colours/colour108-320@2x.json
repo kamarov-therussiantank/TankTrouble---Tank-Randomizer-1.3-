@@ -9,7 +9,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour108-3200@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour108-320@2x.png",
       "resourceTypes": ["image"]
     }
   }
