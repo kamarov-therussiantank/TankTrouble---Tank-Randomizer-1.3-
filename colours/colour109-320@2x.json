@@ -1,0 +1,16 @@
+[
+  {
+    "id": 12,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour109-320%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour109-320@2x.png",
+      "resourceTypes": ["image"]
+    }
+  }
+]
