@@ -246,6 +246,21 @@
 				"id": "48",
 				"enabled": true,
 				"path": "colours/colour61-320@2x.json"
+			},
+			{
+				"id": "49",
+				"enabled": true,
+				"path": "colours/colour43-140@2x.json"
+			},
+			{
+				"id": "50",
+				"enabled": true,
+				"path": "colours/colour43-200@2x.json"
+			},
+			{
+				"id": "51",
+				"enabled": true,
+				"path": "colours/colour43-320@2x.json"
 			}
 		]
 	},
