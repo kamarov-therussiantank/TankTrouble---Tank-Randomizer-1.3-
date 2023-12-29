@@ -25,15 +25,30 @@
 			{
 				"id": "4",
 				"enabled": true,
-				"path": "colours/colour42-140@2x.json"
+				"path": "colours/colour13-140@2x.json"
 			},
 			{
 				"id": "5",
 				"enabled": true,
-				"path": "colours/colour42-200@2x.json"
+				"path": "colours/colour13-200@2x.json"
 			},
 			{
 				"id": "6",
+				"enabled": true,
+				"path": "colours/colour13-320@2x.json"
+			},
+			{
+				"id": "7",
+				"enabled": true,
+				"path": "colours/colour42-140@2x.json"
+			},
+			{
+				"id": "8",
+				"enabled": true,
+				"path": "colours/colour42-200@2x.json"
+			},
+			{
+				"id": "9",
 				"enabled": true,
 				"path": "colours/colour42-320@2x.json"
 			}
