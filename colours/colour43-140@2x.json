@@ -1,6 +1,6 @@
 [
   {
-    "id": 10
+    "id": 10,
     "priority": 1,
     "action": {
       "type": "redirect",
