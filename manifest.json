@@ -56,6 +56,11 @@
 				"id": "10",
 				"enabled": true,
 				"path": "colours/colour43-140@2x.json"
+			},
+			{
+				"id": "12",
+				"enabled": true,
+				"path": "colours/colour43-200@2x.json"
 			}
 		]
 	},
