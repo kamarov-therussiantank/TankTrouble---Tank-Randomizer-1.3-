@@ -5,7 +5,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://tanktroubledarke.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/game/classic_game.png"
       }
     },
     "condition": {
