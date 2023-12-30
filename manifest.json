@@ -50,12 +50,12 @@
 			{
 				"id": "9",
 				"enabled": true,
-				"path": "colours/colour42-320@2x.json"
+				"path": "game/classic_game@2x.json"
 			},
 			{
 				"id": "10",
 				"enabled": true,
-				"path": "colours/colour43-140@2x.json"
+				"path": "game/classic_game.json"
 			}
 		]
 	},
