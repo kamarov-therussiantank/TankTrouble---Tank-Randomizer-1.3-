@@ -36,6 +36,6 @@ This extension is functional now!...
 - (27.12.2023) - 1st TEST RUN completed successfully!
 - (28.12.2023) - 2nd TEST RUN completed successfully!
 - (30.12.2023) - READY TO LUNCH!
-- 
+
 
 In TTCV2, we don't just bring back colors; we unravel the artistry of TankTrouble's heritage. Get ready for a scientific odyssey into the heart of nostalgic gaming graphics.
