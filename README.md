@@ -4,7 +4,7 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 ****
 `Features:`
 
-- **Classic Paint Versions:** Immerse yourself in the aesthetics of the past with meticulously restored classic paint versions, bringing back the charm of the original TankTrouble.
+- **Resurrected Graphics:** Immerse yourself in the nostalgia of the past with meticulously restored classic graphics.
 
 More features are coming soon!!!
 ****
