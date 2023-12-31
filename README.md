@@ -23,11 +23,14 @@ And you are ready to go!
 ****
 `Goal:`
 
-This extension leverages cutting-edge technologies to seamlessly integrate classic graphics into the TankTrouble Multiplayer Online platform, combining nostalgia with modern multiplayer gaming.
+Unleash the ambition of TTCV2! Your mission: resurrect the essence of Classic TankTrouble in the vast realm of Multiplayer Online. While achieving the impossible may be a lofty goal, my extension strives to breathe life into the nostalgia, endeavoring to revive the very soul of the Classic experience. In the vast expanse of TankTrouble Multiplayer, embark on a journey to reintroduce the heart and soul of the Classic era, promising a revival of cherished elements. Witness the evolution of your project as it endeavors to bring back the essence of what once was.
 ****
-`Editors note:`
+`Radio:`
 
 This extension is still not functioning. Please wait...
 - (27.12.2023) - 1st TEST RUN completed successfully!
 - (28.12.2023) - 2nd TEST RUN completed successfully!
 - (30.12.2023) - READY TO LUNCH!
+
+
+In TTCV2, we don't just bring back colors; we unravel the artistry of TankTrouble's heritage. Get ready for a scientific odyssey into the heart of nostalgic gaming graphics.
