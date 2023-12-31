@@ -1,14 +1,20 @@
-[
-  {
-    "id": "4",
-    "path": "colours/colour14-140@2x.json"
-  },
-  {
-    "id": "5",
-    "path": "colours/colour14-200@2x.json"
-  },
-  {
-    "id": "6",
-    "path": "colours/colour14-320@2x.json"
-  }
-]
+{
+  "id": "2",
+  "rules": [
+    {
+      "id": "4",
+      "enabled": true,
+      "path": "colours/colour14-140@2x.json"
+    },
+    {
+      "id": "5",
+      "enabled": true,
+      "path": "colours/colour14-200@2x.json"
+    },
+    {
+      "id": "6",
+      "enabled": true,
+      "path": "colours/colour14-320@2x.json"
+    }
+  ]
+}
