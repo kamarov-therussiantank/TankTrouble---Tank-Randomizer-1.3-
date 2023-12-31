@@ -5,8 +5,8 @@ The TTCV2 extension (aka TankTroubleClassic-V2) is a nostalgic journey into the 
 `Features:`
 
 - **Classic Paint Versions:** Immerse yourself in the aesthetics of the past with meticulously restored classic paint versions, bringing back the charm of the original TankTrouble.
-- **Remastered Old Tank Sprites:** Witness the resurrection of classic tanks in a contemporary light. The extension meticulously updates tank sprites, ensuring they seamlessly integrate into the modern TankTrouble experience while preserving the essence of the originals.
-- **Remastwred Old Weapon Crate Sprites:** Immerse yourself in the excitement of battle with revitalized weapon crate sprites. Each crate is reimagined to meet the standards of modern gaming, offering a visually stunning and engaging combat experience.
+
+More are coming soon!
 ****
 
 `Installation:`
@@ -30,4 +30,4 @@ This extension leverages cutting-edge technologies to seamlessly integrate class
 This extension is still not functioning. Please wait...
 - (27.12.2023) - 1st TEST RUN completed successfully!
 - (28.12.2023) - 2nd TEST RUN completed successfully!
-- (30.12.2023) - ...
+- (30.12.2023) - READY TO LUNCH!
