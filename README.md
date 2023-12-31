@@ -1,6 +1,6 @@
 **TTCV2**
 
-The TTCV2 extension (aka TankTroubleClassic-V2) is a nostalgic journey into the past, aiming to breathe new life into the iconic Classic TankTrouble game by restoring its vintage graphics to the modern multiplayer online platform. This endeavor involves the resurrection of old paint versions, timeless tank sprites, and the revival of weapon crate sprites that once adorned the Classic TankTrouble gaming experience.
+TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aesthetics of Classic TankTrouble within the framework of TankTrouble Multiplayer Online. By resurrecting historical graphics and textures, this project aspires to evoke a scientifically crafted nostalgia, providing users with a meticulously curated journey into the cherished past of TankTrouble gaming.
 ****
 `Features:`
 
