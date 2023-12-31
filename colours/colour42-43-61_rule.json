@@ -1,0 +1,128 @@
+[
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour42-140%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour42-140@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour42-200%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour42-200@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour42-320%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour42-320@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour43-140%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour43-140@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour43-200%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour43-200@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour43-320%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour43-320@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour61-140%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour61-140@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour61-200%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour61-200@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2-Extension/main/colours/colour61-320%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/colours/colour61-320@2x.png",
+      "resourceTypes": ["image"]
+    }
+  }
+]
