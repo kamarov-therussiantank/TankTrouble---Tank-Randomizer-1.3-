@@ -30,10 +30,12 @@ Unleash the ambition of TTCV2! Your mission: resurrect the essence of Classic Ta
 ****
 `Radio:`
 
-This extension is still not functioning. Please wait...
+As the malevolent symphony of TTCV2 unfolds, anticipate the unveiling of new marvels—sinister additions that will further shape the digital landscape of TankTroubleMultiplayerOnline. The experiment is far from over; brace yourself for the imminent emergence of unprecedented features, a testament to the relentless pursuit of innovation within the confines of this scientific gaming odyssey. The realm of TTCV2 shall continue to evolve, casting a shadow over the multiplayer horizon with its ever-expanding repertoire of diabolical delights.
+
+This extension is functional now!...
 - (27.12.2023) - 1st TEST RUN completed successfully!
 - (28.12.2023) - 2nd TEST RUN completed successfully!
 - (30.12.2023) - READY TO LUNCH!
-
+- 
 
 In TTCV2, we don't just bring back colors; we unravel the artistry of TankTrouble's heritage. Get ready for a scientific odyssey into the heart of nostalgic gaming graphics.
