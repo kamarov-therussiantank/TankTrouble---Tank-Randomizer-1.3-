@@ -3,7 +3,7 @@
 	"author": "Kamarov",
 	"version": "28.12.2023.01",
 	"manifest_version": 3,
-	"description": "Classic is back baby!",
+	"description": "Classic TankTrouble is alive once again!",
   
 	"declarative_net_request": {
 		"rule_resources": [
@@ -56,6 +56,16 @@
 				"id": "10",
 				"enabled": true,
 				"path": "colours/colour43-140@2x.json"
+			},
+			{
+				"id": "11",
+				"enabled": true,
+				"path": "colours/colour43-200@2x.json"
+			},
+			{
+				"id": "12",
+				"enabled": true,
+				"path": "colours/colour43-320@2x.json"
 			}
 		]
 	},
@@ -78,5 +88,4 @@
 		"128": "icon/128.png",
 		"256": "icon/256.png"
 	}
-  
 }
