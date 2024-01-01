@@ -13,7 +13,7 @@ More features are coming soon!!!
 
 To deploy TTCV2 in the Browser, employ a systematic approach:
 
-1. [Download the ZIP folder](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.)
+1. [Download the ZIP folder](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.zip)
 2. Extract the ZIP folder to a location of your choice.  
 3. Navigate to your browser's extension menu.  
 4. Find the "Developer mode" button and turn it on.  
