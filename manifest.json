@@ -1,7 +1,7 @@
 {
 	"name": "TTCV2",
 	"author": "Kamarov",
-	"version": "2024.1.1",
+	"version": "1.1.2024.1",
 	"manifest_version": 2,
 	"description": "Classic TankTrouble is alive once again!",
   
@@ -45,12 +45,9 @@
 		"declarativeNetRequestFeedback",
 		"declarativeNetRequestWithHostAccess",
 		"storage",
-		"activeTab"
-	],
-  
-	"host_permissions": [
-		"*://*.tanktrouble.com/",
-		"*://*.raw.githubusercontent.com/"
+		"activeTab",
+		"*://*.tanktrouble.com/*",
+		"*://*.raw.githubusercontent.com/*"
 	],
 
 	"icons": {
