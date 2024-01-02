@@ -1,8 +1,8 @@
 {
 	"name": "TTCV2",
 	"author": "Kamarov",
-	"version": "1.1.2024.1",
-	"manifest_version": 3,
+	"version": "2024.1.1",
+	"manifest_version": 2,
 	"description": "Classic TankTrouble is alive once again!",
   
 	"declarative_net_request": {
@@ -45,7 +45,7 @@
 		"declarativeNetRequestFeedback",
 		"declarativeNetRequestWithHostAccess",
 		"storage",
-		"tabs"
+		"activeTab"
 	],
   
 	"host_permissions": [
