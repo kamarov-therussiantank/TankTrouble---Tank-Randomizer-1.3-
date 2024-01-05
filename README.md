@@ -4,7 +4,7 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 ****
 `Features:`
 
-- **Resurrected Graphics:** Immerse yourself in the nostalgia of the past with meticulously restored classic graphics.
+- **Matte Versions of Paints:** Who said that we will never get matte paints ever again? I don't think so! Feel the nostalgia once again with matte paints equipped on your tanks.
 
 More features are coming soon!!!
 ****
