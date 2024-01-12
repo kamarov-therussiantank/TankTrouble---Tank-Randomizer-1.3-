@@ -36,6 +36,11 @@
 				"id": "6",
 				"enabled": true,
 				"path": "colours/colour151-152-153_rule.json"
+			},
+			{
+				"id": "7",
+				"enabled": true,
+				"path": "game/classic_game-rule.json"
 			}
 		]
 	},
