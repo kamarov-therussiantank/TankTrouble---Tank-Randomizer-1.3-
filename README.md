@@ -37,6 +37,7 @@ As the malevolent symphony of TTCV2 unfolds, anticipate the unveiling of new mar
 `Changelog:`
 
 (5.1.2024.) - Extension launched, bringing our most loved paints back in game, matte paints.
+
 (12.1.2024.) - Aha! Some old tank parts have been found, what could I do with them? Hehe, why not, old tanks are back! With a little rework, in order to keep them funcional. 
 
 
