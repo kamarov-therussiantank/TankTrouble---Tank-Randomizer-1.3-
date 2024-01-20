@@ -41,6 +41,11 @@
 				"id": "7",
 				"enabled": true,
 				"path": "game/classic_game_rule.json"
+			},
+			{
+				"id": "8",
+				"enabled": true,
+				"path": "header/classicTabs.json"
 			}
 		]
 	},
