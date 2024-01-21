@@ -10,40 +10,15 @@
 			{
 				"id": "1",
 				"enabled": true,
-				"path": "colours/colour13-14_rule.json"
+				"path": "colours/classicColours.json"
 			},
 			{
 				"id": "2",
 				"enabled": true,
-				"path": "colours/colour42-43-61_rule.json"
-			},
-			{
-				"id": "3",
-				"enabled": true,
-				"path": "colours/colour45-50-60_rule.json"
-			},
-			{
-				"id": "4",
-				"enabled": true,
-				"path": "colours/colour107-108-109_rule.json"
-			},
-			{
-				"id": "5",
-				"enabled": true,
-				"path": "colours/colour110-120-150_rule.json"
-			},
-			{
-				"id": "6",
-				"enabled": true,
-				"path": "colours/colour151-152-153_rule.json"
-			},
-			{
-				"id": "7",
-				"enabled": true,
 				"path": "game/classicGame.json"
 			},
 			{
-				"id": "8",
+				"id": "3",
 				"enabled": true,
 				"path": "header/classicTabs.json"
 			}
