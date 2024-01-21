@@ -7,6 +7,7 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 - **Matte Versions of Paints:** Who said that we will never get matte paints ever again? I don't think so! Feel the nostalgia once again with matte paints equipped on your tanks.
 - **Classic Tanks:** Feels good to drive these old treads, and blow up your firends like in old days.
 - **Old School Mazes:** For even better mayhem in mazes, Classic Mazes spice it up, 100% True.
+- **Old Tab designs:** Little bit of rework, nothing much.
 
 More features are coming soon!!!
 ****
@@ -15,7 +16,7 @@ More features are coming soon!!!
 
 To deploy TTCV2 in the Browser, employ a systematic approach:
 
-1. [Download the ZIP folder](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.zip)
+1. [Download the ZIP archive](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.zip)
 2. Extract the ZIP folder to a location of your choice.  
 3. Navigate to your browser's extension menu.  
 4. Find the "Developer mode" button and turn it on.  
@@ -39,9 +40,11 @@ As the malevolent symphony of TTCV2 unfolds, anticipate the unveiling of new mar
 
 (5.1.2024.2) - Extension launched, bringing our most loved paints back in game, matte paints.
 
-(12.1.2024.3) - Aha! Some old tank parts have been found, what could I do with them? Hehe, why not, old tanks are back! With a little rework, in order to keep them funcional. 
+(12.1.2024.3) - Some old tank parts have been found, what could I do with them? Hehe, why not, old tanks are back! With a little rework, in order to keep them funcional. 
 
 (12.1.2024.3) - For even better mayhem in mazes, Classic Mazes spice it up, 100% True.
+
+(21.1.2024.4) - Classic Tabs
 
 
 
