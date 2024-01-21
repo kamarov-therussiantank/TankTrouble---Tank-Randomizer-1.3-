@@ -182,7 +182,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 14,
     "priority": 1,
     "action": {
       "type": "redirect",
@@ -196,7 +196,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 15,
     "priority": 1,
     "action": {
       "type": "redirect",
@@ -210,7 +210,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 16,
     "priority": 1,
     "action": {
       "type": "redirect",
