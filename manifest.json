@@ -40,7 +40,7 @@
 			{
 				"id": "7",
 				"enabled": true,
-				"path": "game/classic_game_rule.json"
+				"path": "game/classicGame.json"
 			},
 			{
 				"id": "8",
