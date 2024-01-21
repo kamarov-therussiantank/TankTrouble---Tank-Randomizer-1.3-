@@ -1,5 +1,4 @@
-[
-  {
+{
     "id": 13,
     "priority": 1,
     "action": {
@@ -251,4 +250,3 @@
       "resourceTypes": ["image"]
     }
   }
-]
