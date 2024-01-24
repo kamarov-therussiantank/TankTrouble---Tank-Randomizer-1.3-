@@ -38,13 +38,12 @@ As the malevolent symphony of TTCV2 unfolds, anticipate the unveiling of new mar
 
 `Changelog:`
 
-(5.1.2024.2) - Extension launched, bringing our most loved paints back in game, matte paints.
+2024.1.5 - Extension launched, bringing our most loved paints back in game, matte paints.
 
-(12.1.2024.3) - Some old tank parts have been found, what could I do with them? Hehe, why not, old tanks are back! With a little rework, in order to keep them funcional. 
+2024.1.12 - Some old tank parts have been found, what could I do with them? Hehe, why not, old tanks are back! With a little rework, in order to keep them functional. And for even better mayhem in mazes, Classic Mazes spice it up.
 
-(12.1.2024.3) - For even better mayhem in mazes, Classic Mazes spice it up, 100% True.
+2024.1.21 - Found in the lost folder in the underground laboratory. Dusty, seems like they haven't been used in years. No more waiting, time to shine once again, Classic Tabs are back.
 
-(21.1.2024.4) - Classic Tabs
 
 
 
