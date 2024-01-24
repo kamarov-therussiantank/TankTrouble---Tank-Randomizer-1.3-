@@ -7,7 +7,7 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 - **Matte Versions of Paints:** Who said that we will never get matte paints ever again? I don't think so! Feel the nostalgia once again with matte paints equipped on your tanks.
 - **Classic Tanks:** Feels good to drive these old treads, and blow up your firends like in old days.
 - **Old School Mazes:** For even better mayhem in mazes, Classic Mazes spice it up, 100% True.
-- **Old Tab designs:** Little bit of rework, nothing much.
+- **Old Classic Tab designs:** Little bit of rework, nothing much.
 
 More features are coming soon!!!
 ****
