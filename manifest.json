@@ -3,6 +3,12 @@
 	"author": "Kamarov",
 	"version": "2024.01.21",
 	"manifest_version": 3,
+	"content_scripts": [
+    {
+      "matches": ["*://www.tanktrouble.com/*"],
+      "css": ["defaultStyle.css"]
+    }
+	  ]
 	"description": "Classic TankTrouble is alive once again!",
   
 	"declarative_net_request": {
@@ -19,7 +25,7 @@
 			},
 			{
 				"id": "3",
-				"enabled": true,
+				"enabled": false,
 				"path": "header/classicTabs.json"
 			}
 		]
