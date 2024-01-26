@@ -1,0 +1,95 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+#info {
+    -webkit-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%)
+
+}
+
+.container.snippet,.container.snippet .card {
+    display:inline-block;
+    position:relative;
+    width:160px;
+    height:245px;
+    border-radius:8px;
+    overflow:hidden
+}
+
+.container.snippet {
+    text-align:center;
+    font-family:'Poppins',sans-serif;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    vertical-align:top
+}
+
+.container.snippet .card {
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(10%,#bbb),color-stop(90%,#bbb));
+    background:-o-linear-gradient(top,#bbb 10%,#bbb 90%);
+    background:linear-gradient(to bottom,#bbb 10%,#bbb 90%)
+}
+
+#garageTab .deselected,#garageTab .selected {
+    width:0;
+    height:0;
+    padding:60px 0 0 120px;
+    background-image:-webkit-image-set(url(/header/tab5Selected.png) 1x,url(/header/tab5Selected@2x.png) 2x);
+    background-image:image-set(url(/header/tab5Selected.png) 1x,url(/header/tab5Selected@2x.png) 2x)
+}
+
+#garageTab .deselected {
+    background-image:-webkit-image-set(url(/header/tab5.png) 1x,url(/header/tab5@2x.png) 2x);
+    background-image:image-set(url(/header/tab5.png) 1x,url(/header/tab5@2x.png) 2x)
+}
+
+#newsTab .deselected,#newsTab .selected {
+    width:0;
+    height:0;
+    padding:60px 0 0 120px;
+    background-image:-webkit-image-set(url(/header/tab3Selected.png) 1x,url(/header/tab3Selected@2x.png) 2x);
+    background-image:image-set(url(/header/tab5Selected.png) 1x,url(/header/tab3Selected@2x.png) 2x)
+}
+
+#newsTab .deselected {
+    background-image:-webkit-image-set(url(/header/tab3.png) 1x,url(/header/tab3@2x.png) 2x);
+    background-image:image-set(url(/header/tab3.png) 1x,url(/header/tab3@2x.png) 2x)
+}
+
+#forumTab .deselected,#forumTab .selected {
+    width:0;
+    height:0;
+    padding:60px 0 0 120px;
+    background-image:-webkit-image-set(url(/header/tab4Selected.png) 1x,url(/header/tab4Selected@2x.png) 2x);
+    background-image:image-set(url(/header/tab4Selected.png) 1x,url(/header/tab4Selected@2x.png) 2x)
+}
+
+#forumTab .deselected {
+    background-image:-webkit-image-set(url(/header/tab4.png) 1x,url(/header/tab4@2x.png) 2x);
+    background-image:image-set(url(/header/tab4.png) 1x,url(/header/tab4@2x.png) 2x)
+}
+
+#shoTab .deselected,#shopTab .selected {
+    width:0;
+    height:0;
+    padding:60px 0 0 120px;
+    background-image:-webkit-image-set(url(/header/tab2Selected.png) 1x,url(/header/tab2Selected@2x.png) 2x);
+    background-image:image-set(url(/header/tab2Selected.png) 1x,url(/header/tab2Selected@2x.png) 2x)
+}
+
+#shopTab .deselected {
+    background-image:-webkit-image-set(url(/header/tab2.png) 1x,url(/header/tab2@2x.png) 2x);
+    background-image:image-set(url(/header/tab2.png) 1x,url(/header/tab2@2x.png) 2x)
+}
+
+#gameTab .deselected,#gameTab .selected {
+    width:0;
+    height:0;
+    padding:60px 0 0 120px;
+    background-image:-webkit-image-set(url(/header/tab1Selected.png) 1x,url(/header/tab1Selected@2x.png) 2x);
+    background-image:image-set(url(/header/tab1Selected.png) 1x,url(/header/tab1Selected@2x.png) 2x)
+}
+
+#gameTab .deselected {
+    background-image:-webkit-image-set(url(/header/tab1.png) 1x,url(/header/tab1@2x.png) 2x);
+    background-image:image-set(url(/header/tab1.png) 1x,url(/header/tab1@2x.png) 2x)
+  }
