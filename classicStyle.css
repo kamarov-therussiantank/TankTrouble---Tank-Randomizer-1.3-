@@ -47,7 +47,7 @@
     height:0;
     padding:60px 0 0 120px;
     background-image:-webkit-image-set(url(/header/tab3Selected.png) 1x,url(/header/tab3Selected@2x.png) 2x);
-    background-image:image-set(url(/header/tab5Selected.png) 1x,url(/header/tab3Selected@2x.png) 2x)
+    background-image:image-set(url(/header/tab3Selected.png) 1x,url(/header/tab3Selected@2x.png) 2x)
 }
 
 #newsTab .deselected {
@@ -68,7 +68,7 @@
     background-image:image-set(url(/header/tab4.png) 1x,url(/header/tab4@2x.png) 2x)
 }
 
-#shoTab .deselected,#shopTab .selected {
+#shopTab .deselected,#shopTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
