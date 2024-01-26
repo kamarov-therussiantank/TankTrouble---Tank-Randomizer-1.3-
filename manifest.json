@@ -19,7 +19,7 @@
 			},
 			{
 				"id": "3",
-				"enabled": false,
+				"enabled": true,
 				"path": "header/classicTabs.json"
 			}
 		]
