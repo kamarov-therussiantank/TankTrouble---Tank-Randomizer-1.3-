@@ -10,12 +10,12 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 
 - **Classic Tanks:** Feels good to drive these old treads, and blow up your firends like in old days.
 
-<img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/classictanks.png">
+<img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/classictanks.jpg">
 
 
 - **Old School Mazes:** For even better mayhem in mazes, Classic Mazes spice it up, 100% True.
 
-<img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/classictanks.jpg">
+<img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/classicmazes.jpg">
 
 
 - **Old Classic Tab designs:** Little bit of rework, nothing much.
