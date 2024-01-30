@@ -18,7 +18,7 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 <img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/classicmazes.jpg">
 
 
-- **Old Classic Tab designs:** Little bit of rework, nothing much.
+- **Old Classic Tab designs:** Few old Classic Tabs, have made back into the game. Others are yet to be found..
 
 More features are coming soon!!!
 ****
