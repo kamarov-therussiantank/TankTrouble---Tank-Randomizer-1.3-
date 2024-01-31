@@ -2,32 +2,47 @@
 	"name": "TTCV2",
 	"author": "Kamarov",
 	"version": "2024.01.21",
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"description": "Classic TankTrouble is alive once again!",
+  
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "1",
+				"enabled": true,
+				"path": "colours/classicColours.json"
+			},
+			{
+				"id": "2",
+				"enabled": true,
+				"path": "game/classicGame.json"
+			},
+			{
+				"id": "3",
+				"enabled": true,
+				"path": "header/classicTabs.json"
+			}
+		]
+	},
   
 	"permissions": [
 		"declarativeNetRequest",
 		"declarativeNetRequestFeedback",
 		"declarativeNetRequestWithHostAccess",
 		"storage",
-		"activeTab",
+		"activeTab"
+	],
+  
+	"host_permissions": [
 		"*://*.tanktrouble.com/",
 		"*://*.raw.githubusercontent.com/"
 	],
 
 	"icons": {
 		"16": "icon/16.png",
+		"32": "icon/32.png",
 		"48": "icon/48.png",
 		"128": "icon/128.png",
 		"256": "icon/256.png"
-	},
-
-	"browser_action": {
-		"default_popup": "popup.html",
-		"default_icon": {
-			"16": "icon/16.png",
-			"48": "icon/48.png",
-			"128": "icon/128.png"
-		}
 	}
 }
