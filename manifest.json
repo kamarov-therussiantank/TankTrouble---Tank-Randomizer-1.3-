@@ -1,7 +1,7 @@
 {
 	"name": "TTCV2",
 	"author": "Kamarov",
-	"version": "2024.01.21",
+	"version": "2024.03.02",
 	"manifest_version": 3,
 	"description": "Classic TankTrouble is alive once again!",
   
@@ -44,5 +44,12 @@
 		"48": "icon/48.png",
 		"128": "icon/128.png",
 		"256": "icon/256.png"
-	}
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.tanktrouble.com/*"],
+			"js": ["contentScript.js"]
+		}
+	]
 }
