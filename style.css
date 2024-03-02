@@ -1,27 +1,9 @@
-@font-face {
-    font-family: 'TankTrouble';
-    src: url('fonts/TankTrouble.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Atkison';
-    src: url('fonts/Atkinson-Hyperlegible.ttf') format('truetype');
-}
-
-.custom-font {
-    font-family: 'TankTrouble', sans-serif;
-}
-
- .custom-font {
-    font-family: 'Atkison', sans-serif;
-}
-
 .snippet {
-  background: linear-gradient(to bottom, #c2c2c2, #c2c2c2);
-  border: #cfcfcf 2px solid;
+    background: linear-gradient(to bottom, #c2c2c2, #c2c2c2);
+    border: #cfcfcf 2px solid;
 }
 
 .forum .bubble {
-  background-color: #c7c7c7
-  border: #b8b8b8 2px solid;
-  
+    background-color: #c7c7c7;
+    border: #b8b8b8 2px solid;
+}
