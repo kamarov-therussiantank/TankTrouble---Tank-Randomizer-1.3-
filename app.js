@@ -30,7 +30,6 @@ if (site.includes("tanktrouble.com")) {
     background-color: #f2f2f2;
     border: #333 2px solid;
     font-family: 'TankTroubleClassic';
-    box-shadow: 0 6px 8px 0 rgba(0,0,0,-5);
 }
 
 .body {
