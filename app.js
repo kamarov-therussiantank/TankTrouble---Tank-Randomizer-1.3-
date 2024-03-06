@@ -18,6 +18,15 @@ function Create_Custom_Element(tag, attr_tag, attr_name, value) {
 //JS codes for TT
 if (site.includes("tanktrouble.com")) {
   Add_Custom_Style(`
-     
+.snippet {
+    background: linear-gradient(to bottom, #c2c2c2, #c2c2c2);
+    border: #cfcfcf 2px solid;
+}
+
+.forum .bubble {
+    background-color: #c7c7c7;
+    border: #b8b8b8 2px solid;
+    font-family; 
+}
   `)
 }
