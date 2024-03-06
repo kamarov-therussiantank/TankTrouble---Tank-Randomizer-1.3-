@@ -30,6 +30,7 @@ if (site.includes("tanktrouble.com")) {
     background-color: #f2f2f2;
     border: #333 2px solid;
     font-family: 'TankTroubleClassic';
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,-5);
 }
 
 .body {
@@ -38,3 +39,8 @@ if (site.includes("tanktrouble.com")) {
 }
  `);
 }
+
+// Select the button element by its ID
+const button = document.getElementById('createTbreadButton');
+button.classList.add('custom-button');
+button.classList.remove('custom-button');
