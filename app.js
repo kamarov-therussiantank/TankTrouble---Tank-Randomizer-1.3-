@@ -39,8 +39,3 @@ if (site.includes("tanktrouble.com")) {
 }
  `);
 }
-
-// Select the button element by its ID
-const button = document.getElementById('createTbreadButton');
-button.classList.add('custom-button');
-button.classList.remove('custom-button');
