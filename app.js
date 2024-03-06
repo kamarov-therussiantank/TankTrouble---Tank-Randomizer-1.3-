@@ -22,14 +22,19 @@ document.head.appendChild(linkElement);
 if (site.includes("tanktrouble.com")) {
   addCustomStyle(`
 .snippet {
-    background: linear-gradient(to bottom, #d9d9d9, #d9d9d9);
-    border: #cfcfcf 2px solid;
+    background: linear-gradient(to bottom, #e6e6e6, #e6e6e6);
+    border: #cfcfcf 4px solid;
 }
 
 .forum .bubble {
     background-color: #f2f2f2;
     border: #333 2px solid;
-    font-family: 'TankTroubleClassic'; // Fix the typo here
+    font-family: 'TankTroubleClassic';
+}
+
+.body {
+    font-family: 'TankTroubleClassic';
+    font-size: 13px;
 }
   `);
 }
