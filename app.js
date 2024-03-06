@@ -36,5 +36,12 @@ if (site.includes("tanktrouble.com")) {
     font-family: 'TankTroubleClassic';
     font-size: 13px;
 }
+
+.button {
+    background: linear-gradient(to bottom, #fff, #fff);
+    border: #333 4px solid;
+    border-radius: 0px;
+    font-family: 'TankTrouble';
+}
   `);
 }
