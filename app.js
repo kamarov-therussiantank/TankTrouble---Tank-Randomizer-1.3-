@@ -26,7 +26,7 @@ if (site.includes("tanktrouble.com")) {
 .forum .bubble {
     background-color: #fff;
     border: #333 2px solid;
-    font-family; 'TankTroubleClassic';
+    font-family: 'TankTroubleClassic';
     
 }
   `)
