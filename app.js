@@ -24,9 +24,10 @@ if (site.includes("tanktrouble.com")) {
 }
 
 .forum .bubble {
-    background-color: #c7c7c7;
-    border: #b8b8b8 2px solid;
-    font-family; 
+    background-color: #fff;
+    border: #333 2px solid;
+    font-family; 'TankTroubleClassic';
+    
 }
   `)
 }
