@@ -22,20 +22,20 @@ document.head.appendChild(linkElement);
 if (site.includes("tanktrouble.com")) {
   addCustomStyle(`
 .snippet {
-    background: linear-gradient(to bottom, #e6e6e6, #e6e6e6);
-    border: #cfcfcf 4px solid;
+    background: linear-gradient(to bottom, #fff, #fff);
+    border: #cfcfcf 3px solid;
 }
 
 .forum .bubble {
     background-color: #f2f2f2;
     border: #333 2px solid;
     font-family: 'TankTroubleClassic';
-    box-shadow: 0 3px 4px 0 rgba(0,0,0,-5);
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,-5);
 }
 
 .body {
     font-family: 'TankTroubleClassic';
-    font-size: 13px;
+    font-size: 14px;
 }
  `);
 }
