@@ -34,3 +34,9 @@
     background-color: #c7c7c7;
     border: #b8b8b8 2px solid;
 }
+
+.custom-button {
+    background: linear-gradient(to bottom, yellow, gold);
+    color: white;
+}
+
