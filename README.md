@@ -1,4 +1,4 @@
-**TTCV2**
+**TTCV2** **(2024.07.03)**
 
 TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aesthetics of Classic TankTrouble within the framework of TankTrouble Multiplayer Online. By resurrecting historical graphics and textures, this project aspires to evoke a scientifically crafted nostalgia, providing users with a meticulously curated journey into the cherished past of TankTrouble gaming.
 ****
@@ -18,7 +18,7 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 <img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/classicmazes.jpg">
 
 
-- **Old Classic Tab designs:** Few old Classic Tabs, have made back into the game. Others are yet to be found..
+- **Old Classic UI:** Lets welcome back our most loved Classic UI! What does it brings? Install the extension and see it for your self. You will be amazed.
 
 More features are coming soon!!!
 ****
