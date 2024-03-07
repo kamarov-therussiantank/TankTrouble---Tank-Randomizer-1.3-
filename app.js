@@ -22,7 +22,7 @@ document.head.appendChild(linkElement);
 if (site.includes("tanktrouble.com")) {
   addCustomStyle(`
 .snippet {
-    background: linear-gradient(to bottom, #fff, #fff);
+    background: linear-gradient(to bottom, #f0f0f0, #f0f0f0);
     border: #cfcfcf 3px solid;
 }
 
