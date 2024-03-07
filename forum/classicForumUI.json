@@ -93,7 +93,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/page@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/page2@2x.png",
       "resourceTypes": ["image"]
     }
   },
