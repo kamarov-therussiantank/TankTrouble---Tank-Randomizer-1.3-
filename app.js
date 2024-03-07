@@ -24,6 +24,7 @@ if (site.includes("tanktrouble.com")) {
 .snippet {
     background: linear-gradient(to bottom, #f0f0f0, #f0f0f0);
     border: #cfcfcf 3px solid;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
 }
 
 .forum .bubble {
@@ -37,5 +38,14 @@ if (site.includes("tanktrouble.com")) {
     font-family: 'TankTroubleClassic';
     font-size: 14px;
 }
+
+.forum .tank {
+    font-family: 'TankTrouble';
+    font-size: 12px;
+}
+
+.p {
+    font-family: 'TankTrouble';
+ }
  `);
 }
