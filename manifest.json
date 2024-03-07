@@ -1,9 +1,9 @@
 {
 	"name": "TTCV2",
 	"author": "Kamarov",
-	"version": "2024.03.02",
+	"version": "2024.07.03",
 	"manifest_version": 3,
-	"description": "Classic TankTrouble is alive once again!",
+	"description": "Origin of TankTrouble Classic site. Extension that brings nostalgia back.",
   
 	"declarative_net_request": {
 		"rule_resources": [
@@ -21,6 +21,11 @@
 				"id": "3",
 				"enabled": true,
 				"path": "header/classicTabs.json"
+			},
+			{
+				"id": "4",
+				"enabled": true,
+				"path": "forum/classicForumUI.json"
 			}
 		]
 	},
