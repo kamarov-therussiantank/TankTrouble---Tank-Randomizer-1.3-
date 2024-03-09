@@ -672,77 +672,77 @@
     }
   },
   {
-    "id": 37,
+    "id": 49,
     "priority": 1,
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/back%402x.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/pageNewest@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/back@2x.png",
       "resourceTypes": ["image"]
     }
   },
   {
-    "id": 38,
+    "id": 50,
     "priority": 1,
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/back.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/pageNewest.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/back.png",
       "resourceTypes": ["image"]
     }
   },
   {
-    "id": 39,
+    "id": 51,
     "priority": 1,
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/back%402x.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/pageNewestSelected@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/backSelected@2x.png",
       "resourceTypes": ["image"]
     }
   },
   {
-    "id": 40,
+    "id": 52,
     "priority": 1,
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/back.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/pageNewestSelected.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/backSelected.png",
       "resourceTypes": ["image"]
     }
   },
   {
-    "id": 41,
+    "id": 53,
     "priority": 1,
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/back%402x.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/pageNewestActive@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/forum/backActive@2x.png",
       "resourceTypes": ["image"]
     }
   },
   {
-    "id": 42,
+    "id": 54,
     "priority": 1,
     "action": {
       "type": "redirect",
