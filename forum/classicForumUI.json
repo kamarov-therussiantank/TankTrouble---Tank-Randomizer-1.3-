@@ -537,7 +537,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewestSelected%402x.png"
       }
     },
     "condition": {
@@ -551,7 +551,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewestSelected.png"
       }
     },
     "condition": {
@@ -565,7 +565,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewestSelected%402x.png"
       }
     },
     "condition": {
@@ -579,7 +579,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewest.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageNewestSelected.png"
       }
     },
     "condition": {
@@ -621,7 +621,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldest%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldestSelected%402x.png"
       }
     },
     "condition": {
@@ -635,7 +635,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldest.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldestSekected.png"
       }
     },
     "condition": {
@@ -649,7 +649,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldest%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldestSelected%402x.png"
       }
     },
     "condition": {
@@ -663,7 +663,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldest.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/forum/pageOldestSelected.png"
       }
     },
     "condition": {
