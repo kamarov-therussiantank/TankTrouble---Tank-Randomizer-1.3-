@@ -59,16 +59,5 @@ if (site.includes("tanktrouble.com")) {
     border: #999 3px solid;
     padding: 5px;
  }
-
- .messages .message.important {
-    background: #d12626;
-    border: #871717 5px solid;
-    color: #fff;
- }
-
- .messages .message {
-    background: #1b9e3c;
-    border: #156128 5px solid;
-    color: #fff;
  `);
 }
