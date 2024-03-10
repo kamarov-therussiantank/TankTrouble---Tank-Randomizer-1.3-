@@ -20,6 +20,9 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 
 - **Old Classic UI:** Lets welcome back our most loved Classic UI! What does it brings? Install the extension and see it for your self. You will be amazed.
 
+<img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/classicUI.jpg">
+
+
 More features are coming soon!!!
 ****
 
