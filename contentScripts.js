@@ -59,5 +59,10 @@ if (site.includes("tanktrouble.com")) {
     border: #999 3px solid;
     padding: 5px;
  }
+
+ .premium #header {
+    background-image: url(https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/header/background.png);
+    background-image: url(https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/header/background@2x.png);
+ }
  `);
 }
