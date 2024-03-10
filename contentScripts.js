@@ -32,7 +32,7 @@ if (site.includes("tanktrouble.com")) {
 
 .snippet {
     background: linear-gradient(to bottom, #fff, #fff);
-    border: #cfcfcf 2px solid;
+    border: #333 2px solid;
     box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
 }
 
@@ -50,11 +50,14 @@ if (site.includes("tanktrouble.com")) {
 
 .forum .tank {
     font-family: 'TankTrouble';
-    font-size: 10px;
+    font-size: 14px;
 }
 
-.p {
-    font-family: 'TankTroubleClassic';
+.box .content {
+    background: #e0e0e0;
+    border-radius: 0px;
+    border: #cfcfcf 3px solid;
+    padding: 5px;
  }
  `);
 }
