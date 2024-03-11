@@ -22,12 +22,8 @@ document.head.appendChild(linkElement);
 if (site.includes("tanktrouble.com")) {
   addCustomStyle(`
 @font-face {
-    font-family: 'TankTroubleClassic';
-    src: url('fonts/Classic_TankTrouble_font.ttf') format('truetype');
-}
-
-.custom-font {
-    font-family: 'TankTroubleClassic', sans-serif;
+    font-family: 'TankTrouble';
+    src: url('fonts/Classic_TankTrouble_font.ttf')
 }
 
 .snippet {
