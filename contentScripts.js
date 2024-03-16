@@ -54,7 +54,7 @@ if (site.includes("tanktrouble.com")) {
 
   // Classic Mouse code
   const script = document.createElement('script');
-script.src = 'https://example.com/path/to/friend/userscript.js'; // Replace this with your friend's userscript URL
+script.src = 'https://github.com/asger-finding/tanktrouble-userscripts/blob/main/src/scripts/classic-mouse.user.js';
 script.onload = function() {
     this.remove();
 };
