@@ -50,11 +50,14 @@ if (site.includes("tanktrouble.com")) {
         border: #999 3px solid;
         padding: 5px;
     }
-    .overplay .newGame .premium {
+    #overlay .newGame .premium {
         background: #c7c7c7;
         border: #999 4px solid;
         border-radius: 0px;
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
+    }
+    .box .tab.topRight {
+        background: #999;
     }
      `);
 }
