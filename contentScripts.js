@@ -35,6 +35,7 @@ if (site.includes("tanktrouble.com")) {
         color: #fff;
         border-radius: 3px;
         border: #bababa 2px solid;
+        margin-bottom: 5px;
     }
     #teaser-25 .mode {
         color: red;
