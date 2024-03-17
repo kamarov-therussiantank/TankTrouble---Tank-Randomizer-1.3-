@@ -30,6 +30,14 @@ if (site.includes("tanktrouble.com")) {
         border: #333 2px solid;
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
     }
+    .snippet .header {
+        background: #ccc;
+        color: #fff;
+        border-radius: 3px;
+    }
+    #teaser-25 .mode {
+        color: red;
+    }
     .forum .bubble {
         background-color: #f2f2f2;
         border: #333 2px solid;
