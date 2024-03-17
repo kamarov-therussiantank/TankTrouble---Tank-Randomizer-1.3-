@@ -18,6 +18,25 @@ linkElement.rel = 'stylesheet';
 linkElement.href = chrome.runtime.getURL('style.css');
 document.head.appendChild(linkElement);
 
+var statisticsElement = document.createElement('div');
+                        statisticsElement.id = 'statisticsSnippet';
+                        statisticsElement.setAttribute('class', 'snippet teaser standard');
+                        statisticsElement.style.display = 'block';
+                        statisticsElement.innerHTML = "<style>#statisticsSnippet .header{font-family: TankTrouble; margin: 0px 0px 2px 0px; padding: 3px 0 5px 0;}#statisticsSnippet .content *{padding: 4px 0px 2px 0px;}#statisticsSnippet .content #onlinePlayerCount{font-size: 40px; font-weight: 600;}</style><div class=\"content\"> <div class=\"header\">Who has deployed?</div><div id=\"onlinePlayerCount\" style=\"\">...</div><div id=\"onlineGameCount\" style=\"\">" + loadingText[Math.floor(Math.random() * loadingText.length)] + "</div><div class=\"managedNavigation\" onclick=\"TankTrouble.Statistics._switchType(this)\">Global</div></div>";
+
+                        var pushStatisticsSnippet = setInterval((function () {
+                            var secondaryContent = document.getElementById('secondaryContent');
+                            if (!!secondaryContent) {
+                                secondaryContent.appendChild(statisticsElement);
+                                clearInterval(pushStatisticsSnippet);
+                            }
+                        }), 500);
+
+                        var statisticsScript = document.createElement('script');
+                        statisticsScript.innerHTML = "TankTrouble.Statistics.type=\"global\";ClientManager.classMethod(\"_attemptToConnectToServer\",function(serverId){ClientManager.log.debug(\"Attempt to connect to server initiated: \"+serverId);ClientManager._getSelectedServerStats(serverId,function(success,serverId,latency,gameCount,playerCount,message){if(ClientManager.client.getState()===TTClient.STATES.UNCONNECTED){if(success){TankTrouble.Statistics._updateStatistics(serverId);TankTrouble.SettingsBox.enableServer(serverId,latency);TankTrouble.SettingsBox.setServer(serverId);ClientManager.log.debug(\"Attempt to connect to server resulted in new connect: \"+serverId);Cookies.set(\"multiplayerserverid\",serverId,{expires:365});ClientManager.multiplayerServerId=serverId;ClientManager.client.connect(ClientManager.availableServers[serverId].url)}else{TankTrouble.SettingsBox.disableServer(serverId);Cookies.remove(\"multiplayerserverid\");ClientManager.multiplayerServerId=null;ClientManager._findAndConnectToBestAvailableServer()}}else{ClientManager.log.debug(\"Client connected to other server while attempting to connect to this server: \"+serverId)}})});TankTrouble.Statistics._switchType=function(element){switch(this.type){case\"global\":this.type=\"server\";element.innerText=\"Server\";this._updateStatistics();break;case\"server\":this.type=\"global\";element.innerText=\"Global\";this._updateStatistics();break;default:this.type=\"global\";break}};TankTrouble.Statistics._updateStatistics=function(serverId){var self=this;switch(this.type){case\"global\":Backend.getInstance().getStatistics(function(result){if(typeof result==\"object\"){self._updateNumber($(\"#onlinePlayerCount\"),result.onlineStatistics.playerCount);self._updateNumber($(\"#onlineGameCount\"),result.onlineStatistics.gameCount,\"game\");$(\"#statisticsSnippet\").css(\"display\",\"inline-block\")}},function(result){});break;case\"server\":var server;if(typeof serverId!==\"undefined\"){server=serverId}else{server=ClientManager.multiplayerServerId}ClientManager._getSelectedServerStats(server,function(success,serverId,latency,gameCount,playerCount,message){self._updateNumber($(\"#onlinePlayerCount\"),playerCount);self._updateNumber($(\"#onlineGameCount\"),gameCount,\"game\");$(\"#statisticsSnippet\").css(\"display\",\"inline-block\")});break;default:Backend.getInstance().getStatistics(function(result){if(typeof result==\"object\"){self._updateNumber($(\"#onlinePlayerCount\"),result.onlineStatistics.playerCount);self._updateNumber($(\"#onlineGameCount\"),result.onlineStatistics.gameCount,\"game\");$(\"#statisticsSnippet\").css(\"display\",\"inline-block\")}},function(result){});break}};";
+                        document.head.appendChild(statisticsScript);
+
+
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
    addCustomStyle(`
