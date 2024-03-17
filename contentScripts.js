@@ -64,7 +64,7 @@ if (site.includes("tanktrouble.com")) {
     .box .content {
         background: #c7c7c7;
         border-radius: 0px;
-        border: #999 3px solid;
+        border: #999 5px solid;
         padding: 5px;
     }
     #overlay .newGame .premium {
