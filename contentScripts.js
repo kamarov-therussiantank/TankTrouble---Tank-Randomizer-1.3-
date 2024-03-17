@@ -24,10 +24,6 @@ document.head.appendChild(linkElement);
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
    addCustomStyle(`
-    @font-face {
-        font-family: 'TankTrouble';
-        src: url('fonts/Classic_TankTrouble_font.ttf')
-    }
     .snippet {
         background: linear-gradient(to bottom, #fff, #fff);
         border: #333 2px solid;
