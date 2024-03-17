@@ -50,7 +50,7 @@ if (site.includes("tanktrouble.com")) {
         border: #999 3px solid;
         padding: 5px;
     }
-    #overplay .newGame .premium {
+    .overplay .newGame .premium {
         background: #c7c7c7;
         border: #999 4px solid;
         border-radius: 0px;
