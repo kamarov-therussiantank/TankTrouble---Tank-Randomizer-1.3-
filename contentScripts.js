@@ -1,3 +1,6 @@
+// TODO: Total Tank Owners snippet
+// TODO: Upgrade Classic UI
+
 // Get the hostname of the current website
 const site = window.location.hostname;
 
@@ -17,100 +20,6 @@ const linkElement = document.createElement('link');
 linkElement.rel = 'stylesheet';
 linkElement.href = chrome.runtime.getURL('style.css');
 document.head.appendChild(linkElement);
-
-// TODO: for now this is just a akeleton of upcoming snippet
-var statisticsElement = document.createElement('div');
-statisticsElement.id = 'statisticsSnippet';
-statisticsElement.className = 'snippet teaser standard';
-statisticsElement.style.display = 'block';
-statisticsElement.innerHTML = `
-    <style>
-        #statisticsSnippet .header {
-            font-family: TankTrouble;
-            margin: 0px 0px 2px 0px;
-            padding: 3px 0 5px 0;
-        }
-        #statisticsSnippet .content * {
-            padding: 4px 0px 2px 0px;
-        }
-        #statisticsSnippet .content #onlinePlayerCount {
-            font-size: 40px;
-            font-weight: 600;
-        }
-    </style>
-    <div class="content">
-        <div class="header">Who has deployed?</div>
-        <div id="onlinePlayerCount">...</div>
-        <div id="onlineGameCount">${loadingText[Math.floor(Math.random() * loadingText.length)]}</div>
-        <div class="managedNavigation" id="switchTypeButton">Global</div>
-    </div>`;
-
-// Append statistics snippet
-var pushStatisticsSnippet = setInterval(() => {
-    var secondaryContent = document.getElementById('secondaryContent');
-    if (!!secondaryContent) {
-        secondaryContent.appendChild(statisticsElement);
-        clearInterval(pushStatisticsSnippet);
-    }
-}, 500);
-
-// Add script for statistics
-var statisticsScript = document.createElement('script');
-statisticsScript.innerHTML = `
-    TankTrouble.Statistics.type = "global";
-
-    TankTrouble.Statistics._switchType = function(element) {
-        this.type = (this.type === "global") ? "server" : "global";
-        element.innerText = (this.type === "global") ? "Global" : "Server";
-        this._updateStatistics();
-    };
-
-    TankTrouble.Statistics._updateStatistics = function(serverId) {
-        var self = this;
-        switch (this.type) {
-            case "global":
-                Backend.getInstance().getStatistics(
-                    function(result) {
-                        if (typeof result === "object") {
-                            self._updateNumber(document.getElementById("onlinePlayerCount"), result.onlineStatistics.playerCount);
-                            self._updateNumber(document.getElementById("onlineGameCount"), result.onlineStatistics.gameCount, "game");
-                            document.getElementById("statisticsSnippet").style.display = "inline-block";
-                        }
-                    },
-                    function(result) {}
-                );
-                break;
-            case "server":
-                var server;
-                if (typeof serverId !== "undefined") {
-                    server = serverId;
-                } else {
-                    server = ClientManager.multiplayerServerId;
-                }
-                ClientManager._getSelectedServerStats(server,
-                    function(success, serverId, latency, gameCount, playerCount, message) {
-                        self._updateNumber(document.getElementById("onlinePlayerCount"), playerCount);
-                        self._updateNumber(document.getElementById("onlineGameCount"), gameCount, "game");
-                        document.getElementById("statisticsSnippet").style.display = "inline-block";
-                    }
-                );
-                break;
-            default:
-                Backend.getInstance().getStatistics(
-                    function(result) {
-                        if (typeof result === "object") {
-                            self._updateNumber(document.getElementById("onlinePlayerCount"), result.onlineStatistics.playerCount);
-                            self._updateNumber(document.getElementById("onlineGameCount"), result.onlineStatistics.gameCount, "game");
-                            document.getElementById("statisticsSnippet").style.display = "inline-block";
-                        }
-                    },
-                    function(result) {}
-                );
-                break;
-        }
-    };
-`;
-document.head.appendChild(statisticsScript);
 
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
