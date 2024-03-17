@@ -1,26 +1,33 @@
+/* Define TankTrouble font */
 @font-face {
     font-family: 'TankTrouble';
     src: url('fonts/TankTrouble.ttf') format('truetype');
 }
 
-.custom-font {
+/* Apply TankTrouble font to elements with .tank-trouble-font class */
+.tank-trouble-font {
     font-family: 'TankTrouble', sans-serif;
 }
 
+/* Define Atkinson font */
 @font-face {
-    font-family: 'Atkison';
+    font-family: 'Atkinson';
     src: url('fonts/Atkinson-Hyperlegible.ttf') format('truetype');
 }
 
-.custom-font {
-    font-family: 'Atkison', sans-serif;
+/* Apply Atkinson font to elements with .atkinson-font class */
+.atkinson-font {
+    font-family: 'Atkinson', sans-serif;
 }
 
+/* Define TankTroubleClassic font */
 @font-face {
     font-family: 'TankTroubleClassic';
     src: url('fonts/Classic_TankTrouble_font.ttf') format('truetype');
 }
 
- .custom-font {
-    font-family: 'TTCV2', sans-serif;
- }
+/* Apply TankTroubleClassic font to elements with .tank-trouble-classic-font class */
+.tank-trouble-classic-font {
+    font-family: 'TankTroubleClassic', sans-serif;
+}
+
