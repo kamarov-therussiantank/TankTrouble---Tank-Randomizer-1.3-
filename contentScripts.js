@@ -79,8 +79,16 @@ if (site.includes("tanktrouble.com")) {
     #overlay .newGame. premium::before {
         width: 170px;
         height: 190px;
-        background-image: url(https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/tankInfo/accountActive@2x.png);
+        background-image: url(https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/tankInfo/accountActive.png);
         background-size: 170px 190px;
+    }
+    @media {
+        #overlay .newGame. premium::before {
+            width: 170px;
+            height: 190px;
+            background-image: url(https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/tankInfo/accountActive@2x.png);
+            background-size: 170px 190px;
+        }
     }
     .box .tab.topRight {
         background: #999;
