@@ -86,7 +86,7 @@ if (site.includes("tanktrouble.com")) {
     #overlay .messages .message.important {
         background: linear-gradient(to bottom, #e01f1f, #961717);
         color: #fff;
-        border: maroon 3px solid
+        border: maroon 3px solid;
         border-radius: 3px
         text-shadow: none;
      }
