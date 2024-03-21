@@ -43,7 +43,7 @@ if (site.includes("tanktrouble.com")) {
     }
     shopItem svg text {
        text-shadow: none;
-       stroke-width: 0px;
+       stroke-width: 1px;
     }
     #teaser-25 .mode {
         color: red;
