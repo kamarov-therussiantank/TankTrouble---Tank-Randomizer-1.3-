@@ -77,16 +77,18 @@ if (site.includes("tanktrouble.com")) {
         box-shadow: 0 5px 7px 0 rgba(0,0,0, .5)
     }
     #overlay .messages .message {
-        background: #4acf1b;
+        background: linear-gradient(to bottom, #3ee64c, #2a9133);
         color: #fff;
         border: darkgreen 3px solid;
         border-radius: 3px;
+        text-shadow: none;
     }
     #overlay .messages .message.important {
-        background: red;
+        background: linear-gradient(to bottom, #e01f1f, #961717);
         color: #fff;
         border: maroon 3px solid
         border-radius: 3px
+        text-shadow: none;
      }
     .box .tab.topRight {
         background: #999;
