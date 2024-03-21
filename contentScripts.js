@@ -27,6 +27,7 @@ if (site.includes("tanktrouble.com")) {
     .snippet {
         background: linear-gradient(to bottom, #fff, #fff);
         border: #333 2px solid;
+        border-radius: 2px;
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
     }
     .snippet .header {
@@ -46,6 +47,7 @@ if (site.includes("tanktrouble.com")) {
     .forum .bubble {
         background-color: #f2f2f2;
         border: #333 2px solid;
+        border-radius: 2px;
         font-family: 'TankTroubleClassic';
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
     }
@@ -59,7 +61,7 @@ if (site.includes("tanktrouble.com")) {
     }
     .box .content {
         background: #c7c7c7;
-        border-radius: 0px;
+        border-radius: 2px;
         border: #999 5px solid;
         padding: 5px;
     }
@@ -79,15 +81,18 @@ if (site.includes("tanktrouble.com")) {
     #overlay .messages .message {
         background: linear-gradient(to bottom, #3ee64c, #2a9133);
         color: #fff;
-        border: darkgreen 3px solid;
-        border-radius: 3px;
+        border: darkgreen 4px solid;
+        border-radius: 2px;
         text-shadow: none;
     }
     #overlay .messages .message.important {
         background: linear-gradient(to bottom, #e01f1f, #961717);
         color: #fff;
-        border: maroon 3px solid;
-        border-radius: 3px
+        border: maroon 4px solid;
+        border-radius: 2px
+        text-shadow: none;
+     }
+     #overlay .admin .attention {
         text-shadow: none;
      }
     .box .tab.topRight {
