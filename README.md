@@ -13,7 +13,7 @@ TTCV2, an innovative extension, seeks to meticulously reconstruct the visual aes
 <img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/1.jpg">
 
 
-- **Classic Mazes:** Like in old days. Everything looks clean and simple. They also spice the mayhem in mazes.
+- **Classic Mazes:**Everything looks clean and simple. They also spice the mayhem in mazes.
 
 <img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/screenshots/2.jpg">
 
