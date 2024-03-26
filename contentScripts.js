@@ -109,5 +109,13 @@ if (site.includes("tanktrouble.com")) {
    `);
    
    // Create a custom HTML element
-   createCustomElement('div', 'class', 'snippet', '<div class="header" style="margin-left: 4px; margin-right: 4px; margin-top: 2px;">Statistics</div><div class="content" id="websiteStatisticsSnippet">Tank Owners:</div>');
+   createCustomElement('div', 'class', 'snippet', `
+      <div class="header" style="margin-left: 4px; margin-right: 4px; margin-top: 2px;">Statistics</div>
+      <div class="content">
+         <div id="tankOwners">Tank Owners: 1000</div>
+         <div id="onlinePlayers">Total Online Players: 500</div>
+         <div id="scrappedTanks">Total Scrapped Tanks: 200</div>
+         <div id="websiteVisits">Total Visits: 10000</div>
+      </div>
+   `);
 }
