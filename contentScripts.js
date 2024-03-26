@@ -1,8 +1,9 @@
-// TODO: Total Tank Owners snippet
-// TODO: Upgrade Classic UI
-
-// Get the hostname of the current website
-const site = window.location.hostname;
+//TODO: Add Record Snippet
+//TODO: Upgrade Classic UI
+//TODO: Add more matte versions of paints and add matte versions of spray cans
+//TODO: Add Classic Mouse
+//TODO: GM badges, Kickstarter badges
+//TODO: Classic Lobby Settings (local only), Leaderboard, Maze Creator (local only)
 
 // Function to dynamically add custom CSS
 const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
@@ -14,6 +15,9 @@ function createCustomElement(tag, attr_tag, attr_name, value) {
   custom_element.innerHTML = value;
   document.body.append(custom_element);
 }
+
+// Get the hostname of the current website
+const site = window.location.hostname;
 
 // Create a link element for linking the style.css file
 const linkElement = document.createElement('link');
@@ -93,7 +97,7 @@ if (site.includes("tanktrouble.com")) {
         background: linear-gradient(to bottom, #e01f1f, #961717);
         color: #fff;
         border: maroon 4px solid;
-        border-radius: 2px
+        border-radius: 2px;
         text-shadow: none;
      }
      #overlay .admin .attention {
@@ -102,5 +106,8 @@ if (site.includes("tanktrouble.com")) {
     .box .tab.topRight {
         background: #999;
     }
-     `);
+   `);
+   
+   // Create a custom HTML element
+   createCustomElement('div', 'id', 'customElementId', 'This is a custom element added dynamically.');
 }
