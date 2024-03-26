@@ -109,5 +109,5 @@ if (site.includes("tanktrouble.com")) {
    `);
    
    // Create a custom HTML element
-   createCustomElement('div', 'class', 'snippet', '<div class="header">Statistics</div><div class="content" id="websiteStatisticsSnippet">Tank Owners:</div>');
+   createCustomElement('div', 'class', 'snippet', '<div class="header" style="margin-left: 4px; margin-right: 4px; margin-top: 2px;">Statistics</div><div class="content" id="websiteStatisticsSnippet">Tank Owners:</div>');
 }
