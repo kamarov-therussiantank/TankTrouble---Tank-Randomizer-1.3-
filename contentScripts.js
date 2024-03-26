@@ -13,7 +13,7 @@ function createCustomElement(tag, attr_tag, attr_name, value) {
   const custom_element = document.createElement(tag);
   custom_element.setAttribute(attr_tag, attr_name);
   custom_element.innerHTML = value;
-  document.body.append(custom_element);
+  document.getElementById('tertiaryContent').appendChild(custom_element);
 }
 
 // Get the hostname of the current website
@@ -109,5 +109,5 @@ if (site.includes("tanktrouble.com")) {
    `);
    
    // Create a custom HTML element
-   createCustomElement('div', 'id', 'customElementId', 'This is a custom element added dynamically.');
+   createCustomElement('div', 'class', 'snippet', '<div class="header">Website Statistics</div><div class="content" id="websiteStatisticsSnippet">...</div>');
 }
