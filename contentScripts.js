@@ -232,7 +232,7 @@ TankTrouble.Statistics.type = "global";
         } else {
           server = ClientManager.multiplayerServerId;
         }
-        ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, message) {
+        ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
           self._updateNumber($("#visitsCount"), visits);
           self._updateNumber($("#tankOwnersCount"), tankOwners);
           self._updateNumber($("#onlinePlayerCount"), playerCount);
