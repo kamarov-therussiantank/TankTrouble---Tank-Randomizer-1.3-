@@ -212,19 +212,22 @@ TankTrouble.Statistics.type = "global";
     });
   });
     TankTrouble.Statistics._updateStatistics = function(serverId) {
-    var self = this;
-    switch (this.type) {
-      case "global":
-        Backend.getInstance().getStatistics(function(result) {
-          if (typeof result == "object") {
-            self._updateNumber($("#visitsCount"), result.data.visits);
-            self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
-            self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
-            self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
-            $("#statisticsSnippet").css("display", "inline-block");
-          }
-        }, function(result) {});
-        break;
+  var self = this;
+  switch (this.type) {
+    case "global":
+      Backend.getInstance().getStatistics(function(result) {
+        console.log("Server response:", result); // Log the server response for debugging
+        if (typeof result == "object") {
+          self._updateNumber($("#visitsCount"), result.data.visits);
+          self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
+          self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
+          self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
+          $("#statisticsSnippet").css("display", "inline-block");
+        }
+      }, function(error) {
+        console.error("Error fetching statistics:", error); // Log any errors that occur during fetching statistics
+      });
+      break;
       case "server":
         var server;
         if (typeof serverId !== "undefined") {
