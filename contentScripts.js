@@ -133,18 +133,34 @@ if (site.includes("tanktrouble.com")) {
                     1px  1px 0 #000;
     }
     #statisticsSnippet .content {
-      margin: 3px 0px 3px 0px;
+      margin: 3px 1px 3px 1px;
     }
     #statisticsSnippet .content * {
-      margin: 3px 0px 3px 0px;
+      margin: 3px 1px 3px 1px;
+    }
+    #statisticsSnippet .content #visitsCount {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 2px;
+      margin-bottom: 3px;
+    }
+    #statisticsSnippet .content #tankOwnersCount {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
     #statisticsSnippet .content #onlinePlayerCount {
       font-size: 20px;
       font-weight: 500;
+      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
     #statisticsSnippet .content #onlineGameCount {
-      font-size: 20px;
+      font-size: 15px;
       font-weight: 500;
+      margin-too: 2px;
+      margin-bottom: 3px;
     }
     #statisticsSnippet .managedNavigation {
       cursor: pointer;
@@ -156,6 +172,10 @@ if (site.includes("tanktrouble.com")) {
   </style>
     <div class="content">
       <div class="header">Statistics</div>
+      <div>Visits:</div>
+      <div id="visitsCount">...</div>
+      <div>Tank Owners:</div>
+      <div id="tankOwnersCount">...</div>
       <div>Online Players:</div>
       <div id="onlinePlayerCount">...</div>
       <div>Game Made:</div>
