@@ -139,8 +139,12 @@ if (site.includes("tanktrouble.com")) {
       margin: 3px 0px 3px 0px;
     }
     #statisticsSnippet .content #onlinePlayerCount {
-      font-size: 10px;
-      font-weight: 300;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    #statisticsSnippet .content #onlineGameCount {
+      font-size: 20px;
+      font-weight: 500;
     }
     #statisticsSnippet .managedNavigation {
       cursor: pointer;
@@ -152,7 +156,9 @@ if (site.includes("tanktrouble.com")) {
   </style>
     <div class="content">
       <div class="header">Statistics</div>
+      <div>Online Players:</div>
       <div id="onlinePlayerCount">...</div>
+      <div>Game Made:</div>
       <div id="onlineGameCount">Loading...</div>
       <div class="managedNavigation" onclick="TankTrouble.Statistics._switchType(this)"></div>
     </div>
