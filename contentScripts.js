@@ -119,6 +119,7 @@ if (site.includes("tanktrouble.com")) {
       margin-bottom: 10px;
     }
     #statisticsSnippet .header {
+      font-family:'TankTrouble';
       background: #dadada;
       color: #fff;
       border-radius: 3px;
@@ -137,23 +138,15 @@ if (site.includes("tanktrouble.com")) {
       padding: 4px 0;
     }
     #statisticsSnippet .content #onlinePlayerCount {
-      font-size: 40px;
-      font-weight: 600;
+      font-size: 10px;
+      font-weight: 300;
     }
     #statisticsSnippet .managedNavigation {
       cursor: pointer;
-      color: #fff;
-      background-color: #007bff;
-      border: #007bff;
-      border-radius: .25rem;
-      padding: .375rem .75rem;
-      margin-top: 10px;
-      display: inline-block;
-      transition: background-color .15s;
     }
     #statisticsSnippet .managedNavigation:hover {
-      background-color: #0056b3;
-      border-color: #0056b3;
+      background-color: #fff;
+      border-color: #fff
     }
   </style>
     <div class="content">
