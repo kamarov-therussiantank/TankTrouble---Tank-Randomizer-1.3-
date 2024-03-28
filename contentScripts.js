@@ -110,6 +110,20 @@ if (site.includes("tanktrouble.com")) {
    
    // Create a custom HTML element
    createCustomElement('div', 'id', 'snippet', `
+   <style>
+      #snippet .header {
+        font-family: TankTrouble;
+        margin: 0px 0px 2px 0px;
+        padding: 3px 0 5px 0;
+      }
+      #snippet .content * {
+        padding: 4px 0px 2px 0px;
+      }
+      #snippet .content #onlinePlayerCount {
+        font-size: 40px;
+        font-weight: 600;
+      }
+    </style>
     <div class="content">
       <div class="header">Statistics</div>
       <div id="onlinePlayerCount">...</div>
