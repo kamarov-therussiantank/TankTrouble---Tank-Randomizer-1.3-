@@ -139,16 +139,18 @@ if (site.includes("tanktrouble.com")) {
       margin: 3px 2px 3px 2px;
     }
     #statisticsSnippet .content #onlinePlayerCount {
-      font-size: 25px;
-      font-weight: 500;
-      margin-bottom: 2px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 2px;
       margin-bottom: 5px;
+      font-family: 'Commodore';
     }
     #statisticsSnippet .content #onlineGameCount {
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 10px;
+      font-weight: 600;
       margin-top: 2px;
       margin-bottom: 1px;
+      font-family: 'Commodore';
     }
     #statisticsSnippet .managedNavigation {
       cursor: pointer;
@@ -160,9 +162,9 @@ if (site.includes("tanktrouble.com")) {
   </style>
     <div class="content">
       <div class="header">Statistics</div>
-      <div style="color: #ccc;">Players Online:</div>
+      <div style="color: #a4a4a4;">Players Online:</div>
       <div id="onlinePlayerCount">...</div>
-      <div style="color: #ccc;">Games Made:</div>
+      <div style="color: #a4a4a4;">Games Made:</div>
       <div id="onlineGameCount">Loading...</div>
       <div class="managedNavigation" onclick="TankTrouble.Statistics._switchType(this)"></div>
     </div>
