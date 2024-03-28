@@ -243,7 +243,7 @@ TankTrouble.Statistics.type = "global";
     }
   };
 
-// Add the custom script
+// Classic Mouse Script
 const customScript = document.createElement('script');
 customScript.innerHTML = `
    Tank.method('_computeRotationSpeed',function(){this.rotationSpeed=0;var speedModifier=this.roundModel.getModifier(this.playerId,Constants.MODIFIER_TYPES.SPEED);var classicMouseEnabled=Inputs.isClassicMouseEnabled(this.playerId);if(this.left){this.rotationSpeed+=-Constants.TANK.ROTATION_SPEED*(classicMouseEnabled?Inputs.turnMultiplier:speedModifier)}if(this.right){this.rotationSpeed+=Constants.TANK.ROTATION_SPEED*(classicMouseEnabled?Inputs.turnMultiplier:speedModifier)}});
