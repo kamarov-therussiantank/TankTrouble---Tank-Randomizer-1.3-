@@ -141,15 +141,15 @@ if (site.includes("tanktrouble.com")) {
     #statisticsSnippet .content #onlinePlayerCount {
       font-size: 20px;
       font-weight: 600;
-      margin-top: 2px;
+      margin-top: 5px;
       margin-bottom: 5px;
       font-family: 'Commodore';
     }
     #statisticsSnippet .content #onlineGameCount {
-      font-size: 10px;
+      font-size: 13px;
       font-weight: 600;
-      margin-top: 2px;
-      margin-bottom: 1px;
+      margin-top: 5px;
+      margin-bottom: 2px;
       font-family: 'Commodore';
     }
     #statisticsSnippet .managedNavigation {
