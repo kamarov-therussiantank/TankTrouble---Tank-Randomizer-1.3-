@@ -117,6 +117,7 @@ if (site.includes("tanktrouble.com")) {
       border-radius: 2px;
       box-shadow: 0 3px 4px 0 rgba(0,0,0, .5);
       margin-bottom: 10px;
+      text-align: center;
     }
     #statisticsSnippet .header {
       font-family:'TankTrouble';
@@ -125,17 +126,17 @@ if (site.includes("tanktrouble.com")) {
       border-radius: 3px;
       border: #bababa 2px solid;
       margin-bottom: 5px;
-      padding: 5px;
+      padding: 3px 0 5px 0;
       text-shadow: -1px -1px 0 #000,  
                     1px -1px 0 #000,
                    -1px  1px 0 #000,
                     1px  1px 0 #000;
     }
     #statisticsSnippet .content {
-      padding: 10px;
+      margin: 3px 3px 3px 3px;
     }
     #statisticsSnippet .content * {
-      padding: 4px 0;
+      margin: 3px 3px 3px 3px;
     }
     #statisticsSnippet .content #onlinePlayerCount {
       font-size: 10px;
