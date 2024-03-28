@@ -125,10 +125,10 @@ if (site.includes("tanktrouble.com")) {
       }
     </style>
     <div class="content">
-      <div class="header">Who has deployed?</div>
+      <div class="header">Statistics</div>
       <div id="onlinePlayerCount">...</div>
       <div id="onlineGameCount">Loading...</div>
-      <div class="managedNavigation" onclick="TankTrouble.Statistics._switchType(this)">Global</div>
+      <div class="managedNavigation" onclick="TankTrouble.Statistics._switchType(this)"></div>
     </div>
   `);
 
