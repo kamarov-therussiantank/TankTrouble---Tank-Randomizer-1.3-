@@ -133,10 +133,10 @@ if (site.includes("tanktrouble.com")) {
                     1px  1px 0 #000;
     }
     #statisticsSnippet .content {
-      margin: 3px 3px 3px 3px;
+      margin: 3px 0px 3px 0px;
     }
     #statisticsSnippet .content * {
-      margin: 3px 3px 3px 3px;
+      margin: 3px 0px 3px 0px;
     }
     #statisticsSnippet .content #onlinePlayerCount {
       font-size: 10px;
