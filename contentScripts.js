@@ -214,43 +214,42 @@ TankTrouble.Statistics.type = "global";
   TankTrouble.Statistics._updateStatistics = function(serverId) {
     var self = this;
     switch (this.type) {
-      case "global":
-        Backend.getInstance().getStatistics(function(result) {
-          if (typeof result == "object") {
-            self._updateNumber($("#visitsCount"), result.data.visits);
-            self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
-            self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
-            self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
-            $("#statisticsSnippet").css("display", "inline-block");
-          }
-        }, function(result) {});
-        break;
-      case "server":
-        var server;
-        if (typeof serverId !== "undefined") {
-          server = serverId;
-        } else {
-          server = ClientManager.multiplayerServerId;
-        }
-        ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
-          self._updateNumber($("#visitsCount"), visits);
-          self._updateNumber($("#tankOwnersCount"), tankOwners);
-          self._updateNumber($("#onlinePlayerCount"), playerCount);
-          self._updateNumber($("#onlineGameCount"), gameCount, "game");
-          $("#statisticsSnippet").css("display", "inline-block");
-        });
-        break;
-      default:
-        Backend.getInstance().getStatistics(function(result) {
-          if (typeof result == "object") {
-            self._updateNumber($("#visitsCount"), result.data.visits);
-            self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
-            self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
-            self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
-            $("#statisticsSnippet").css("display", "inline-block");
-          }
-        }, function(result) {});
-        break;
+        case "global":
+            Backend.getInstance().getStatistics(function(result) {
+                if (typeof result == "object") {
+                    self._updateNumber($("#visitsCount"), result.data.visits);
+                    self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
+                    self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
+                    self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
+                    $("#statisticsSnippet").css("display", "inline-block");
+                }
+            }, function(result) {});
+            break;
+        case "server":
+            var server;
+            if (typeof serverId !== "undefined") {
+                server = serverId;
+            } else {
+                server = ClientManager.multiplayerServerId;
+            }
+            ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
+                self._updateNumber($("#visitsCount"), visits);
+                self._updateNumber($("#tankOwnersCount"), tankOwners);
+                self._updateNumber($("#onlinePlayerCount"), playerCount);
+                self._updateNumber($("#onlineGameCount"), gameCount, "game");
+                $("#statisticsSnippet").css("display", "inline-block");
+            });
+            break;
+        default:
+            Backend.getInstance().getStatistics(function(result) {
+                if (typeof result == "object") {
+                    self._updateNumber($("#visitsCount"), result.data.visits);
+                    self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
+                    self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
+                    self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
+                    $("#statisticsSnippet").css("display", "inline-block");
+                }
+            }, function(result) {});
+            break;
     }
-  };
-  }
+};
