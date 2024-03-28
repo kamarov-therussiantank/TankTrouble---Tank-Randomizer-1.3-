@@ -109,21 +109,53 @@ if (site.includes("tanktrouble.com")) {
    `);
    
    // Create a custom HTML element
-   createCustomElement('div', 'id', 'snippet', `
+   createCustomElement('div', 'id', 'statisticsSnippet', `
    <style>
-      #snippet .header {
-        font-family: TankTrouble;
-        margin: 0px 0px 2px 0px;
-        padding: 3px 0 5px 0;
-      }
-      #snippet .content * {
-        padding: 4px 0px 2px 0px;
-      }
-      #snippet .content #onlinePlayerCount {
-        font-size: 40px;
-        font-weight: 600;
-      }
-    </style>
+    #statisticsSnippet {
+      background: linear-gradient(to bottom, #fff, #fff);
+      border: #333 2px solid;
+      border-radius: 2px;
+      box-shadow: 0 3px 4px 0 rgba(0,0,0, .5);
+      margin-bottom: 10px;
+    }
+    #statisticsSnippet .header {
+      background: #dadada;
+      color: #fff;
+      border-radius: 3px;
+      border: #bababa 2px solid;
+      margin-bottom: 5px;
+      padding: 5px;
+      text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                   -1px  1px 0 #000,
+                    1px  1px 0 #000;
+    }
+    #statisticsSnippet .content {
+      padding: 10px;
+    }
+    #statisticsSnippet .content * {
+      padding: 4px 0;
+    }
+    #statisticsSnippet .content #onlinePlayerCount {
+      font-size: 40px;
+      font-weight: 600;
+    }
+    #statisticsSnippet .managedNavigation {
+      cursor: pointer;
+      color: #fff;
+      background-color: #007bff;
+      border: #007bff;
+      border-radius: .25rem;
+      padding: .375rem .75rem;
+      margin-top: 10px;
+      display: inline-block;
+      transition: background-color .15s;
+    }
+    #statisticsSnippet .managedNavigation:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
     <div class="content">
       <div class="header">Statistics</div>
       <div id="onlinePlayerCount">...</div>
