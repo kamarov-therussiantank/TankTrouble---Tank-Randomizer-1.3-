@@ -1,3 +1,6 @@
+// TODO: Admin Improvements and Admin Statistics
+// TODO: TankInfo Improvements and AccountInfo Improvements
+
 if (window.location.hostname.includes("tanktrouble.com")) {
     // Injection
     function injectJSCode(code) {
