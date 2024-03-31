@@ -100,6 +100,12 @@ if (site.includes("tanktrouble.com")) {
     .box .tab.topRight {
         background: #999;
     }
+    .box .tab.right {
+        background: #999;
+    }
+    .box .tab.left {
+        background: #999;
+    }
    `);
    
    // Create a custom HTML element
