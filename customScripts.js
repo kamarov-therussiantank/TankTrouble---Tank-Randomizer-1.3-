@@ -1,4 +1,4 @@
-const site = window.location.hostname;
+if (window.location.hostname.includes("tanktrouble.com")) {
 
 function injectJSCode(code) {
   const scriptElement = document.createElement('script');
@@ -153,4 +153,5 @@ if (site.includes('www.tanktrouble.com')) {
       }
     }
   });
+}
 }
