@@ -19,12 +19,6 @@ function createCustomElement(tag, attr_tag, attr_name, value) {
 // Get the hostname of the current website
 const site = window.location.hostname;
 
-// Create a link element for linking the style.css file
-const linkElement = document.createElement('link');
-linkElement.rel = 'stylesheet';
-linkElement.href = chrome.runtime.getURL('style.css');
-document.head.appendChild(linkElement);
-
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
    addCustomStyle(`
