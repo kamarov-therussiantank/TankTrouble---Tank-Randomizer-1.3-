@@ -152,4 +152,3 @@ Inputs.classMethod('update', function() {
     }
   }
 });
-``
