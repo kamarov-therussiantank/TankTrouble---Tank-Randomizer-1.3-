@@ -54,7 +54,9 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.tanktrouble.com/*"],
-			"js": ["contentScripts.js"]
+			"js": ["contentScripts.js", "customScripts.js"],
+			"run_at": "document_idle",
+                        "world": "MAIN"
 		}
 	]
 }
