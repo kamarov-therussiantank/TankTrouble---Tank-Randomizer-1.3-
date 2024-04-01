@@ -19,7 +19,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab1.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab1%402x.png"
       }
     },
     "condition": {
@@ -47,7 +47,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab1Selected.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab1Selected%402x.png"
       }
     },
     "condition": {
@@ -75,7 +75,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab3.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab3%402x.png"
       }
     },
     "condition": {
@@ -103,7 +103,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab3Selected.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab3Selected%402x.png"
       }
     },
     "condition": {
@@ -131,7 +131,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab5.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab5%402x.png"
       }
     },
     "condition": {
@@ -159,7 +159,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab5Selected.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab5Selected%402x.png"
       }
     },
     "condition": {
@@ -187,7 +187,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab4.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab4%402x.png"
       }
     },
     "condition": {
@@ -201,7 +201,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab4Selected.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab4Selected%402x.png"
       }
     },
     "condition": {
@@ -243,7 +243,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab2.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab2%402x.png"
       }
     },
     "condition": {
@@ -257,7 +257,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab2Selected.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/header/tab2Selected%402x.png"
       }
     },
     "condition": {
