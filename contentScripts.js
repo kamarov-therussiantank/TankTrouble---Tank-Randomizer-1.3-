@@ -171,7 +171,7 @@ if (site.includes("tanktrouble.com")) {
 TankTrouble.Statistics.type = "global";
   ClientManager.classMethod("_attemptToConnectToServer", function(serverId) {
     ClientManager.log.debug("Attempt to connect to server initiated: " + serverId);
-    ClientManager._getSelectedServerStats(serverId, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
+    ClientManager._getSelectedServerStats(serverId, function(success, serverId, latency, gameCount, playerCount, message) {
       if (ClientManager.client.getState() === TTClient.STATES.UNCONNECTED) {
         if (success) {
           TankTrouble.Statistics._updateStatistics(serverId);
@@ -201,8 +201,6 @@ TankTrouble.Statistics.type = "global";
       Backend.getInstance().getStatistics(function(result) {
         console.log("Server response:", result); // Log the server response for debugging
         if (typeof result == "object") {
-          self._updateNumber($("#visitsCount"), result.data.visits);
-          self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
           self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
           self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
           $("#statisticsSnippet").css("display", "inline-block");
@@ -218,7 +216,7 @@ TankTrouble.Statistics.type = "global";
         } else {
           server = ClientManager.multiplayerServerId;
         }
-        ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
+        ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, message) {
           self._updateNumber($("#visitsCount"), visits);
           self._updateNumber($("#tankOwnersCount"), tankOwners);
           self._updateNumber($("#onlinePlayerCount"), playerCount);
@@ -229,8 +227,6 @@ TankTrouble.Statistics.type = "global";
       default:
         Backend.getInstance().getStatistics(function(result) {
           if (typeof result == "object") {
-            self._updateNumber($("#visitsCount"), result.data.visits);
-            self._updateNumber($("#tankOwnersCount"), result.data.tankOwners);
             self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
             self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
             $("#statisticsSnippet").css("display", "inline-block");
