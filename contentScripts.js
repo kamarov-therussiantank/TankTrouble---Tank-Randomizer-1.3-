@@ -136,14 +136,28 @@ if (site.includes("tanktrouble.com")) {
       margin: 3px 2px 3px 2px;
     }
     #statisticsSnippet .content #onlinePlayerCount {
-      font-size: 20px;
+      font-size: 15px;
       font-weight: 600;
       margin-top: 5px;
       margin-bottom: 5px;
       font-family: 'Commodore';
     }
     #statisticsSnippet .content #onlineGameCount {
-      font-size: 13px;
+      font-size: 7px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 2px;
+      font-family: 'Commodore';
+    }
+    #statisticsSnippet .content #visitsCount {
+      font-size: 7px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 2px;
+      font-family: 'Commodore';
+    }
+    #statisticsSnippet .content #tankOwnersCount {
+      font-size: 7px;
       font-weight: 600;
       margin-top: 5px;
       margin-bottom: 2px;
@@ -160,9 +174,9 @@ if (site.includes("tanktrouble.com")) {
     <div class="content">
       <div class="header">Statistics</div>
       <div style="color: #a4a4a4;">Visits</div>
-      <div id="visitsCount">...</div>
+      <div id="visitsCount">76103068</div>
       <div style="color: #a4a4a4;">Tank Owners</div>
-      <div id="tankOwnersCount">...</div>
+      <div id="tankOwnersCount">3358424</div>
       <div style="color: #a4a4a4;">Players Online</div>
       <div id="onlinePlayerCount">...</div>
       <div style="color: #a4a4a4;">Games Made</div>
@@ -175,7 +189,7 @@ if (site.includes("tanktrouble.com")) {
 TankTrouble.Statistics.type = "global";
   ClientManager.classMethod("_attemptToConnectToServer", function(serverId) {
     ClientManager.log.debug("Attempt to connect to server initiated: " + serverId);
-    ClientManager._getSelectedServerStats(serverId, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
+    ClientManager._getSelectedServerStats(serverId, function(success, serverId, latency, gameCount, playerCount, message) {
       if (ClientManager.client.getState() === TTClient.STATES.UNCONNECTED) {
         if (success) {
           TankTrouble.Statistics._updateStatistics(serverId);
@@ -205,8 +219,6 @@ TankTrouble.Statistics.type = "global";
       Backend.getInstance().getStatistics(function(result) {
         console.log("Server response:", result); // Log the server response for debugging
         if (typeof result == "object") {
-          self._updateNumber($("#onlinePlayerCount"), result.result.visits);
-          self._updateNumber($("#onlinePlayerCount"), result.result.tankOwners);
           self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
           self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
           $("#statisticsSnippet").css("display", "inline-block");
@@ -222,9 +234,7 @@ TankTrouble.Statistics.type = "global";
         } else {
           server = ClientManager.multiplayerServerId;
         }
-        ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
-          self._updateNumber($("#visitsCount"), visits);
-          self._updateNumber($("#tankOwnersCount"), tankOwners);
+        ClientManager._getSelectedServerStats(server, function(success, serverId, latency, gameCount, playerCount, message) {
           self._updateNumber($("#onlinePlayerCount"), playerCount);
           self._updateNumber($("#onlineGameCount"), gameCount, "game");
           $("#statisticsSnippet").css("display", "inline-block");
@@ -233,8 +243,6 @@ TankTrouble.Statistics.type = "global";
       default:
         Backend.getInstance().getStatistics(function(result) {
           if (typeof result == "object") {
-            self._updateNumber($("#visitsCount"), result.result.visits);
-            self._updateNumber($("#tankOwnersCount"), result.result.tankOwners);
             self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
             self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
             $("#statisticsSnippet").css("display", "inline-block");
