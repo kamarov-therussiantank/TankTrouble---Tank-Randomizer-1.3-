@@ -1,4 +1,23 @@
-    //Classic Mouse script
+// TODO: Admin Improvements and Admin Statistics
+// TODO: TankInfo Improvements and AccountInfo Improvements
+
+if (window.location.hostname.includes("tanktrouble.com")) {
+    // Injection
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
+    }
+
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
+    }
+
+//Classic Mouse script
     Tank.method('_computeRotationSpeed', function() {
         this.rotationSpeed = 0;
         var speedModifier = this.roundModel.getModifier(this.playerId, Constants.MODIFIER_TYPES.SPEED);
