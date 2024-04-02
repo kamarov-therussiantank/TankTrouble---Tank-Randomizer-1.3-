@@ -205,8 +205,8 @@ TankTrouble.Statistics.type = "global";
       Backend.getInstance().getStatistics(function(result) {
         console.log("Server response:", result); // Log the server response for debugging
         if (typeof result == "object") {
-          self._updateNumber($("#onlinePlayerCount"), result.visits);
-          self._updateNumber($("#onlinePlayerCount"), result.tankOwners);
+          self._updateNumber($("#onlinePlayerCount"), result.result.visits);
+          self._updateNumber($("#onlinePlayerCount"), result.result.tankOwners);
           self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
           self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
           $("#statisticsSnippet").css("display", "inline-block");
@@ -233,8 +233,8 @@ TankTrouble.Statistics.type = "global";
       default:
         Backend.getInstance().getStatistics(function(result) {
           if (typeof result == "object") {
-            self._updateNumber($("#visitsCount"), result.visits);
-            self._updateNumber($("#tankOwnersCount"), result.tankOwners);
+            self._updateNumber($("#visitsCount"), result.result.visits);
+            self._updateNumber($("#tankOwnersCount"), result.result.tankOwners);
             self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
             self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
             $("#statisticsSnippet").css("display", "inline-block");
