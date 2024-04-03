@@ -38,7 +38,7 @@ if (site.includes("tanktrouble.com")) {
     }
     #scrapyardSnippet .content {
         margin-left: 4px;
-        margin-right: 0;
+        margin-right: 4px;
     }
     #scrapyardSnippet {
         width: 133px;
