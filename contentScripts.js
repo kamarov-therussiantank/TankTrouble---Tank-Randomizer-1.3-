@@ -41,7 +41,7 @@ if (site.includes("tanktrouble.com")) {
         margin-right: 0;
     }
     #scrapyardSnippet {
-        width: 135px;
+        width: 133px;
         padding: 3px;
     }
     .shopItem svg text {
