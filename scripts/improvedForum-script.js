@@ -1,3 +1,20 @@
+// Injection 
+if (window.location.hostname.includes("tanktrouble.com")) {
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
+    }
+
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
+    }
+    
+// Improved Forum script
 ForumView.method('checkForUnmoderatedReplies', function(thread, animate) {
     if (Users.highestGmLevel >= UIConstants.ADMIN_LEVEL_APPROVE_THREAD_OR_REPLY) {
         var self = this;
