@@ -1,3 +1,20 @@
+// Injection 
+if (window.location.hostname.includes("tanktrouble.com")) {
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
+    }
+
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
+    }
+
+// Improvements
 TankTrouble.AdminChatLogOverlay.filter = null;
 
 TankTrouble.AdminChatLogOverlay.show = function(params) {
@@ -231,4 +248,4 @@ TankTrouble.AdminChatLogOverlay._createChatMessage = function(chatMessage, conte
         }
     }
 };
-            
+}
