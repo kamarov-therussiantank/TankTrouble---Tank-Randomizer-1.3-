@@ -1,4 +1,20 @@
-    //Classic Mouse script
+// Injection 
+if (window.location.hostname.includes("tanktrouble.com")) {
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
+    }
+
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
+    }
+
+//Classic Mouse script
     Tank.method('_computeRotationSpeed', function() {
         this.rotationSpeed = 0;
         var speedModifier = this.roundModel.getModifier(this.playerId, Constants.MODIFIER_TYPES.SPEED);
@@ -10,13 +26,10 @@
             this.rotationSpeed += Constants.TANK.ROTATION_SPEED * (classicMouseEnabled ? Inputs.turnMultiplier : speedModifier);
         }
     });
-
     Inputs.classMethod('isClassicMouseEnabled', function(playerId) {
         return (playerId == undefined ? true : Inputs.getAssignedInputSetId(playerId) == Inputs.INPUT_TYPES.MOUSE) && localStorage.getItem('classicMouse') == 'true';
     });
-
     Inputs.turnMultiplier = 1;
-
     MouseInputManager.method('update', function() {
         this._super();
         var game = GameManager.getGame();
@@ -101,7 +114,6 @@
         this.storedStates['right'] = rightState;
         this.storedStates['fire'] = fireState;
     });
-
     QualityManager.classMethod('update', function() {
         var time = Date.now();
         if (QualityManager.fpsTime > 0) {
@@ -122,7 +134,6 @@
             }
         }
     });
-
     Inputs.classMethod('update', function() {
         for (var i = 0; i < Inputs.inputManagers.length; ++i) {
             Inputs.inputManagers[i].update();
@@ -136,3 +147,4 @@
             }
         }
     });
+}
