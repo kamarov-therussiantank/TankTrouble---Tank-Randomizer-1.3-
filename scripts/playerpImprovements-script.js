@@ -1,3 +1,20 @@
+// Injection
+if (window.location.hostname.includes("tanktrouble.com")) {
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
+    }
+
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
+    }
+    
+//Improvements 
 TankTrouble.AccountOverlay._initialize = function() {
     this.accountWrapper = $('<div class=\"account centre\"/>');
     this.accountIcon = $('<canvas class=\"icon\" style=\"width: 320px; height: 192px;\"></canvas>');
@@ -285,4 +302,4 @@ TankTrouble.AccountOverlay.hide = function() {
     this.suicides.empty();
     this.accountPlayerId.empty();
 };
-  
+}
