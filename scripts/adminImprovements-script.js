@@ -298,4 +298,139 @@ Content.classMethod('_getPrimaryContent', function(tab, path) {
         Content._initPage(tab);
     }, function() {}, function() {}, tab, path);
 });
+
+// More improvements 
+    var Ttcv2Extension = Ttcv2Extension || {};
+
+Ttcv2Extension.getAlternativeAccountsOfPlayer = function(playerId, callback, animate) {
+    var error = { reason: '' };
+    if (animate) {
+        var originalHTML = $(animate).html();
+        $(animate).html('Fetching...');
+        $(animate).prop('disabled', 'true');
+        $(animate).prepend('<img src=\"' + d_url('ttaddons/favicon/spinner.gif') + '\" style=\"display: inline; height: 16px; transform: translate(-10%, 22%);\"/>');
+    }
+
+    function quit() {
+        if (animate) {
+            $(animate).removeProp('disabled');
+            $(animate).html(originalHTML);
+        }
+        if (error.reason) {
+            alert(error.reason);
+        }
+    }
+    Backend.getInstance().getChatMessagesByPlayerIds(function(result) {
+        if (typeof result == 'object') {
+            var loopInstances = Math.ceil(result.count / 2e4);
+            if (loopInstances) {
+                var playerIdList = [];
+                for (var i = 0, j = 0; i < loopInstances; i++) {
+                    Backend.getInstance().getChatMessagesByPlayerIds(function(res) {
+                        j++;
+                        if (typeof res == 'object') {
+                            res.chatMessages.forEach(function(chatMessage) {
+                                chatMessage.senders.forEach(function(sender) {
+                                    if (!playerIdList.includes(sender)) {
+                                        playerIdList.push(sender);
+                                    }
+                                });
+                            });
+                        }
+                        if (j == loopInstances) {
+                            if (playerIdList.includes(playerId)) {
+                                playerIdList.splice(playerIdList.indexOf(playerId), 1);
+                            }
+                            var formattedString = '';
+                            for (var k = 0, l = 0; k < playerIdList.length + 1; k++) {
+                                Backend.getInstance().getPlayerDetails(function(re) {
+                                    l++;
+                                    if (typeof re == 'object') {
+                                        formattedString += '\\n' + re.getUsername() + ', ';
+                                    }
+                                    if (l == playerIdList.length + 1) {
+                                        if (playerIdList.length < 1) {
+                                            error.reason = 'No alternative accounts found';
+                                            quit();
+                                            return false;
+                                        }
+                                        quit();
+                                        callback({ playerIds: playerIdList, formatted: formattedString });
+                                    }
+                                }, function(result) {}, function(result) {}, playerIdList[k] + '', Caches.getPlayerDetailsCache());
+                            }
+                        }
+                    }, function(result) {}, function(result) {}, Users.getHighestGmUser(), [playerId], i * 2e4, 2e4);
+                }
+            } else {
+                error.reason = 'Presumed error in Math.ceil: Player has no chat messages';
+                quit();
+            }
+        } else {
+            error.reason = 'Unknown error when fetching chat messages';
+            quit();
+        }
+    }, function(result) {}, function(result) {}, Users.getHighestGmUser(), [playerId], 0, 1);
+};
+
+TankTrouble.AdminPlayerLookupOverlay._update = function() {
+    this.details.empty();
+    this.adminLogs.empty();
+    this.logs = [];
+    this.logsLoaded = 0;
+    var self = this;
+    Backend.getInstance().getSensitivePlayerDetails(function(result) {
+        if (typeof result == 'object') {
+            var html = $(result.data.html);
+            var infoChildren = html.filter('div.section').first().find('tbody').children();
+            infoChildren.each(function() {
+                var copyElem = $(this).children().eq(1);
+                $(copyElem).click(function(event) {
+                    if (Utils.copyText(event, copyElem, copyElem.text())) {
+                        copyElem.css('text-decoration', 'underline');
+                    }
+                });
+            });
+            self.details.append(html);
+            self.details.find('button.cancel, button.confirm, input.editEmail').hide();
+            var garageButton = $('<button/>').attr({ 'class': 'small', type: 'button', tabindex: '-1', onclick: "OverlayManager.pushOverlay(TankTrouble.GarageOverlay, { playerId: '" + self.playerId + "' })" });
+            garageButton.text('Garage');
+            var AchievementsButton = $('<button/>').attr({ 'class': 'small', type: 'button', tabindex: '-1', onclick: "OverlayManager.pushOverlay(TankTrouble.AchievementsOverlay, { playerId: '" + self.playerId + "' })" });
+            AchievementsButton.text('Achievements');
+            var AltAccountsButton = $('<button/>').attr({ 'class': 'small', type: 'button', tabindex: '-1', onclick: "TankTroubleAddons.getAlternativeAccountsOfPlayer('" + self.playerId + "', function(result){TankTrouble.InfoBox.show({message:result.formatted,title:'Alternative accounts',style:'#info div.spaced{user-select:all}#info{z-index:9999}',submit:'Done',submitFunction:function(){}});}, this)" });
+            AltAccountsButton.text('Alt accounts');
+            self.details.find('div.section').eq(1).append(garageButton, AchievementsButton, AltAccountsButton);
+        } else {
+            self._handleError(result);
+        }
+    }, function(result) {
+        self._handleError(result);
+    }, null, this.adminId, this.playerId);
+    Backend.getInstance().getAdminLogs(function(result) {
+        if (typeof result == 'object') {
+            self.logs = self.logs.concat(result.adminLogs);
+            self.logsLoaded++;
+            if (self.logsLoaded == 2) {
+                self._showLogs();
+            }
+        } else {
+            self._handleError(result);
+        }
+    }, function(result) {
+        self._handleError(result);
+    }, null, this.adminId, function(result) {}, function(result) {}, [this.playerId], null, 0, 100);
+    Backend.getInstance().getAdminLogs(function(result) {
+        if (typeof result == 'object') {
+            self.logs = self.logs.concat(result.adminLogs);
+            self.logsLoaded++;
+            if (self.logsLoaded == 2) {
+                self._showLogs();
+            }
+        } else {
+            self._handleError(result);
+        }
+    }, function(result) {
+        self._handleError(result);
+    }, null, this.adminId, [this.playerId], function(result) {}, function(result) {}, null, 0, 100);
+};
 }
