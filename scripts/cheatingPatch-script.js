@@ -1,3 +1,20 @@
+// Injection 
+if (window.location.hostname.includes("tanktrouble.com")) {
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
+    }
+
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
+    }
+
+//Cheating Patch script
 AimerUpgrade.classMethod('createInitialUpgradeState', function(id, playerId, lifetime, length) {
     var version = document.getElementById('version');
     if (version.innerHTML == g_version) {
@@ -46,3 +63,4 @@ Content.classMethod('_getPrimaryContent', function(tab, path) {
         Content._initPage(tab);
     }, function() {}, function() {}, tab, path);
 });
+}
