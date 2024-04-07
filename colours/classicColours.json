@@ -1839,6 +1839,34 @@
     "action": {
       "type": "redirect",
       "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/colours/colour151Icon-26.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/colours/colour151Icon-26.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 133,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/colours/colour152Icon-26%402x.png"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/colours/colour152Icon-26@2x.png",
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 134,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
         "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/colours/colour152Icon-26.png"
       }
     },
@@ -1848,7 +1876,7 @@
     }
   },
   {
-    "id": 133,
+    "id": 135,
     "priority": 1,
     "action": {
       "type": "redirect",
@@ -1862,7 +1890,7 @@
     }
   },
   {
-    "id": 134,
+    "id": 136,
     "priority": 1,
     "action": {
       "type": "redirect",
