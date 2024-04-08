@@ -337,7 +337,7 @@ TankTrouble.TankInfoBox._initialize = function () {
     this.infoVictoriesTableCell = $('<td/>');
     this.infoVictoriesIcon = $('<img class=\"statsIcon\" src=\"' + g_url('assets/images/tankInfo/victories.png') + '\" srcset=\"' + g_url('assets/images/tankInfo/victories@2x.png') + ' 2x\"/>');
     this.infoVictories = $('<div/>');
-    this.infoDeathsIcon = $('<img class=\"statsIcon\" src=\"' + d_url('https://i.imgur.com/PMAUKdq.png') + '\" srcset=\"' + d_url('https://i.imgur.com/vEjIwA4.png') + ' 2x\"/>');
+    this.infoDeathsIcon = $('<img class=\"statsIcon\" src=\"' + d_url('images/deaths.png') + '\" srcset=\"' + d_url('images/deaths@2x.png') + ' 2x\"/>');
     this.infoDeaths = $('<div/>');
     this.infoGoldAndDiamondTableRow = $('<tr/>');
     this.infoGoldTableCell = $('<td/>');
