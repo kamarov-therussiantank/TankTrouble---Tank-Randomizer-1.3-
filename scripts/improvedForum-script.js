@@ -15,273 +15,646 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     }
 
     // Improved Forum script
-    ForumView.method('checkForUnmoderatedReplies', function(thread, animate) {
-        if (Users.highestGmLevel >= UIConstants.ADMIN_LEVEL_APPROVE_THREAD_OR_REPLY) {
-            var self = this;
-            Backend.getInstance().getForumReplies(function(result) {
-                if (typeof result == 'object') {
-                    var replies = result.result.data.replies;
-                    if (replies.length > 0) {
-                        for (var i = 0; i < replies.length; i++) {
-                            if (replies[i].approved == false && replies[i].deleted == false) {
-                                i = replies.length;
-                                thread.html.threadlist = $(thread.html.threadlist).addClass('unmoderatedReplies').prop('outerHTML');
-                                self.mergeThread(thread, animate);
-                            }
-                        }
-                    }
-                } else {
-                    self.mergeThread(thread, animate);
-                }
-            }, function(result) {}, function(result) {}, thread.id, Number.MAX_SAFE_INTEGER, 'older', 0, 3);
-        } else {
-            this.mergeThread(thread, animate);
-        }
-    });
+const ranges = {
+	years: 3600 * 24 * 365,
+	months: (365 * 3600 * 24) / 12,
+	weeks: 3600 * 24 * 7,
+	days: 3600 * 24,
+	hours: 3600,
+	minutes: 60,
+	seconds: 1
+};
 
-    ForumView.method('threadListChanged', function(threadList, animate) {
-        this.changeState(ForumView.STATE_THREADLIST);
-        if (this.model.getTrackingNewestThreads()) {
-            Forum.getInstance().startThreadSynchronization(UIConstants.FORUM_THREAD_REFRESH_INTERVAL, !this.suppressNextUpdateAnimation);
-        } else {
-            Forum.getInstance().stopSynchronization(!this.suppressNextUpdateAnimation);
-        }
-        for (var i = 0; i < threadList.length; i++) {
-            this.mergeThread(threadList[i], animate);
-            this.checkForUnmoderatedReplies(threadList[i], animate);
-        }
-        $('.forum .thread[id]').each(function() {
-            var t = $(this).data();
-            for (i = 0; i < threadList.length; i++) {
-                if (threadList[i].id == t.id) {
-                    if (threadList[i].time <= t.time) {
-                        return;
-                    }
-                }
-            }
-            if (animate) {
-                $(this).css('height', $(this).height()).css('min-height', 0).animate({ opacity: 0 }, 300).animate({ height: 0, marginTop: 0 }, 300, function() {
-                    $(this).remove();
-                });
-            } else {
-                $(this).remove();
-            }
-        });
-        var pageCount = Math.ceil(this.model.getThreadCount() / this.model.getThreadRequestSize());
-        var currentPage = Math.floor(pageCount - (this.model.getThreadCount() - this.model.getThreadOffset()) / this.model.getThreadRequestSize() - 1);
-        Forum.log.debug(this.model.getThreadOffset() + '/' + this.model.getThreadCount());
-        Forum.log.debug(currentPage + '/' + pageCount);
-        this.updatePaginator($('.threadsPaginator').first(), currentPage, pageCount, this.threadPageFunctions, false, false, false, !this.suppressNextUpdateAnimation);
-        this.updatePaginator($('.threadsPaginator').last(), currentPage, pageCount, this.threadPageFunctions, false, false, false, !this.suppressNextUpdateAnimation);
-        Forum.getInstance().updateComposeAndStatus(!this.suppressNextUpdateAnimation, true);
-        this.suppressNextUpdateAnimation = false;
-        Forum.log.debug('Pushing thread list length ' + threadList.length);
-        var data = { id: this.model.getCurrentThreadWindowNewestThreadId() };
-        Content.updateTab('forum', '/forum?id=' + data.id, data, this.replaceNextHistory);
-        this.replaceNextHistory = false;
-    });
+/**
+ * Format a timestamp to relative time ago from now
+ * @param date Date object
+ * @returns Time ago
+ */
+const timeAgo = date => {
+	const formatter = new Intl.RelativeTimeFormat('en');
+	const secondsElapsed = (date.getTime() - Date.now()) / 1000;
 
-  // Forum Overview Improvements
-    ForumView.method('mergeReply', function(reply, i, animate) {
-    var inserted = false;
+	for (const key in ranges) {
+		if (ranges[key] < Math.abs(secondsElapsed)) {
+			const delta = secondsElapsed / ranges[key];
+			return formatter.format(Math.ceil(delta), key);
+		}
+	}
 
-    $('.forum .reply').each(function() {
-        var r = $(this).data();
+	return 'now';
+};
 
-        if (reply.id == r.id) {
-            Forum.log.debug('VIEW REPLY UPDATE');
-            var replyHtml = $(reply.html.replylist);
-            var newContent = replyHtml.find('.content');
-            var newDetails = replyHtml.find('.details');
+GM_addStyle(`
+player-name {
+	width: 150px;
+	height: 20px;
+	left: -5px;
+	top: -12px;
+	position: relative;
+	display: block;
+}`);
 
-            if (reply.latestEdit !== null) {
-                $(newDetails).text($(newDetails).html().trim() + ' [Edited ' + Utils.forumTimeDiffToString(reply.time, reply.latestEdit) + ' ago]');
-            }
+// Wide "premium" screen
+GM_addStyle(`
+#content {
+    max-width: 1884px !important;
+    width: calc(100%) !important;
+}
 
-            $(this).find('.content').replaceWith(newContent);
-            $(this).find('.details').replaceWith(newDetails);
-            $(this).removeClass('banned deleted approved moderatable approvable deletable bannable editable likable liked').addClass(replyHtml.attr('class'));
-            $(this).data(reply);
+.horizontalAdSlot,
+.verticalAdSlot,
+#leftBanner,
+#rightBanner,
+#topBanner {
+    display: none !important;
+}
+`);
 
-            inserted = true;
-            return false;
-        } else if (reply.id < r.id) {
-            Forum.log.debug('VIEW REPLY MERGE');
-            var atLeft = (Forum.getInstance().getSelectedThreadReplyOffset() + i) % 2 == 1;
-            var replyHtml = $(reply.html.replylist);
-            var newDetails = replyHtml.find('.details');
+if (!customElements.get('player-name')) {
+	customElements.define('player-name',
 
-            if (reply.latestEdit !== null) {
-                $(newDetails).text($(newDetails).html().trim() + ' [Edited ' + Utils.forumTimeDiffToString(reply.time, reply.latestEdit) + ' ago]');
-            }
+		/**
+		 * Custom HTML element that renders a TankTrouble-style player name
+		 * from the username, width and height attribute
+		 */
+		class PlayerName extends HTMLElement {
 
-            $(replyHtml).find('.details').replaceWith(newDetails);
-            replyHtml.addClass(atLeft ? 'left' : 'right');
+			/**
+			 * Initialize the player name element
+			 */
+			constructor() {
+				super();
 
-            if (animate) {
-                replyHtml.addClass('collapsed');
-            }
+				const shadow = this.attachShadow({ mode: 'closed' });
 
-            replyHtml.data(reply);
+				this.username = this.getAttribute('username') || 'Scrapped';
+				this.width = this.getAttribute('width') || '150';
+				this.height = this.getAttribute('height') || '25';
 
-            [reply.coCreator1, reply.coCreator2].forEach(function(playerId, index) {
-                index = index + 1;
-                if (playerId !== null) {
-                    var coCreatorDiv = $("<div style='position: absolute;'></div>");
-                    var canvas = $("<canvas id='reply-" + reply.id + '-coTank' + index + "'></canvas>");
-                    canvas = canvas[0];
+				// create the internal implementation
+				this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+				this.svg.setAttribute('width', this.width);
+				this.svg.setAttribute('height', this.height);
 
-                    coCreatorDiv.on('mouseup', function(event) {
-                        var position = $(this).offset();
-                        TankTrouble.TankInfoBox.show(position.left + $(this).width() / 2, position.top + $(this).height() / 2, playerId, $(this).width() / 2, $(this).height() / 4)
-                    });
+				this.name = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				this.name.setAttribute('x', '50%');
+				this.name.setAttribute('y', '0');
+				this.name.setAttribute('text-anchor', 'middle');
+				this.name.setAttribute('dominant-baseline', 'text-before-edge');
+				this.name.setAttribute('font-family', 'TankTrouble');
+				this.name.setAttribute('font-weight', 'normal');
+				this.name.setAttribute('font-size', '16');
+				this.name.setAttribute('fill', 'white');
+				this.name.setAttribute('stroke', 'black');
+				this.name.setAttribute('stroke-line-join', 'round');
+				this.name.setAttribute('stroke-width', '2');
+				this.name.setAttribute('paint-order', 'stroke');
+				this.name.textContent = this.username;
 
-                    canvas.width = UIConstants.TANK_ICON_WIDTH_SMALL;
-                    canvas.height = UIConstants.TANK_ICON_HEIGHT_SMALL;
-                    canvas.style.width = UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] * (1 - index / 5) + 'px';
-                    canvas.style.height = UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] * .6 * (1 - index / 5) + 'px';
+				this.svg.appendChild(this.name);
 
-                    coCreatorDiv.css('top', UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] * (index / 10) + 'px');
-                    coCreatorDiv.css('left', (atLeft ? '-' : '') + 60 * (index * .9) + 'px');
+				shadow.appendChild(this.svg);
+			}
 
-                    UITankIcon.loadPlayerTankIcon(canvas, UIConstants.TANK_ICON_SIZES.SMALL, playerId);
-                    coCreatorDiv.append(canvas);
-                    replyHtml.find('.tank').append(coCreatorDiv);
-                }
-            });
+			/**
+			 * Scale the username SVG text when it's in the DOM.
+			 * 
+			 * Bounding boxes will first be calculated right when
+			 * it can be rendered.
+			 */
+			connectedCallback() {
+				const nameWidth = this.name.getComputedTextLength();
+				if (nameWidth > this.width) {
+					// Scale text down to match svg size
+					const newSize = Math.floor((this.width / nameWidth) * 100);
+					this.name.setAttribute('font-size', `${ newSize }%`);
+				}
+			}
 
-            replyHtml.insertBefore($(this));
+		});
+}
 
-            if (animate) {
-                insertedReplyHeight = replyHtml.height();
-                replyHtml.css({ minHeight: 0, height: 0, opacity: 0 });
-                replyHtml.delay(300).animate({ height: insertedReplyHeight }, 300).animate({ opacity: 1 }, 300, function() { $(this).removeAttr('style') });
-                replyHtml.removeClass('collapsed');
-            }
+(() => {
+	/**
+	 * Patch a sprite that doesn't have a .log bound to it
+	 * @param spriteName Name of the sprite in the DOM
+	 * @returns Function wrapper
+	 */
+	const bindLogToSprite = spriteName => {
+		const Sprite = Reflect.get(unsafeWindow, spriteName);
+		if (!Sprite) throw new Error('No sprite in window with name', spriteName);
 
-            inserted = true;
-            return false;
-        }
-    });
+		return function(...args) {
+			const sprite = new Sprite(...args);
 
-    if (!inserted) {
-        Forum.log.debug('VIEW REPLY BOTTOM');
-        var previousReply = $('.forum .reply').last();
-        var atLeft = false;
+			sprite.log = Log.create(spriteName);
 
-        if (previousReply.length > 0) {
-            Forum.log.debug('RELATIVE PLACEMENT');
-            atLeft = previousReply.hasClass('left') ? false : true;
-        } else {
-            Forum.log.debug('ABSOLUTE PLACEMENT');
-            atLeft = (Forum.getInstance().getSelectedThreadReplyOffset() + i) % 2 == 1;
-        }
+			return sprite;
+		};
+	};
 
-        var replyHtml = $(reply.html.replylist);
-        var newDetails = replyHtml.find('.details');
+	Reflect.set(unsafeWindow, 'UIDiamondSprite', bindLogToSprite('UIDiamondSprite'));
+	Reflect.set(unsafeWindow, 'UIGoldSprite', bindLogToSprite('UIGoldSprite'));
+})();
 
-        if (reply.latestEdit !== null) {
-            $(newDetails).text($(newDetails).html().trim() + ' [Edited ' + Utils.forumTimeDiffToString(reply.time, reply.latestEdit) + ' ago]');
-        }
+(() => {
+	GM_addStyle(`
+	@keyframes highlight-thread {
+		50% {
+			border: #a0e900 2px solid;
+			background-color: #dcffcc;
+		}
+	}
+	.forum .thread.highlight .bubble,
+	.forum .reply.highlight .bubble {
+		animation: .5s ease-in 0.3s 2 alternate highlight-thread;
+	}
+	.forum .tanks {
+		position: absolute;
+	}
+	.forum .reply.left .tanks {
+		left: 0;
+	}
+	.forum .reply.right .tanks {
+		right: 0;
+	}
+	.forum .tanks.tankCount2 {
+		transform: scale(0.8);
+	}
+	.forum .tanks.tankCount3 {
+		transform: scale(0.6);
+	}
+	.forum .tank.coCreator1 {
+		position: absolute;
+		transform: translate(-55px, 0px);
+	}
+	.forum .tank.coCreator2 {
+		position: absolute;
+		transform: translate(-110px, 0px);
+	}
+	.forum .reply.right .tank.coCreator1 {
+		position: absolute;
+		transform: translate(55px, 0px);
+	}
+	.forum .reply.right .tank.coCreator2 {
+		position: absolute;
+		transform: translate(110px, 0px);
+	}
+	.forum .share img {
+		display: none;
+	}
+	.forum .thread .share:not(:active) .standard,
+	.forum .thread .share:active .active,
+	.forum .reply .share:not(:active) .standard,
+	.forum .reply .share:active .active {
+		display: inherit;
+	}
+	`);
 
-        $(replyHtml).find('.details').replaceWith(newDetails);
-        replyHtml.addClass(atLeft ? 'left' : 'right');
+	// The jquery SVG plugin does not support the newer paint-order attribute
+	$.svg._attrNames.paintOrder = 'paint-order';
 
-        if (animate) {
-            replyHtml.addClass('collapsed');
-        }
+	/**
+	 * Add tank previews for all thread creators, not just the primary creator
+	 * @param threadOrReply Post data
+	 * @param threadOrReplyElement Parsed post element
+	 */
+	const insertMultipleCreators = (threadOrReply, threadOrReplyElement) => {
+		// Remove original tank preview
+		threadOrReplyElement.find('.tank').remove();
 
-        replyHtml.data(reply);
+		const creators = {
+			...{ creator: threadOrReply.creator },
+			...threadOrReply.coCreator1 && { coCreator1: threadOrReply.coCreator1 },
+			...threadOrReply.coCreator2 && { coCreator2: threadOrReply.coCreator2 }
+		};
+		const creatorsContainer = $('<div/>')
+			.addClass(`tanks tankCount${Object.keys(creators).length}`)
+			.insertBefore(threadOrReplyElement.find('.container'));
 
-        [reply.coCreator1, reply.coCreator2].forEach(function(playerId, index) {
-            index = index + 1;
-            if (playerId !== null) {
-                var coCreatorDiv = $("<div style='position: absolute;'></div>");
-                var canvas = $("<canvas id='reply-" + reply.id + '-coTank' + index + "'></canvas>");
-                canvas = canvas[0];
+		// Render all creator tanks in canvas
+		for (const [creatorType, playerId] of Object.entries(creators)) {
+			const wrapper = document.createElement('div');
+			wrapper.classList.add('tank', creatorType);
 
-                coCreatorDiv.on('mouseup', function(event) {
-                    var position = $(this).offset();
-                    TankTrouble.TankInfoBox.show(position.left + $(this).width() / 2, position.top + $(this).height() / 2, playerId, $(this).width() / 2, $(this).height() / 4)
-                });
+			const canvas = document.createElement('canvas');
+			canvas.width = UIConstants.TANK_ICON_WIDTH_SMALL;
+			canvas.height = UIConstants.TANK_ICON_HEIGHT_SMALL;
+			canvas.style.width = `${UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] }px`;
+			canvas.style.height = `${UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] * 0.6 }px`;
+			canvas.addEventListener('mouseup', () => {
+				const rect = canvas.getBoundingClientRect();
+				const win = canvas.ownerDocument.defaultView;
 
-                canvas.width = UIConstants.TANK_ICON_WIDTH_SMALL;
-                canvas.height = UIConstants.TANK_ICON_HEIGHT_SMALL;
-                canvas.style.width = UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] * (1 - index / 5) + 'px';
-                canvas.style.height = UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] * .6 * (1 - index / 5) + 'px';
+				const top = rect.top + win.scrollY;
+				const left = rect.left + win.scrollX;
 
-                coCreatorDiv.css('top', UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] * (index / 10) + 'px');
-                coCreatorDiv.css('left', (atLeft ? '-' : '') + 32 * (1.5 + index ** 2 / 2.5) + 'px');
+				TankTrouble.TankInfoBox.show(left + (canvas.clientWidth / 2), top + (canvas.clientHeight / 2), playerId, canvas.clientWidth / 2, canvas.clientHeight / 4);
+			});
+			UITankIcon.loadPlayerTankIcon(canvas, UIConstants.TANK_ICON_SIZES.SMALL, playerId);
 
-                UITankIcon.loadPlayerTankIcon(canvas, UIConstants.TANK_ICON_SIZES.SMALL, playerId);
-                coCreatorDiv.append(canvas);
-                replyHtml.find('.tank').append(coCreatorDiv);
-            }
-        });
+			wrapper.append(canvas);
+			creatorsContainer.append(wrapper);
+		}
 
-        replyHtml.appendTo('#repliesContainer');
+		// Render name of primary creator
+		Backend.getInstance().getPlayerDetails(result => {
+			const username = typeof result === 'object' ? Utils.maskUnapprovedUsername(result) : 'Scrapped';
+			const width = UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] + 10;
+			const height = 25;
 
-        if (animate) {
-            insertedReplyHeight = replyHtml.height();
-            replyHtml.css({ minHeight: 0, height: 0, opacity: 0 });
-            replyHtml.delay(300).animate({ height: insertedReplyHeight }, 300).animate({ opacity: 1 }, 300, function() { $(this).removeAttr('style') });
-            replyHtml.removeClass('collapsed');
-        }
-    }
-});
+			const playerName = $(`<player-name username="${ username }" width="${ width }" height="${ height }"></player-name>`);
+			creatorsContainer.find('.tank.creator').append(playerName);
+		}, () => {}, () => {}, creators.creator, Caches.getPlayerDetailsCache());
+	};
 
-ForumView.method('replyUpdated', function(reply) {
-    var existingReply = $('#reply-' + reply.id);
-    var r = existingReply.data();
+	/**
+	 * Scroll a post into view if it's not already
+	 * and highlight it once in view
+	 * @param threadOrReply Parsed post element
+	 */
+	const highlightThreadOrReply = threadOrReply => {
+		const observer = new IntersectionObserver(entries => {
+			const [entry] = entries;
+			const inView = entry.isIntersecting;
 
-    if (r && reply.id == r.id) {
-        Forum.log.debug('VIEW REPLY UPDATE SINGLE');
-        var replyHtml = $(reply.html.replylist);
-        var newContent = replyHtml.find('.content');
-        var newDetails = replyHtml.find('.details');
+			threadOrReply[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+			if (inView) {
+				threadOrReply.addClass('highlight');
 
-        if (reply.latestEdit !== null) {
-            $(newDetails).text($(newDetails).html().trim() + ' [Edited ' + Utils.forumTimeDiffToString(reply.time, reply.latestEdit) + ' ago]');
-        }
+				observer.disconnect();
+			}
+		});
 
-        existingReply.find('.content').replaceWith(newContent);
-        existingReply.find('.details').replaceWith(newDetails);
-        existingReply.removeClass('banned deleted approved moderatable approvable deletable bannable editable likable liked').addClass(replyHtml.attr('class'));
-        existingReply.data(reply);
+		observer.observe(threadOrReply[0]);
+	};
 
-        this.updateSingleBubbleAndActionWidth(existingReply);
-        this.updateModerationTooltip(existingReply);
-        Forum.getInstance().checkCooldown(true);
-    }
-});
+	/**
+	 * Insert a share button to the thread or reply that copies the link to the post to clipboard
+	 * @param threadOrReply Post data
+	 * @param threadOrReplyElement Parsed post element
+	 */
+	const addShare = (threadOrReply, threadOrReplyElement) => {
+		const isReply = Boolean(threadOrReply.threadId);
 
-Utils.classMethod('forumTimeDiffToString', function(now, then) {
-    if (then > now) {
-        return 'no time';
-    } else {
-        var diff = now - then;
-        if (diff > 31536e3) {
-            var years = Math.floor(diff / 31536e3);
-            return years + ' year' + (years != 1 ? 's' : '');
-        } else if (diff > 2678400) {
-            var months = Math.floor(diff / 2678400);
-            return months + ' month' + (months != 1 ? 's' : '');
-        } else if (diff > 604800) {
-            var weeks = Math.floor(diff / 604800);
-            return weeks + ' week' + (weeks != 1 ? 's' : '');
-        } else if (diff > 86400) {
-            var days = Math.floor(diff / 86400);
-            return days + ' day' + (days != 1 ? 's' : '');
-        } else if (diff > 3600) {
-            var hours = Math.floor(diff / 3600);
-            return hours + ' hour' + (hours != 1 ? 's' : '');
-        } else if (diff > 60) {
-            var minutes = Math.floor(diff / 60);
-            return minutes + ' minute' + (minutes != 1 ? 's' : '');
-        } else {
-            var seconds = Math.floor(diff / 1);
-            return seconds + ' second' + (seconds !== 1 ? 's' : '');
-        }
-    }
-});
+		const url = new URL(window.location.href);
+		const wasWindowOpenedFromPostShare = url.searchParams.get('ref') === 'share';
+		if (wasWindowOpenedFromPostShare && isReply) {
+			const urlReplyId = Number(url.searchParams.get('id'));
+			if (urlReplyId === threadOrReply.id) highlightThreadOrReply(threadOrReplyElement);
+		}
+
+		const likeAction = threadOrReplyElement.find('.action.like');
+
+		let shareAction = $('<div class="action share"></div>');
+		const shareActionStandardImage = $('<img class="standard" src="https://i.imgur.com/emJXwew.png" srcset="https://i.imgur.com/UF4gXBk.png 2x"/>');
+		const shareActionActiveImage = $('<img class="active" src="https://i.imgur.com/pNQ0Aja.png" srcset="https://i.imgur.com/Ti3IplV.png 2x"/>');
+
+		shareAction.append([shareActionStandardImage, shareActionActiveImage]);
+		likeAction.after(shareAction);
+
+		// Replies have a duplicate actions container for 
+		// both right and left-facing replies.
+		// So when the share button is appended, there may be multiple
+		// and so we need to realize those instances as well
+		shareAction = threadOrReplyElement.find('.action.share');
+
+		shareAction.tooltipster({
+			position: 'top',
+			offsetY: 5,
+
+			/** Reset tooltipster when mouse leaves */
+			functionAfter: () => {
+				shareAction.tooltipster('content', 'Copy link to clipboard');
+			}
+		});
+		shareAction.tooltipster('content', 'Copy link to clipboard');
+
+		shareAction.on('mouseup', () => {
+			const urlConstruct = new URL('/forum', window.location.origin);
+
+			if (isReply) {
+				urlConstruct.searchParams.set('id', threadOrReply.id);
+				urlConstruct.searchParams.set('threadId', threadOrReply.threadId);
+			} else {
+				urlConstruct.searchParams.set('threadId', threadOrReply.id);
+			}
+
+			urlConstruct.searchParams.set('ref', 'share');
+
+			ClipboardManager.copy(urlConstruct.href);
+
+			shareAction.tooltipster('content', 'Copied!');
+		});
+	};
+
+	/**
+	 * Add text to details that shows when a post was last edited
+	 * @param threadOrReply Post data
+	 * @param threadOrReplyElement Parsed post element
+	 */
+	const addLastEdited = (threadOrReply, threadOrReplyElement) => {
+		const { created, latestEdit } = threadOrReply;
+
+		if (latestEdit) {
+			const details = threadOrReplyElement.find('.bubble .details');
+			const detailsText = details.text();
+			const replyIndex = detailsText.indexOf('-');
+			const lastReply = replyIndex !== -1
+				? ` - ${ detailsText.slice(replyIndex + 1).trim()}`
+				: '';
+
+			// We remake creation time since the timeAgo
+			// function estimates months slightly off
+			// which may result in instances where the
+			// edited happened longer ago than the thread
+			// creation date
+			const createdAgo = timeAgo(new Date(created * 1000));
+			const editedAgo = `, edited ${ timeAgo(new Date(latestEdit * 1000)) }`;
+
+			details.text(`Created ${createdAgo}${editedAgo}${lastReply}`);
+		}
+	};
+
+	/**
+	 * Add anchor tags to links in posts
+	 * @param _threadOrReply Post data
+	 * @param threadOrReplyElement Parsed post element
+	 */
+	const addHyperlinks = (_threadOrReply, threadOrReplyElement) => {
+		const threadOrReplyContent = threadOrReplyElement.find('.bubble .content');
+
+		if (threadOrReplyContent.length) {
+			const urlRegex = /(?<_>https?:\/\/[\w\-_]+(?:\.[\w\-_]+)+(?:[\w\-.,@?^=%&amp;:/~+#]*[\w\-@?^=%&amp;/~+#])?)/gu;
+			const messageWithLinks = threadOrReplyContent.html().replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+			threadOrReplyContent.html(messageWithLinks);
+		}
+	};
+
+	/**
+	 * Add extra features to a thread or reply
+	 * @param threadOrReply Post data
+	 * @param threadOrReplyElement
+	 */
+	const addFeaturesToThreadOrReply = (threadOrReply, threadOrReplyElement) => {
+		insertMultipleCreators(threadOrReply, threadOrReplyElement);
+		addLastEdited(threadOrReply, threadOrReplyElement);
+		addShare(threadOrReply, threadOrReplyElement);
+		addHyperlinks(threadOrReply, threadOrReplyElement);
+	};
+
+	/**
+	 *
+	 * @param threadOrReply
+	 */
+	const handleThreadOrReply = threadOrReply => {
+		if (threadOrReply === null) return;
+
+		const [key] = Object.keys(threadOrReply.html);
+		const html = threadOrReply.html[key];
+
+		if (typeof html === 'string') {
+			const threadOrReplyElement = $($.parseHTML(html));
+
+			addFeaturesToThreadOrReply(threadOrReply, threadOrReplyElement);
+			threadOrReply.html[key] = threadOrReplyElement;
+			threadOrReply.html.backup = html;
+		} else if (html instanceof $) {
+			// For some reason, the post breaks if it's already
+			// been parsed through here. Therefore, we pull
+			// from the backup html we set, and re-apply the changes
+			const threadOrReplyElement = $($.parseHTML(threadOrReply.html.backup));
+
+			addFeaturesToThreadOrReply(threadOrReply, threadOrReplyElement);
+			threadOrReply.html[key] = threadOrReplyElement;
+		}
+	};
+
+	const threadListChanged = ForumView.getMethod('threadListChanged');
+	ForumView.method('threadListChanged', function(...args) {
+		const threadList = args.shift();
+		for (const thread of threadList) handleThreadOrReply(thread);
+
+		const result = threadListChanged.apply(this, [threadList, ...args]);
+		return result;
+	});
+
+	const replyListChanged = ForumView.getMethod('replyListChanged');
+	ForumView.method('replyListChanged', function(...args) {
+		const replyList = args.shift();
+		for (const thread of replyList) handleThreadOrReply(thread);
+
+		const result = replyListChanged.apply(this, [replyList, ...args]);
+		return result;
+	});
+
+	const getSelectedThread = ForumModel.getMethod('getSelectedThread');
+	ForumModel.method('getSelectedThread', function(...args) {
+		const result = getSelectedThread.apply(this, [...args]);
+
+		handleThreadOrReply(result);
+
+		return result;
+	});
+})();
+
+(() => {
+	Loader.interceptFunction(TankTrouble.AccountOverlay, '_initialize', (original, ...args) => {
+		original(...args);
+
+		TankTrouble.AccountOverlay.accountCreatedText = $('<div></div>');
+		TankTrouble.AccountOverlay.accountCreatedText.insertAfter(TankTrouble.AccountOverlay.accountHeadline);
+	});
+
+	Loader.interceptFunction(TankTrouble.AccountOverlay, 'show', (original, ...args) => {
+		original(...args);
+
+		Backend.getInstance().getPlayerDetails(result => {
+			if (typeof result === 'object') {
+				const created = new Date(result.getCreated() * 1000);
+				const formatted = new Intl.DateTimeFormat('en-GB', { dateStyle: 'full' }).format(created);
+
+				TankTrouble.AccountOverlay.accountCreatedText.text(`Created: ${formatted} (${timeAgo(created)})`);
+			}
+		}, () => {}, () => {}, TankTrouble.AccountOverlay.playerId, Caches.getPlayerDetailsCache());
+	});
+})();
+
+(() => {
+	/**
+	 * Determine player's admin state
+	 * @param playerDetails Player details
+	 * @returns -1 for retired admin, 0 for non-admin, 1 for admin
+	 */
+	const getAdminState = playerDetails => {
+		const isAdmin = playerDetails.getGmLevel() >= UIConstants.ADMIN_LEVEL_PLAYER_LOOKUP;
+
+		if (isAdmin) return 1;
+		else if (TankTrouble.WallOfFame.admins.includes(playerDetails.getUsername())) return -1;
+		return 0;
+	};
+
+	/**
+	 * Prepend admin details to username
+	 * @param usernameParts Transformable array for the username
+	 * @param playerDetails Player details
+	 * @returns Mutated username parts
+	 */
+	const maskUsernameByAdminState = (usernameParts, playerDetails) => {
+		const adminState = getAdminState(playerDetails);
+
+		if (adminState === 1) usernameParts.unshift(`(GM${ playerDetails.getGmLevel() }) `);
+		else if (adminState === -1) usernameParts.unshift('(Retd.) ');
+
+		return usernameParts;
+	};
+
+	/**
+	 * Mask username if not yet approved
+	 * If the user or an admin is logged in
+	 * locally, then still show the username
+	 * @param usernameParts Transformable array for the username
+	 * @param playerDetails Player details
+	 * @returns Mutated username parts
+	 */
+	const maskUnapprovedUsername = (usernameParts, playerDetails) => {
+		if (!playerDetails.getUsernameApproved()) {
+			const playerLoggedIn = Users.isAnyUser(playerDetails.getPlayerId());
+			const anyAdminLoggedIn = Users.getHighestGmLevel() >= UIConstants.ADMIN_LEVEL_PLAYER_LOOKUP;
+
+			if (playerLoggedIn || anyAdminLoggedIn) {
+				usernameParts.unshift('× ');
+				usernameParts.push(playerDetails.getUsername(), ' ×');
+			} else {
+				usernameParts.length = 0;
+				usernameParts.push('× × ×');
+			}
+		} else {
+			usernameParts.push(playerDetails.getUsername());
+		}
+
+		return usernameParts;
+	};
+
+	/**
+	 * Transforms the player's username
+	 * depending on parameters admin and username approved
+	 * @param playerDetails Player details
+	 * @returns New username
+	 */
+	const transformUsername = playerDetails => {
+		const usernameParts = [];
+
+		maskUnapprovedUsername(usernameParts, playerDetails);
+		maskUsernameByAdminState(usernameParts, playerDetails);
+
+		return usernameParts.join('');
+	};
+
+	Utils.classMethod('maskUnapprovedUsername', playerDetails => transformUsername(playerDetails));
+})();
+
+(() => {
+	GM_addStyle(`
+	.walletIcon {
+	  object-fit: contain;
+	  margin-right: 6px;
+	}
+	`);
+
+	Loader.interceptFunction(TankTrouble.VirtualShopOverlay, '_initialize', (original, ...args) => {
+		original(...args);
+
+		// Initialize wallet elements
+		TankTrouble.VirtualShopOverlay.walletGold = $("<div><button class='medium disabled' style='display: flex;'>Loading ...</button></div>");
+		TankTrouble.VirtualShopOverlay.walletDiamonds = $("<div><button class='medium disabled' style='display: flex;'>Loading ...</button></div>");
+		TankTrouble.VirtualShopOverlay.navigation.append([TankTrouble.VirtualShopOverlay.walletGold, TankTrouble.VirtualShopOverlay.walletDiamonds]);
+	});
+
+	Loader.interceptFunction(TankTrouble.VirtualShopOverlay, 'show', (original, ...args) => {
+		original(...args);
+
+		const [params] = args;
+		Backend.getInstance().getCurrency(result => {
+			if (typeof result === 'object') {
+				// Set wallet currency from result
+				const goldButton = TankTrouble.VirtualShopOverlay.walletGold.find('button').empty();
+				const diamondsButton = TankTrouble.VirtualShopOverlay.walletDiamonds.find('button').empty();
+
+				Utils.addImageWithClasses(goldButton, 'walletIcon', 'assets/images/virtualShop/gold.png');
+				goldButton.append(result.getGold());
+				Utils.addImageWithClasses(diamondsButton, 'walletIcon', 'assets/images/virtualShop/diamond.png');
+				diamondsButton.append(result.getDiamonds());
+			}
+		}, () => {}, () => {}, params.playerId, Caches.getCurrencyCache());
+	});
+})();
+
+(() => {
+	Loader.interceptFunction(TankTrouble.TankInfoBox, '_initialize', (original, ...args) => {
+		original(...args);
+
+		// Initialize death info elements
+		TankTrouble.TankInfoBox.infoDeathsDiv = $('<tr/>');
+		TankTrouble.TankInfoBox.infoDeathsIcon = $('<img class="statsIcon" src="https://i.imgur.com/PMAUKdq.png" srcset="https://i.imgur.com/vEjIwA4.png 2x"/>');
+		TankTrouble.TankInfoBox.infoDeaths = $('<div/>');
+
+		// Align to center
+		TankTrouble.TankInfoBox.infoDeathsDiv.css({
+			display: 'flex',
+			'align-items': 'center',
+			margin: '0 auto',
+			width: 'fit-content'
+		});
+
+		TankTrouble.TankInfoBox.infoDeathsDiv.tooltipster({
+			position: 'left',
+			offsetX: 5
+		});
+
+		TankTrouble.TankInfoBox.infoDeathsDiv.append(TankTrouble.TankInfoBox.infoDeathsIcon);
+		TankTrouble.TankInfoBox.infoDeathsDiv.append(TankTrouble.TankInfoBox.infoDeaths);
+		TankTrouble.TankInfoBox.infoDeathsDiv.insertAfter(TankTrouble.TankInfoBox.infoTable);
+
+		TankTrouble.TankInfoBox.infoDeaths.svg({
+			settings: {
+				width: UIConstants.TANK_INFO_MAX_NUMBER_WIDTH,
+				height: 34
+			}
+		});
+		TankTrouble.TankInfoBox.infoDeathsSvg = TankTrouble.TankInfoBox.infoDeaths.svg('get');
+	});
+
+	Loader.interceptFunction(TankTrouble.TankInfoBox, 'show', (original, ...args) => {
+		original(...args);
+
+		TankTrouble.TankInfoBox.infoDeathsDiv.tooltipster('content', 'Deaths');
+		TankTrouble.TankInfoBox.infoDeathsSvg.clear();
+
+		const [,, playerId] = args;
+
+		Backend.getInstance().getPlayerDetails(result => {
+			const deaths = typeof result === 'object' ? result.getDeaths() : 'N/A';
+
+			const deathsText = TankTrouble.TankInfoBox.infoDeathsSvg.text(1, 22, deaths.toString(), {
+				textAnchor: 'start',
+				fontFamily: 'Arial Black',
+				fontSize: 14,
+				fill: 'white',
+				stroke: 'black',
+				strokeLineJoin: 'round',
+				strokeWidth: 3,
+				letterSpacing: 1,
+				paintOrder: 'stroke'
+			});
+			const deathsLength = Utils.measureSVGText(deaths.toString(), {
+				fontFamily: 'Arial Black',
+				fontSize: 14
+			});
+
+			scaleAndTranslate = Utils.getSVGScaleAndTranslateToFit(UIConstants.TANK_INFO_MAX_NUMBER_WIDTH, deathsLength + 7, 34, 'left');
+			TankTrouble.TankInfoBox.infoDeathsSvg.configure(deathsText, { transform: scaleAndTranslate });
+		}, () => {}, () => {}, playerId, Caches.getPlayerDetailsCache());
+	});
+})();
 }
