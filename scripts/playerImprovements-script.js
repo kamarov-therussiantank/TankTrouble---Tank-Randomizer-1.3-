@@ -744,4 +744,8 @@ TankTrouble.TankInfoBox._initialize = function () {
     });
     this.info.hide()
 };
+
+    function d_url(path) {
+        return path;
+    };
   }
