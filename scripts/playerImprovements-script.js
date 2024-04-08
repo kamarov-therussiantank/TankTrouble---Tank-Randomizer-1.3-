@@ -747,5 +747,5 @@ TankTrouble.TankInfoBox._initialize = function () {
 
     function d_url(path) {
         return path;
-    };
+    }
   }
