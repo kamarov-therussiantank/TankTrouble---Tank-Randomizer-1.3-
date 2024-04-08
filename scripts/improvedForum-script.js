@@ -424,7 +424,7 @@ if (!customElements.get('player-name')) {
 
 		return result;
 	});
-})
+});
 
 (() => {
 	Loader.interceptFunction(TankTrouble.AccountOverlay, '_initialize', (original, ...args) => {
