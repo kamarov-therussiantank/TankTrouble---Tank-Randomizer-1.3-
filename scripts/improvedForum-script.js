@@ -14,6 +14,8 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         document.documentElement.appendChild(scriptElement);
     }
 
+const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
+
     // Improved Forum script
 const ranges = {
 	years: 3600 * 24 * 365,
@@ -25,11 +27,6 @@ const ranges = {
 	seconds: 1
 };
 
-/**
- * Format a timestamp to relative time ago from now
- * @param date Date object
- * @returns Time ago
- */
 const timeAgo = date => {
 	const formatter = new Intl.RelativeTimeFormat('en');
 	const secondsElapsed = (date.getTime() - Date.now()) / 1000;
@@ -44,7 +41,8 @@ const timeAgo = date => {
 	return 'now';
 };
 
-GM_addStyle(`
+if (site.includes("tanktrouble.com")) {
+   addCustomStyle(`
 player-name {
 	width: 150px;
 	height: 20px;
@@ -55,7 +53,8 @@ player-name {
 }`);
 
 // Wide "premium" screen
-GM_addStyle(`
+if (site.includes("tanktrouble.com")) {
+   addCustomStyle(`
 #content {
     max-width: 1884px !important;
     width: calc(100%) !important;
@@ -158,7 +157,8 @@ if (!customElements.get('player-name')) {
 })();
 
 (() => {
-	GM_addStyle(`
+	if (site.includes("tanktrouble.com")) {
+   addCustomStyle(`
 	@keyframes highlight-thread {
 		50% {
 			border: #a0e900 2px solid;
@@ -211,14 +211,9 @@ if (!customElements.get('player-name')) {
 	}
 	`);
 
-	// The jquery SVG plugin does not support the newer paint-order attribute
 	$.svg._attrNames.paintOrder = 'paint-order';
 
-	/**
-	 * Add tank previews for all thread creators, not just the primary creator
-	 * @param threadOrReply Post data
-	 * @param threadOrReplyElement Parsed post element
-	 */
+// Multiple Creators and threadOrReply script
 	const insertMultipleCreators = (threadOrReply, threadOrReplyElement) => {
 		// Remove original tank preview
 		threadOrReplyElement.find('.tank').remove();
@@ -257,7 +252,7 @@ if (!customElements.get('player-name')) {
 			creatorsContainer.append(wrapper);
 		}
 
-		// Render name of primary creator
+		// Render name
 		Backend.getInstance().getPlayerDetails(result => {
 			const username = typeof result === 'object' ? Utils.maskUnapprovedUsername(result) : 'Scrapped';
 			const width = UIConstants.TANK_ICON_RESOLUTIONS[UIConstants.TANK_ICON_SIZES.SMALL] + 10;
@@ -268,11 +263,7 @@ if (!customElements.get('player-name')) {
 		}, () => {}, () => {}, creators.creator, Caches.getPlayerDetailsCache());
 	};
 
-	/**
-	 * Scroll a post into view if it's not already
-	 * and highlight it once in view
-	 * @param threadOrReply Parsed post element
-	 */
+// Some highlights 
 	const highlightThreadOrReply = threadOrReply => {
 		const observer = new IntersectionObserver(entries => {
 			const [entry] = entries;
@@ -289,11 +280,7 @@ if (!customElements.get('player-name')) {
 		observer.observe(threadOrReply[0]);
 	};
 
-	/**
-	 * Insert a share button to the thread or reply that copies the link to the post to clipboard
-	 * @param threadOrReply Post data
-	 * @param threadOrReplyElement Parsed post element
-	 */
+// Share 
 	const addShare = (threadOrReply, threadOrReplyElement) => {
 		const isReply = Boolean(threadOrReply.threadId);
 
@@ -348,11 +335,7 @@ if (!customElements.get('player-name')) {
 		});
 	};
 
-	/**
-	 * Add text to details that shows when a post was last edited
-	 * @param threadOrReply Post data
-	 * @param threadOrReplyElement Parsed post element
-	 */
+// Some more details
 	const addLastEdited = (threadOrReply, threadOrReplyElement) => {
 		const { created, latestEdit } = threadOrReply;
 
@@ -364,11 +347,7 @@ if (!customElements.get('player-name')) {
 				? ` - ${ detailsText.slice(replyIndex + 1).trim()}`
 				: '';
 
-			// We remake creation time since the timeAgo
-			// function estimates months slightly off
-			// which may result in instances where the
-			// edited happened longer ago than the thread
-			// creation date
+// Creation date blah blah
 			const createdAgo = timeAgo(new Date(created * 1000));
 			const editedAgo = `, edited ${ timeAgo(new Date(latestEdit * 1000)) }`;
 
@@ -376,11 +355,7 @@ if (!customElements.get('player-name')) {
 		}
 	};
 
-	/**
-	 * Add anchor tags to links in posts
-	 * @param _threadOrReply Post data
-	 * @param threadOrReplyElement Parsed post element
-	 */
+// Some anchor link tags
 	const addHyperlinks = (_threadOrReply, threadOrReplyElement) => {
 		const threadOrReplyContent = threadOrReplyElement.find('.bubble .content');
 
@@ -391,11 +366,7 @@ if (!customElements.get('player-name')) {
 		}
 	};
 
-	/**
-	 * Add extra features to a thread or reply
-	 * @param threadOrReply Post data
-	 * @param threadOrReplyElement
-	 */
+// Extra features 
 	const addFeaturesToThreadOrReply = (threadOrReply, threadOrReplyElement) => {
 		insertMultipleCreators(threadOrReply, threadOrReplyElement);
 		addLastEdited(threadOrReply, threadOrReplyElement);
@@ -403,10 +374,7 @@ if (!customElements.get('player-name')) {
 		addHyperlinks(threadOrReply, threadOrReplyElement);
 	};
 
-	/**
-	 *
-	 * @param threadOrReply
-	 */
+
 	const handleThreadOrReply = threadOrReply => {
 		if (threadOrReply === null) return;
 
@@ -481,11 +449,7 @@ if (!customElements.get('player-name')) {
 })();
 
 (() => {
-	/**
-	 * Determine player's admin state
-	 * @param playerDetails Player details
-	 * @returns -1 for retired admin, 0 for non-admin, 1 for admin
-	 */
+// Determine admin state
 	const getAdminState = playerDetails => {
 		const isAdmin = playerDetails.getGmLevel() >= UIConstants.ADMIN_LEVEL_PLAYER_LOOKUP;
 
@@ -494,12 +458,7 @@ if (!customElements.get('player-name')) {
 		return 0;
 	};
 
-	/**
-	 * Prepend admin details to username
-	 * @param usernameParts Transformable array for the username
-	 * @param playerDetails Player details
-	 * @returns Mutated username parts
-	 */
+// Prepend admin details to username
 	const maskUsernameByAdminState = (usernameParts, playerDetails) => {
 		const adminState = getAdminState(playerDetails);
 
@@ -509,14 +468,7 @@ if (!customElements.get('player-name')) {
 		return usernameParts;
 	};
 
-	/**
-	 * Mask username if not yet approved
-	 * If the user or an admin is logged in
-	 * locally, then still show the username
-	 * @param usernameParts Transformable array for the username
-	 * @param playerDetails Player details
-	 * @returns Mutated username parts
-	 */
+// Mask usernames
 	const maskUnapprovedUsername = (usernameParts, playerDetails) => {
 		if (!playerDetails.getUsernameApproved()) {
 			const playerLoggedIn = Users.isAnyUser(playerDetails.getPlayerId());
@@ -536,12 +488,6 @@ if (!customElements.get('player-name')) {
 		return usernameParts;
 	};
 
-	/**
-	 * Transforms the player's username
-	 * depending on parameters admin and username approved
-	 * @param playerDetails Player details
-	 * @returns New username
-	 */
 	const transformUsername = playerDetails => {
 		const usernameParts = [];
 
@@ -555,7 +501,8 @@ if (!customElements.get('player-name')) {
 })();
 
 (() => {
-	GM_addStyle(`
+	if (site.includes("tanktrouble.com")) {
+   addCustomStyle(``
 	.walletIcon {
 	  object-fit: contain;
 	  margin-right: 6px;
