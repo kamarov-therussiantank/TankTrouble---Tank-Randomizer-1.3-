@@ -143,7 +143,21 @@ if (site.includes("tanktrouble.com")) {
     #statisticsSnippet .content * {
       margin: 3px 2px 3px 2px;
     }
+    #statisticsSnippet .content #visits {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-family: 'Commodore';
+    }
     #statisticsSnippet .content #onlinePlayerCount {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-family: 'Commodore';
+    }
+    #statisticsSnippet .content #tankOwnersCount {
       font-size: 15px;
       font-weight: 600;
       margin-top: 5px;
@@ -154,7 +168,7 @@ if (site.includes("tanktrouble.com")) {
       font-size: 7px;
       font-weight: 600;
       margin-top: 5px;
-      margin-bottom: 2px;
+      margin-bottom: 10px;
       font-family: 'Commodore';
     }
     #statisticsSnippet .managedNavigation {
@@ -167,19 +181,22 @@ if (site.includes("tanktrouble.com")) {
   </style>
     <div class="content">
       <div class="header">Statistics</div>
+      <div style="color: #a4a4a4;">Visits</div>
+      <div id="visits">...</div>
+      <div style="color: #a4a4a4;">Tank Owners</div>
+      <div id="tankOwnersCount">...</div>
       <div style="color: #a4a4a4;">Players Online</div>
       <div id="onlinePlayerCount">...</div>
       <div style="color: #a4a4a4;">Games Made</div>
       <div id="onlineGameCount">Loading...</div>
-      <div class="managedNavigation" onclick="TankTrouble.Statistics._switchType(this)"></div>
-    </div>
+      </div>
   `);
 
 //Script for Statistics Snippet
 TankTrouble.Statistics.type = "global";
   ClientManager.classMethod("_attemptToConnectToServer", function(serverId) {
     ClientManager.log.debug("Attempt to connect to server initiated: " + serverId);
-    ClientManager._getSelectedServerStats(serverId, function(success, serverId, latency, gameCount, playerCount, message) {
+    ClientManager._getSelectedServerStats(serverId, function(success, serverId, latency, gameCount, playerCount, visits, tankOwners, message) {
       if (ClientManager.client.getState() === TTClient.STATES.UNCONNECTED) {
         if (success) {
           TankTrouble.Statistics._updateStatistics(serverId);
@@ -209,6 +226,8 @@ TankTrouble.Statistics.type = "global";
       Backend.getInstance().getStatistics(function(result) {
         console.log("Server response:", result); // Log the server response for debugging
         if (typeof result == "object") {
+          $("#visits").text(response.result.data.visits);
+          self._updateNumber($("#tankOwnersCount"), rerult.tankOwners, "player");
           self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
           self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
           $("#statisticsSnippet").css("display", "inline-block");
