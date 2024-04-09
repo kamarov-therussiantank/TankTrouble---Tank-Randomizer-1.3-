@@ -144,7 +144,7 @@ if (site.includes("tanktrouble.com")) {
       margin: 3px 2px 3px 2px;
     }
     #statisticsSnippet .content #visits {
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 600;
       margin-top: 5px;
       margin-bottom: 5px;
@@ -158,7 +158,7 @@ if (site.includes("tanktrouble.com")) {
       font-family: 'Commodore';
     }
     #statisticsSnippet .content #tankOwnersCount {
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 600;
       margin-top: 5px;
       margin-bottom: 5px;
