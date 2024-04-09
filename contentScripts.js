@@ -226,8 +226,8 @@ TankTrouble.Statistics.type = "global";
       Backend.getInstance().getStatistics(function(result) {
         console.log("Server response:", result); // Log the server response for debugging
         if (typeof result == "object") {
-          $("#visits").text(response.result.data.visits);
-          self._updateNumber($("#tankOwnersCount"), rerult.tankOwners, "player");
+          $("#visits").text(result.visits);
+          $("#tankOwnersCount").text(result.tankOwners); 
           self._updateNumber($("#onlinePlayerCount"), result.onlineStatistics.playerCount);
           self._updateNumber($("#onlineGameCount"), result.onlineStatistics.gameCount, "game");
           $("#statisticsSnippet").css("display", "inline-block");
