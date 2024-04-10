@@ -131,7 +131,7 @@ if (site.includes("tanktrouble.com")) {
       border-radius: 3px;
       border: #bababa 2px solid;
       margin-bottom: 5px;
-      padding: 3px 0 5px 0;
+      padding: 5px 0 3px 0;
       text-shadow: -1px -1px 0 #000,  
                     1px -1px 0 #000,
                    -1px  1px 0 #000,
