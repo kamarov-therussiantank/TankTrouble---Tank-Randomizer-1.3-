@@ -111,6 +111,23 @@ if (site.includes("tanktrouble.com")) {
     .box .tab.left {
         background: #999;
     }
+     .achievement.unlockedAndSeen {
+        background: linear-gradient(to bottom, #ccc, #666);
+        box-shadow: #000 0px 3px 3px 0px;
+        text-shadow: none;
+        color: #000;
+    }
+    .achievement {
+        background: #666;
+        text-shadow: none;
+        color: #fff;
+    }
+    .achievement .progress {
+        background: linear-gradient(to bottom, #e5c766, #a68826);
+    }
+    .note {
+        background: #000;
+    }
    `);
    
    // Create a custom HTML element
