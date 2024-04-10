@@ -126,7 +126,7 @@ if (site.includes("tanktrouble.com")) {
         background: linear-gradient(to bottom, #e5c766, #a68826);
     }
     .note {
-        background: #000;
+        color: #000;
     }
    `);
    
