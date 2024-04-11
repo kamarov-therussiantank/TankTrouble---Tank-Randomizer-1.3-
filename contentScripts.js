@@ -157,7 +157,6 @@ if (site.includes("tanktrouble.com")) {
 #overlay input[type="checkbox"]:checked+label::before {
     border-color: #000000 !important;
     background: limegreen;
-    content: '\00d7';
 }
    `);
    
