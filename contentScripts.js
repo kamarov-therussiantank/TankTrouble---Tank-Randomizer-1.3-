@@ -48,6 +48,19 @@ if (site.includes("tanktrouble.com")) {
        text-shadow: none;
        stroke: none;
     }
+    .shopItem {
+       background: #ccc;
+       border-radius: 3px;
+       border: #666 3px solid;
+       box-shadow: #000 0 3px 5px 0;
+    }
+    .shopItem.info button.info {
+    width: 34px;
+    float: right;
+    right: 10px;
+    color: white;
+    background: #3159bf;
+    }
     #teaser-25 .mode {
         color: red;
     }
