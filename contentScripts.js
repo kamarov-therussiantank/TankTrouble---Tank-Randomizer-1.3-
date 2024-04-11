@@ -20,7 +20,7 @@ const site = window.location.hostname;
 if (site.includes("tanktrouble.com")) {
    addCustomStyle(`
     .snippet {
-        background: linear-gradient(to bottom, #fff, #fff);
+        background: #fff;
         border: #333 2px solid;
         border-radius: 2px;
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
