@@ -19,15 +19,13 @@ TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual
 
 
 - **Classic UI:** Old Classic Tank Trouble is nearly back!
-
+<img src="https://github.com/kamarov-therussiantank/TTCV2/blob/main/header/tab1Selected.png">
 
 - **Classic Mouse:** Let that tank go crazy
 
   
 - **More Games:** Asits name says, more games in servers
 
-  
-<img src="https://github.com/kamarov-therussiantank/TTCV2/blob/main/header/tab1Selected.png">
 
 
 More features are coming soon!!!
