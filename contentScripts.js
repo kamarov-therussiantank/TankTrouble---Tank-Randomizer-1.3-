@@ -1,4 +1,4 @@
-// TODO: Upgrade Classic UI
+
 // TODO: Add more matte versions of paints and add matte versions of spray cans
 // TODO: Classic Lobby Settings (local only), Leaderboard
 
