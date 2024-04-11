@@ -49,7 +49,7 @@ if (site.includes("tanktrouble.com")) {
        stroke: none;
     }
     .shopItem {
-       background: #ccc;
+       background: #aaa;
        border-radius: 3px;
        border: #666 3px solid;
        box-shadow: #000 0 3px 5px 0;
@@ -91,11 +91,11 @@ if (site.includes("tanktrouble.com")) {
                       1px  1px 0 #000;
     }
     #overlay .newGame .premium {
-        background: #aaa;
-        border: #000 8px solid;
-        border-radius: 0px;
-        box-shadow: 0 5px 7px 0 rgba(0,0,0, .5)
-    }
+    background: #aaa;
+    border: #666 4px solid;
+    border-radius: 0px;
+    box-shadow: 0 5px 7px 0 rgba(0,0,0, .5);
+   }
     #overlay .messages .message {
         background: linear-gradient(to bottom, #3ee64c, #2a9133);
         color: #fff;
@@ -139,6 +139,26 @@ if (site.includes("tanktrouble.com")) {
     .note {
         color: #000;
     }
+    #overlay input[type="checkbox"]+label::before {
+    content: '';
+    background: red;
+    border: 3px solid black;
+    transition: background .3s;
+    border-radius: 2px;
+    font-size: 35px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+#overlay input[type="checkbox"]:checked+label::before {
+    border-color: #000000 !important;
+    background: limegreen;
+    content: '\00d7';
+}
    `);
    
    // Create a custom HTML element
