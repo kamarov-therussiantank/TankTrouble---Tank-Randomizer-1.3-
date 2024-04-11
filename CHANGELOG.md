@@ -1,4 +1,4 @@
-2024.1.5 - Extension launched, bringing our most loved paints back in game, matte paints.
+*2024.1.5* - Extension launched, bringing our most loved paints back in game, matte paints.
 
 2024.1.12 - Some old tank parts have been found, what could I do with them? Hehe, why not, old tanks are back! With a little rework, in order to keep them functional. And for even better mayhem in mazes, Classic Mazes spice it up.
 
