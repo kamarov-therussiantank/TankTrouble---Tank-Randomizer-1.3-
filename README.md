@@ -24,7 +24,7 @@ TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual
 - **Classic Mouse:** Let that tank go crazy
 
   
-- **More Games:** Asits name says, more games in servers
+- **More Games:** As its name says, more games in servers
 
 
 
