@@ -308,7 +308,7 @@ Ttcv2Extension.getAlternativeAccountsOfPlayer = function(playerId, callback, ani
         var originalHTML = $(animate).html();
         $(animate).html('Fetching...');
         $(animate).prop('disabled', 'true');
-        $(animate).prepend('<img src=\"' + d_url('ttaddons/favicon/spinner.gif') + '\" style=\"display: inline; height: 16px; transform: translate(-10%, 22%);\"/>');
+        $(animate).prepend('<img src=\"' + d_url('images/spinner.gif') + '\" style=\"display: inline; height: 16px; transform: translate(-10%, 22%);\"/>');
     }
 
     function quit() {
