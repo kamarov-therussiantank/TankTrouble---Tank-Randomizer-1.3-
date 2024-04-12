@@ -1,10 +1,7 @@
-
 // TODO: Add more matte versions of paints and add matte versions of spray cans
 // TODO: Classic Lobby Settings (local only), Leaderboard
-
 // Function to dynamically add custom CSS
 const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
-
 // Function to create a custom HTML element
 function createCustomElement(tag, attr_tag, attr_name, value) {
   const custom_element = document.createElement(tag);
@@ -12,10 +9,8 @@ function createCustomElement(tag, attr_tag, attr_name, value) {
   custom_element.innerHTML = value;
   document.getElementById('secondaryContent').appendChild(custom_element);
 }
-
 // Get the hostname of the current website
 const site = window.location.hostname;
-
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
    addCustomStyle(`
@@ -169,9 +164,8 @@ if (site.includes("tanktrouble.com")) {
 #topBanner {
     display: none !important;
 }
-`);
    `);
-   
+
    // Create a custom HTML element
    createCustomElement('div', 'id', 'statisticsSnippet', `
    <style>
@@ -250,7 +244,6 @@ if (site.includes("tanktrouble.com")) {
       <div id="onlineGameCount">Loading...</div>
       </div>
   `);
-
 //Script for Statistics Snippet
 TankTrouble.Statistics.type = "global";
   ClientManager.classMethod("_attemptToConnectToServer", function(serverId) {
