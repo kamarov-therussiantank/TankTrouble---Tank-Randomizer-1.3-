@@ -433,4 +433,35 @@ TankTrouble.AdminPlayerLookupOverlay._update = function() {
         self._handleError(result);
     }, null, this.adminId, [this.playerId], function(result) {}, function(result) {}, null, 0, 100);
 };
+
+    /**
+ * Prepend admin details to username
+ * @param usernameParts Transformable array for the username
+ * @param playerDetails Player details
+ * @returns Mutated username parts
+ */
+const maskUsernameByAdminState = (usernameParts, playerDetails) => {
+    const adminState = getAdminState(playerDetails);
+
+    if (adminState === 1) {
+        const accessoryImg = document.createElement('img');
+        const isHighResolution = window.devicePixelRatio > 1;
+        
+        // Set the image source based on resolution
+        accessoryImg.src = isHighResolution ? 'scripts/accessory/badge1-140.png' : 'scripts/accessory/badge1-140@2x.png';
+        accessoryImg.src = isHighResolution ? 'scripts/accessory/badge1-200.png' : 'scripts/accessory/badge1-200@2x.png';
+        accessoryImg.src = isHighResolution ? 'scripts/accessory/badge1-320.png' : 'scripts/accessory/badge1-320@2x.png';
+    
+        // Prepend the usernameParts
+        usernameParts.unshift(accessoryImg);
+        
+        // Prepend the admin level to usernameParts
+        usernameParts.unshift(`(GM${ playerDetails.getGmLevel() }) `);
+    } else if (adminState === -1) {
+        usernameParts.unshift('(Retd.) ');
+    }
+
+    return usernameParts;
+};
+    
 }
