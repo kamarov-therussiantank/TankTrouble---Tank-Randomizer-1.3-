@@ -158,6 +158,17 @@ if (site.includes("tanktrouble.com")) {
     border-color: #000000 !important;
     background: limegreen;
 }
+#content {
+    max-width: 1884px !important;
+    width: calc(100%) !important;
+}
+.horizontalAdSlot,
+.verticalAdSlot,
+#leftBanner,
+#rightBanner,
+#topBanner {
+    display: none !important;
+}
    `);
    
    // Create a custom HTML element
