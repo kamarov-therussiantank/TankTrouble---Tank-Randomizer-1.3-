@@ -1,5 +1,6 @@
 // TODO: Add more matte versions of paints and add matte versions of spray cans
 // TODO: Classic Lobby Settings (local only), Leaderboard
+
 // Function to dynamically add custom CSS
 const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
 // Function to create a custom HTML element
