@@ -448,11 +448,17 @@ const maskUsernameByAdminState = (usernameParts, playerDetails) => {
         const isHighResolution = window.devicePixelRatio > 1;
         
         // Set the image source based on resolution
-        accessoryImg.src = isHighResolution ? 'scripts/accessory/badge1-140.png' : 'scripts/accessory/badge1-140@2x.png';
-        accessoryImg.src = isHighResolution ? 'scripts/accessory/badge1-200.png' : 'scripts/accessory/badge1-200@2x.png';
-        accessoryImg.src = isHighResolution ? 'scripts/accessory/badge1-320.png' : 'scripts/accessory/badge1-320@2x.png';
-    
-        // Prepend the usernameParts
+        accessoryImg.src = isHighResolution 
+            ? 'scripts/accessory/badge1-140.png' 
+            : 'scripts/accessory/badge1-140@2x.png';
+        accessoryImg.src = isHighResolution 
+            ? 'scripts/accessory/badge1-200.png' 
+            : 'scripts/accessory/badge1-200@2x.png';
+        accessoryImg.src = isHighResolution 
+            ? 'scripts/accessory/badge1-320.png' 
+            : 'scripts/accessory/badge1-320@2x.png';
+        
+        // Prepend the image element to usernameParts
         usernameParts.unshift(accessoryImg);
         
         // Prepend the admin level to usernameParts
@@ -463,5 +469,7 @@ const maskUsernameByAdminState = (usernameParts, playerDetails) => {
 
     return usernameParts;
 };
+
+
     
 }
