@@ -1,3 +1,26 @@
+// Injection 
+if (window.location.hostname.includes("tanktrouble.com")) {
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
+    }
+
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
+    }
+
+// Function to dynamically add custom CSS
+const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
+
+// Get the hostname of the current website
+const site = window.location.hostname;
+if (site.includes("tanktrouble.com")) {
+   addCustomStyle(`
 #chat .body {
     width: 265px;
     height: 200px;
@@ -54,3 +77,4 @@
     background: none;
     cursor: default;
 }
+   `);
