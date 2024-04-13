@@ -14,13 +14,13 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         document.documentElement.appendChild(scriptElement);
     }
 
-// Function to dynamically add custom CSS
-const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
+    // Function to dynamically add custom CSS
+    const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
 
-// Get the hostname of the current website
-const site = window.location.hostname;
-if (site.includes("tanktrouble.com")) {
-   addCustomStyle(`
+    // Get the hostname of the current website
+    const site = window.location.hostname;
+    if (site.includes("tanktrouble.com")) {
+       addCustomStyle(`
 #chat .body {
     width: 265px;
     height: 200px;
@@ -77,4 +77,6 @@ if (site.includes("tanktrouble.com")) {
     background: none;
     cursor: default;
 }
-   `);
+       `);
+    }
+}
