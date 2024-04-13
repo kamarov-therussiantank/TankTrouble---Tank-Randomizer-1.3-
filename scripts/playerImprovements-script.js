@@ -302,4 +302,73 @@ TankTrouble.AccountOverlay.hide = function() {
     this.suicides.empty();
     this.accountPlayerId.empty();
 };
+
+//Improved tank icon render
+{
+    id: "tankRenderingImprovements",
+    innerHTML: `
+        var TankTroubleAddons = TankTroubleAddons || {};
+
+        // Function to check if high-resolution tanks are enabled
+        TankTroubleAddons.isHighresTanksEnabled = function () {
+            return true; // Always enabled
+        };
+
+        // Method to load player tank icon
+        UITankIcon.classMethod('loadPlayerTankIcon', function (canvas, size, playerId, onReady, context) {
+            Backend.getInstance().getPlayerDetails(function (result) {
+                if (typeof result === 'object') {
+                    var adminStatus = TankTroubleAddons.getAdminStatus(result);
+                    var turretColour = result.getTurretColour();
+                    var treadColour = result.getTreadColour();
+                    var baseColour = result.getBaseColour();
+                    var turretAccessory = result.getTurretAccessory();
+                    var barrelAccessory = result.getBarrelAccessory();
+                    var frontAccessory = result.getFrontAccessory();
+                    var backAccessory = result.getBackAccessory();
+                    var badge = adminStatus === 'false' || TankTroubleAddons.isHighresTanksEnabled() ? '0' : adminStatus === 'active' ? '1' : '2';
+                    
+                    if (!turretColour || !treadColour || !baseColour || !turretAccessory || !barrelAccessory || !frontAccessory || !backAccessory || !badge) {
+                        return;
+                    }
+
+                    if (onReady && context) {
+                        UITankIcon.loadTankIcon(canvas, size, turretColour, treadColour, baseColour, turretAccessory, barrelAccessory, frontAccessory, backAccessory, null, null, badge, onReady, context);
+                    } else {
+                        UITankIcon.loadTankIcon(canvas, size, turretColour, treadColour, baseColour, turretAccessory, barrelAccessory, frontAccessory, backAccessory, null, null, badge, function (self) {}, self);
+                    }
+                } else {
+                    if (onReady && context) {
+                        UITankIcon.loadTankIcon(canvas, size, UIConstants.TANK_UNAVAILABLE_COLOUR, UIConstants.TANK_UNAVAILABLE_COLOUR, UIConstants.TANK_UNAVAILABLE_COLOUR, null, null, null, null, null, null, null, onReady, context);
+                    } else {
+                        UITankIcon.loadTankIcon(canvas, size, UIConstants.TANK_UNAVAILABLE_COLOUR, UIConstants.TANK_UNAVAILABLE_COLOUR, UIConstants.TANK_UNAVAILABLE_COLOUR, null, null, null, null, null, null, null, function (self) {}, self);
+                    }
+                }
+            }, function () {}, function () {}, playerId, Caches.getPlayerDetailsCache());
+        });
+
+        // Method to load tank icon
+        UITankIcon.classMethod('loadTankIcon', function (canvas, size, turretColour, treadColour, baseColour, turretAccessory, barrelAccessory, frontAccessory, backAccessory, treadAccessory, backgroundAccessory, badge, onReady, context) {
+            // Function logic to load tank icon
+        });
+
+        // Method to queue tank addons
+        UITankIconLoader.method('queueAddons', function (part, accessory) {
+            if (accessory !== null && accessory !== undefined && accessory !== '0') {
+                this._queueImage('accessories/', part, accessory, this.accessories, part, true);
+            }
+        });
+
+        // Method to draw tank icon
+        UITankIcon.classMethod('drawTankIcon', function (canvas, turretColour, treadColour, baseColour, turret, barrel, leftTread, rightTread, base, turretShade, barrelShade, leftTreadShade, rightTreadShade, baseShade, turretAccessory, barrelAccessory, frontAccessory, backAccessory, treadAccessory, backgroundAccessory, badge) {
+            // Function logic for drawing tank icon
+        });
+
+        // Method to queue image
+        UITankIconLoader.method('_queueImage', function (basePath, part, image, output, customKey) {
+            // Function logic to queue image
+        });
+    `
+}
+
   }
