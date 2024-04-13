@@ -138,9 +138,9 @@ if (site.includes("tanktrouble.com")) {
     #overlay input[type="checkbox"]+label::before {
     content: '';
     background: red;
-    border: 3px solid black;
+    border: 2px solid #fff;
     transition: background .3s;
-    border-radius: 2px;
+    border-radius: 5px;
     font-size: 35px;
     line-height: 24px;
     text-align: center;
@@ -151,7 +151,7 @@ if (site.includes("tanktrouble.com")) {
     margin-right: 5px;
 }
 #overlay input[type="checkbox"]:checked+label::before {
-    border-color: #000000 !important;
+    border-color: #fff !important;
     background: limegreen;
 }
 #content {
