@@ -34,10 +34,10 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     width: 265px;
     height: 200px;
     margin-left: 20px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-top: 0px !important;
     cursor: default;
     background: #00000014;
+    padding: 2px 2px 2px 5px;
 }
 #chat .content {
     font-family: verdana;
@@ -49,20 +49,23 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 }
 #chat form {
     border-radius: 3px;
-    background-color: #ececec;
+    background-color: #dfdfdf;
     pointer-events: auto;
     animation-name: chatsend;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-direction: normal;
     animation-iteration-count: infinite;
+    padding: 2px 2px 2px 2px;
+    margin-left: 20px;
+}
+#chat:not(.open) form {
+	display: none;
+    background: none;
 }
 #chat.opening .content, #chat.open .content {
-    width: 265px;
+    width: 269px;
     transition: width .250s;
-    display: flex;
-    flex-direction: column-reverse;
-    border-radius: 3px;
 }
 #chat.opening textarea, #chat.open textarea {
     width: 235px;
