@@ -246,3 +246,4 @@ Loader.whenContentInitialized().then(async() => {
 	// Allow more characters in the chat input
 	chatInput.setAttribute('maxlength', '255');
 });
+}
