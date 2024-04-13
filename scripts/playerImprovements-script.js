@@ -523,5 +523,5 @@ TankTrouble.AccountOverlay.hide = function() {
             ++this.numImages;
         }
     });
+  }
 }
-
