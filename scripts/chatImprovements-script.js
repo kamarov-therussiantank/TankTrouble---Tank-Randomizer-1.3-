@@ -48,7 +48,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 }
 #chat form {
     border-radius: 3px;
-    background-color: #d5d5d5;
+    background-color: #dbdbdb;
     pointer-events: auto;
     animation-name: chatsend;
     animation-duration: 2s;
@@ -61,7 +61,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     transition: width .250s;
     display: flex;
     flex-direction: column-reverse;
-    background: #bfbfbf75;
+    background: #dbdbdb75;
     border-radius: 3px;
 }
 #chat.opening textarea, #chat.open textarea {
