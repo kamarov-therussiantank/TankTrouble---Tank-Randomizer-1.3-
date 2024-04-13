@@ -21,6 +21,15 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     const site = window.location.hostname;
     if (site.includes("tanktrouble.com")) {
        addCustomStyle(`
+#chat {
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform: translateZ(0);
+    position: fixed;
+    z-index: 10;
+    width: 1px;
+    height: 1px;
+}
 #chat .body {
     width: 265px;
     height: 200px;
@@ -39,7 +48,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 }
 #chat form {
     border-radius: 3px;
-    background-color: #c5c5c5;
+    background-color: #d5d5d5;
     pointer-events: auto;
     animation-name: chatsend;
     animation-duration: 2s;
