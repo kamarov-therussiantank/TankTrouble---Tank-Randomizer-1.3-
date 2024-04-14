@@ -1,67 +1,18 @@
 
-// Function to inject JavaScript code
-function injectJSCode(code) {
-    const scriptElement = document.createElement('script');
-    scriptElement.setAttribute('type', 'text/javascript');
-    scriptElement.textContent = code;
-    document.documentElement.appendChild(scriptElement);
-}
-
-// Function to inject JavaScript link
-function injectJSLink(src) {
-    const scriptElement = document.createElement('script');
-    scriptElement.setAttribute('type', 'text/javascript');
-    scriptElement.setAttribute('src', src);
-    document.documentElement.appendChild(scriptElement);
-}
-
-// Function to add custom CSS
-const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
-
-// Function to create a custom HTML element
-function createCustomElement(tag, attr_tag, attr_name, value) {
-    const custom_element = document.createElement(tag);
-    custom_element.setAttribute(attr_tag, attr_name);
-    custom_element.innerHTML = value;
-    const existingElement = document.getElementById(attr_name);
-    if (!existingElement) {
-        document.getElementById('tertiaryContent').appendChild(custom_element);
+// Injection
+if (window.location.hostname.includes("tanktrouble.com")) {
+    function injectJSCode(code) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.textContent = code;
+        document.documentElement.appendChild(scriptElement);
     }
-}
-
-// DOMContentLoaded event listener to ensure script execution after DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    // Injection
-    if (window.location.hostname.includes("tanktrouble.com")) {
-        // Inject custom CSS
-        const customCSS = `
-            #helpSnippet {
-                background: #000;
-                border: #000 2px solid;
-                border-radius: 2px;
-                box-shadow: 0 3px 4px 0 rgba(0,0,0, .5);
-                margin-bottom: 10px;
-                text-align: center;
-            }
-        `;
-        addCustomStyle(customCSS);
-
-        // Create custom HTML element
-        createCustomElement('div', 'id', 'helpSnippet', `
-            <div class="content">
-                <div style="color: #fff; font-size: 13px; font-weight: bold;">Need Help?</div>
-                <div style="color: #fff; font-size: 10px; font-weight: bold;">Check the FAQ</div>
-            </div>
-        `);
-
-        // Handle click event on #helpSnippet
-        $("#helpSnippet").mousedown(function(event) {
-            window.open("https://docs.google.com/document/d/1Kge1AgRErxT8uXU_YNpv1-_bkouogm-aSKfoHRiFnEY/edit", "_blank");
-            event.stopPropagation();
-        });
+    function injectJSLink(src) {
+        const scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'text/javascript');
+        scriptElement.setAttribute('src', src);
+        document.documentElement.appendChild(scriptElement);
     }
-});
-
     
 //Improvements 
 TankTrouble.AccountOverlay._initialize = function() {
@@ -85,7 +36,6 @@ TankTrouble.AccountOverlay._initialize = function() {
     this.accountPasswordInput = $('<input placeholder=\"Current password\" name=\"password\" type=\"password\" maxlength=\"32\"/>');
     this.accountSubmitInput = $('<button class=\"medium\" type=\"submit\" tabindex=\"-1\">Update account</button>');
     this.accountDeleteAccount = $('<button class=\"small warning\" type=\"button\" tabindex=\"-1\" title=\"Delete account\">Delete</button>');
-
     this.accountUsernameInput.alphanum({
         allow: '-_',
         allowSpace: false,
@@ -98,7 +48,6 @@ TankTrouble.AccountOverlay._initialize = function() {
         allowOtherCharSets: false,
         maxLength: 128
     });
-
     this.accountForm.append(this.accountHeadline);
     Utils.addOverlayFormRow(this.accountForm, [this.loginDate, this.creationDate, this.suicides, this.accountPlayerId]);
     Utils.addOverlayFormRow(this.accountForm, this.accountUsernameInput);
@@ -109,11 +58,9 @@ TankTrouble.AccountOverlay._initialize = function() {
     this.accountForm.append(this.accountVerificationEmailMessage);
     Utils.addOverlayFormRow(this.accountForm, this.accountPasswordInput);
     Utils.addSuffix(Utils.addOverlayFormRow(this.accountForm, this.accountSubmitInput), this.accountDeleteAccount, true);
-
     this.accountWrapper.append(this.accountIcon);
     this.accountWrapper.append(this.accountIconPlaceholder);
     this.accountWrapper.append(this.accountForm);
-
     this.accountUsernameInput.tooltipster({
         position: 'right',
         theme: 'tooltipster-error',
@@ -148,13 +95,11 @@ TankTrouble.AccountOverlay._initialize = function() {
         theme: 'tooltipster-error',
         offsetX: 5
     });
-
     var self = this;
     this.accountForm.submit(function(event) {
         self._sendAccountUpdate();
         return false;
     });
-
     this.accountUsernameInput.blur(function(event) {
         self._checkUsername();
     });
@@ -221,13 +166,10 @@ TankTrouble.AccountOverlay._initialize = function() {
         $(this).select();
         $(this).tooltipster('show');
     });
-
     this.iconCanvas.width = UIConstants.TANK_ICON_WIDTH_LARGE;
     this.iconCanvas.height = UIConstants.TANK_ICON_HEIGHT_LARGE;
-
     this.initialized = true;
 };
-
 TankTrouble.AccountOverlay.show = function(params) {
     if (!this.initialized) {
         this._initialize();
@@ -236,7 +178,6 @@ TankTrouble.AccountOverlay.show = function(params) {
     this.playerDetails = null;
     this.email = null;
     this.showing = true;
-
     this.accountUsernameInput.val('');
     this.accountNewPasswordInput.val('');
     this.accountConfirmNewPasswordInput.val('');
@@ -251,7 +192,6 @@ TankTrouble.AccountOverlay.show = function(params) {
     this.accountResendVerificationEmail.hide();
     this.accountIconPlaceholder.show();
     this.accountIcon.hide();
-
     var self = this;
     Backend.getInstance().getPlayerDetails(function(result) {
         if (self.showing) {
@@ -268,7 +208,6 @@ TankTrouble.AccountOverlay.show = function(params) {
                 self.suicides.append($('<td>' + self.playerDetails.getSuicides() + '</td>'));
                 self.accountPlayerId.append($('<td>PlayerID:</td>'));
                 self.accountPlayerId.append($('<td>' + self.playerDetails.getPlayerId() + '</td>'));
-
                 var infoChildren = $(self.accountWrapper).find('tr');
                 infoChildren.each(function() {
                     var copyElem = $(this).children().eq(1);
@@ -278,7 +217,6 @@ TankTrouble.AccountOverlay.show = function(params) {
                         }
                     });
                 });
-
                 if (self.email !== null) {
                     if (self.playerDetails.getVerified()) {
                         self.accountVerificationEmailMessage.text('Verified');
@@ -289,7 +227,6 @@ TankTrouble.AccountOverlay.show = function(params) {
                 } else {
                     self.accountVerificationEmailMessage.text('Your email is not set');
                 }
-
                 UITankIcon.loadPlayerTankIcon(self.iconCanvas, UIConstants.TANK_ICON_SIZES.LARGE, self.playerId, function(self) {
                     self.accountIconPlaceholder.hide();
                     self.iconCanvas.getContext('2d').clearRect(0, 0, self.iconCanvas.width, self.iconCanvas.height);
@@ -303,7 +240,6 @@ TankTrouble.AccountOverlay.show = function(params) {
     }, function(result) {
         self.accountUsernameInput.focus();
     }, function(result) {}, self.playerId, Caches.getPlayerDetailsCache());
-
     Backend.getInstance().getEmail(function(result) {
         if (self.showing) {
             if (typeof result == 'string') {
@@ -325,7 +261,6 @@ TankTrouble.AccountOverlay.show = function(params) {
         }
     }, function(result) {}, function(result) {}, self.playerId, Caches.getEmailCache());
 };
-
 TankTrouble.AccountOverlay.hide = function() {
     if (!this.initialized) {
         this._initialize();
