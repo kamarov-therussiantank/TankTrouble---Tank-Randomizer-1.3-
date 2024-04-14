@@ -31,8 +31,8 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     height: 1px;
 }
 #chat .body {
-    width: 265px;
-    height: 200px;
+    width: 242px;
+    height: 140px;
     margin-left: 20px;
     margin-top: 0px !important;
     cursor: default;
