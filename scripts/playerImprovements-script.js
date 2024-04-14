@@ -1,4 +1,3 @@
-// Ensure jQuery is loaded first
 
 // Function to inject JavaScript code
 function injectJSCode(code) {
@@ -15,6 +14,9 @@ function injectJSLink(src) {
     scriptElement.setAttribute('src', src);
     document.documentElement.appendChild(scriptElement);
 }
+
+// Function to add custom CSS
+const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
 
 // Function to create a custom HTML element
 function createCustomElement(tag, attr_tag, attr_name, value) {
@@ -349,27 +351,4 @@ TankTrouble.AccountOverlay.hide = function() {
     this.suicides.empty();
     this.accountPlayerId.empty();
 };
-
-     // Create a custom HTML element
-   createCustomElement('div', 'id', 'helpSnippet', `
-   <style>
-    #helpSnippet {
-      background: #000;
-      border: #000 2px solid;
-      border-radius: 2px;
-      box-shadow: 0 3px 4px 0 rgba(0,0,0, .5);
-      margin-bottom: 10px;
-      text-align: center;
-    }
-     </style>
-    <div class="content">
-      <div style="color: #fff; font-size: 13px; font-weight: bold;">Need Help?</div>
-      <div style="color: #fff; font-size: 10px; font-weight: bold;">Check the FAQ</div>
-      </div>
-  `);
-
-   $("#helpSnippet").mousedown(function(event) {
-      window.open("https://docs.google.com/document/d/1Kge1AgRErxT8uXU_YNpv1-_bkouogm-aSKfoHRiFnEY/edit", "_blank");
-      event.stopPropagation();
- });     
 }
