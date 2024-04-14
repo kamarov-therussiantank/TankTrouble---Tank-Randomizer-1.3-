@@ -1,28 +1,65 @@
-// Injection
-if (window.location.hostname.includes("tanktrouble.com")) {
-    function injectJSCode(code) {
-        const scriptElement = document.createElement('script');
-        scriptElement.setAttribute('type', 'text/javascript');
-        scriptElement.textContent = code;
-        document.documentElement.appendChild(scriptElement);
-    }
+// Ensure jQuery is loaded first
 
-    function injectJSLink(src) {
-        const scriptElement = document.createElement('script');
-        scriptElement.setAttribute('type', 'text/javascript');
-        scriptElement.setAttribute('src', src);
-        document.documentElement.appendChild(scriptElement);
-    }
+// Function to inject JavaScript code
+function injectJSCode(code) {
+    const scriptElement = document.createElement('script');
+    scriptElement.setAttribute('type', 'text/javascript');
+    scriptElement.textContent = code;
+    document.documentElement.appendChild(scriptElement);
+}
 
-    // Function to dynamically add custom CSS
-const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
+// Function to inject JavaScript link
+function injectJSLink(src) {
+    const scriptElement = document.createElement('script');
+    scriptElement.setAttribute('type', 'text/javascript');
+    scriptElement.setAttribute('src', src);
+    document.documentElement.appendChild(scriptElement);
+}
+
 // Function to create a custom HTML element
 function createCustomElement(tag, attr_tag, attr_name, value) {
-  const custom_element = document.createElement(tag);
-  custom_element.setAttribute(attr_tag, attr_name);
-  custom_element.innerHTML = value;
-  document.getElementById('secondaryContent').appendChild(custom_element);
+    const custom_element = document.createElement(tag);
+    custom_element.setAttribute(attr_tag, attr_name);
+    custom_element.innerHTML = value;
+    const existingElement = document.getElementById(attr_name);
+    if (!existingElement) {
+        document.getElementById('tertiaryContent').appendChild(custom_element);
+    }
 }
+
+// DOMContentLoaded event listener to ensure script execution after DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Injection
+    if (window.location.hostname.includes("tanktrouble.com")) {
+        // Inject custom CSS
+        const customCSS = `
+            #helpSnippet {
+                background: #000;
+                border: #000 2px solid;
+                border-radius: 2px;
+                box-shadow: 0 3px 4px 0 rgba(0,0,0, .5);
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        `;
+        addCustomStyle(customCSS);
+
+        // Create custom HTML element
+        createCustomElement('div', 'id', 'helpSnippet', `
+            <div class="content">
+                <div style="color: #fff; font-size: 13px; font-weight: bold;">Need Help?</div>
+                <div style="color: #fff; font-size: 10px; font-weight: bold;">Check the FAQ</div>
+            </div>
+        `);
+
+        // Handle click event on #helpSnippet
+        $("#helpSnippet").mousedown(function(event) {
+            window.open("https://docs.google.com/document/d/1Kge1AgRErxT8uXU_YNpv1-_bkouogm-aSKfoHRiFnEY/edit", "_blank");
+            event.stopPropagation();
+        });
+    }
+});
+
     
 //Improvements 
 TankTrouble.AccountOverlay._initialize = function() {
