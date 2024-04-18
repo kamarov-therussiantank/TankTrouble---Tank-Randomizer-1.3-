@@ -284,3 +284,4 @@ Utils.classMethod('forumTimeDiffToString', function(now, then) {
         }
     }
 });
+}
