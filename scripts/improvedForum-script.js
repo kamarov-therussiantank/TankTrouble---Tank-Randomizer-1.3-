@@ -1,3 +1,5 @@
+// Not in use at the moment.
+
 // Injection 
 if (window.location.hostname.includes("tanktrouble.com")) {
     function injectJSCode(code) {
