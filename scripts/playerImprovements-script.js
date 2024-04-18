@@ -200,9 +200,9 @@ TankTrouble.AccountOverlay.show = function(params) {
                 self.accountUsernameInput.val(result.getUsername());
                 self.accountUsernameInput.addClass('inputAccepted');
                 self.accountNewPasswordInput.focus();
-                self.creationDate.append($('<td>Created on:</td>'));
+                self.creationDate.append($('<td>Created on:‎  </td>'));
                 self.creationDate.append($('<td>' + new Date(self.playerDetails.getCreated() * 1e3).toLocaleString() + '</td>'));
-                self.loginDate.append($('<td>Last Login:</td>'));
+                self.loginDate.append($('<td>Last Login:‎  </td>'));
                 self.loginDate.append($('<td>' + new Date(self.playerDetails.getLastLogin() * 1e3).toLocaleString() + '</td>'));
                 self.accountPlayerId.append($('<td>PlayerID:</td>'));
                 self.accountPlayerId.append($('<td>' + self.playerDetails.getPlayerId() + '</td>'));
