@@ -77,12 +77,12 @@ if (site.includes("tanktrouble.com")) {
         font-family: 'TankTrouble';
         font-size: 14px;
     }
-    .box .content {
-        background: #c7c7c7;
-        border-radius: 2px;
-        border: #999 5px solid;
-        padding: 5px;
-    }
+   .box .content {
+    background: #c7c7c7;
+    border-radius: 5px;
+    border: #999 3px solid;
+    padding: 5px;
+}
     #overlay {
         color: #fff;
         text-shadow: -1px -1px 0 #000,  
@@ -131,13 +131,23 @@ if (site.includes("tanktrouble.com")) {
     .box .tab.left {
         background: #999;
     }
-    #tankinfo .username {
+   #tankinfo .username {
     position: relative;
     z-index: 1;
     height: 28px;
-    background: #4f4f4fa6;
+    background: #979797;
     border: 3px #0000002e solid;
     border-radius: 4px;
+}
+   #tankinfo .icon {
+    position: absolute;
+    width: 320px;
+    height: 192px;
+    left: calc(50% + 5px);
+    top: -162px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
      .achievement.unlockedAndSeen {
         background: linear-gradient(to bottom, #ccc, #666);
