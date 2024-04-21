@@ -131,6 +131,14 @@ if (site.includes("tanktrouble.com")) {
     .box .tab.left {
         background: #999;
     }
+    #tankinfo .username {
+    position: relative;
+    z-index: 1;
+    height: 28px;
+    background: #4f4f4fa6;
+    border: 3px #0000002e solid;
+    border-radius: 4px;
+}
      .achievement.unlockedAndSeen {
         background: linear-gradient(to bottom, #ccc, #666);
         box-shadow: #000 0px 3px 3px 0px;
