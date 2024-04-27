@@ -15,6 +15,12 @@ const site = window.location.hostname;
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
    addCustomStyle(`
+#game {
+    position: relative;
+    left: -10px;
+    top: 0px;
+}
+   
     .premium #header {
         background-image: url(../assets/images/header/background.png);
         background-size: 120px 120px;
