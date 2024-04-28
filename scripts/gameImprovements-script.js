@@ -195,7 +195,7 @@ QualityManager.QUALITY_VALUES['mimimum'] = {
             "spawn zone inverse unstable particle probability": 0.9,
             "spawn zone num collapse particles": 20
 };
-QualityManager.QUALITY_SETTINGS.MINIMUM = 'lowest';
+QualityManager.QUALITY_SETTINGS.LOWEST = 'lowest';
 QualityManager.QUALITY_VALUES['lowest'] = {
             "tank explosion smoke count": 1,
             "tank explosion fragment count": 0,
@@ -213,7 +213,7 @@ QualityManager.QUALITY_VALUES['lowest'] = {
 };
 UIConstants.SETTINGS_QUALITY_MAX_OPTION_HEIGHT = 200;
 UIRubbleGroup.prototype.emit = function (tank) {
-    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOW && QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
+    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOW && QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOWEST) {
         if (tank.getSpeed() != 0 || tank.getRotationSpeed() != 0) {
             this.exists = true;
             this.visible = true;
@@ -226,7 +226,7 @@ UIRubbleGroup.prototype.emit = function (tank) {
     }
 };
 Game.UIGameState.method('_addCameraShake', function (shake) {
-    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
+    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOWEST) {
         this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
     } else {
         this.cameraShake = 0;
