@@ -165,7 +165,7 @@ QualityManager.QUALITY_VALUES['minimum'] = {
 };
 QualityManager.QUALITY_SETTINGS.CLASSIC = 'classic';
 QualityManager.QUALITY_VALUES['classic'] = {
-    'tank explosion smoke count': 4,
+    'tank explosion smoke count': 7,
     'tank explosion fragment count': 12,
     'missile launch smoke count': 25,
     'missile smoke frequency': 30,
