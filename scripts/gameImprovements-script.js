@@ -225,18 +225,20 @@ UIRubbleGroup.prototype.emit = function (tank) {
         }
     }
 };
-Game.UIGameState.method('_addCameraShake', function (shake) {
-    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
-        this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
-    } else {
-        this.cameraShake = 0;
-    }
+ Game.UIGameState.method('_addCameraShake', function (shake) {
+        if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
+            this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
+        } else {
+            this.cameraShake = 0;
+        }
+    });
+
     Game.UIGameState.method('_addCameraShake', function (shake) {
-    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.HIGH) {
-        this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
-    } else {
-        this.cameraShake = 90;
-    }
-});
+        if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.HIGH) {
+            this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
+        } else {
+            this.cameraShake = 90;
+        }
+    });
 TankTrouble.SettingsBox.init();
   }
