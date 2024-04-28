@@ -90,6 +90,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         this.settingsQualityOptions.push($('<option value=\"high\">High</option>'));
         this.settingsQualityOptions.push($('<option value=\"low\">Low</option>'));
         this.settingsQualityOptions.push($('<option value=\"minimum\">Minimum</option>'));
+        this.settingsQualityOptions.push($('<option value=\"classic\">Classic</option>'));
         this.settingsBackground = $('<div class=\"boxbackground\"></div>');
         for (var i = 0; i < this.settingsServerOptions.length; ++i) {
             this.settingsServerSelect.append(this.settingsServerOptions[i]);
@@ -161,6 +162,22 @@ QualityManager.QUALITY_VALUES['minimum'] = {
     'shield spark particles per emit': 0,
     'spawn zone inverse unstable particle probability': 1,
     'spawn zone num collapse particles': 0
+};
+QualityManager.QUALITY_SETTINGS.MINIMUM = 'classic';
+QualityManager.QUALITY_VALUES['classic'] = {
+    'tank explosion smoke count': 6,
+    'tank explosion fragment count': 15,
+    'missile launch smoke count': 20,
+    'missile smoke frequency': 50,
+    'crate land dust count': 0,
+    'aimer min segment length': 1,
+    'aimer off max segment length': 4,
+    'aimer on max segment length': 2,
+    'bullet puff count': 10,
+    'shield inverse bolt probability': 0.90,
+    'shield spark particles per emit': 2,
+    'spawn zone inverse unstable particle probability': 0.7,
+    'spawn zone num collapse particles': 20
 };
 UIConstants.SETTINGS_QUALITY_MAX_OPTION_HEIGHT = 200;
 UIRubbleGroup.prototype.emit = function (tank) {
