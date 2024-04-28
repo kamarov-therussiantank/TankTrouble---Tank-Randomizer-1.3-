@@ -229,7 +229,7 @@ UIRubbleGroup.prototype.emit = function (tank) {
         if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
             this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
         } else {
-            this.cameraShake = 0;
+            this.cameraShake = 90;
         }
     });
 
