@@ -163,7 +163,7 @@ QualityManager.QUALITY_VALUES['minimum'] = {
     'spawn zone inverse unstable particle probability': 1,
     'spawn zone num collapse particles': 0
 };
-QualityManager.QUALITY_SETTINGS.MINIMUM = 'classic';
+QualityManager.QUALITY_SETTINGS.CLASSIC = 'classic';
 QualityManager.QUALITY_VALUES['classic'] = {
     'tank explosion smoke count': 6,
     'tank explosion fragment count': 15,
