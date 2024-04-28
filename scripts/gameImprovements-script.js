@@ -88,9 +88,9 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         this.settingsQualitySelect = $('<select/>');
         this.settingsQualityOptions.push($('<option selected value=\"auto\" data-imagesrc=\"' + g_url('assets/images/game/pingTimeNoConnection.png') + '\" data-imagesrcset=\"' + g_url('assets/images/game/pingTimeNoConnection@2x.png') + ' 2x\" data-description=\" (N/A fps)\">Auto</option>'));
         this.settingsQualityOptions.push($('<option value=\"high\">High</option>'));
-        this.settingsQualityOptions.push($('<option value=\"low\">Medium</option>'));
-        this.settingsQualityOptions.push($('<option value=\"minimum\">Low</option>'));
-        this.settingsQualityOptions.push($('<option value=\"lowest\">Minimum</option>'));
+        this.settingsQualityOptions.push($('<option value=\"medium\">Medium</option>'));
+        this.settingsQualityOptions.push($('<option value=\"low\">Low</option>'));
+        this.settingsQualityOptions.push($('<option value=\"minimum\">Minimum</option>'));
         this.settingsBackground = $('<div class=\"boxbackground\"></div>');
         for (var i = 0; i < this.settingsServerOptions.length; ++i) {
             this.settingsServerSelect.append(this.settingsServerOptions[i]);
@@ -163,8 +163,8 @@ QualityManager.QUALITY_VALUES['high'] = {
     'spawn zone inverse unstable particle probability': 0.7,
     'spawn zone num collapse particles': 20
 };
-QualityManager.QUALITY_SETTINGS.MEDIUM = 'low';
-QualityManager.QUALITY_VALUES['low'] = {
+QualityManager.QUALITY_SETTINGS.MEDIUM = 'medium';
+QualityManager.QUALITY_VALUES['medium'] = {
     "tank explosion smoke count": 6,
             "tank explosion fragment count": 12,
             "missile launch smoke count": 10,
@@ -179,10 +179,10 @@ QualityManager.QUALITY_VALUES['low'] = {
             "spawn zone inverse unstable particle probability": 0.9,
             "spawn zone num collapse particles": 20
 };
-QualityManager.QUALITY_SETTINGS.LOW = 'minimum';
-QualityManager.QUALITY_VALUES['mimimum'] = {
-            "tank explosion smoke count": 2,
-            "tank explosion fragment count": 7,
+QualityManager.QUALITY_SETTINGS.LOW = 'low';
+QualityManager.QUALITY_VALUES['low'] = {
+            "tank explosion smoke count": 3,
+            "tank explosion fragment count": 6,
             "missile launch smoke count": 10,
             "missile smoke frequency": 120,                             // ms / particle
             "crate land dust count": 10,
@@ -195,9 +195,9 @@ QualityManager.QUALITY_VALUES['mimimum'] = {
             "spawn zone inverse unstable particle probability": 0.9,
             "spawn zone num collapse particles": 20
 };
-QualityManager.QUALITY_SETTINGS.LOWEST = 'lowest';
-QualityManager.QUALITY_VALUES['lowest'] = {
-            "tank explosion smoke count": 1,
+QualityManager.QUALITY_SETTINGS.MINIMUM = 'minimum';
+QualityManager.QUALITY_VALUES['minimum'] = {
+            "tank explosion smoke count": 0,
             "tank explosion fragment count": 0,
             "missile launch smoke count": 0,
             "missile smoke frequency": 360,                             // ms / particle
@@ -205,7 +205,7 @@ QualityManager.QUALITY_VALUES['lowest'] = {
             "aimer min segment length": 1.0,                            // m
             "aimer off max segment length": 4.0,                        // m
             "aimer on max segment length": 2.0,                         // m
-            "bullet puff count": 1,
+            "bullet puff count": 0,
             "shield inverse bolt probability": 0.99,
             "shield spark particles per emit": 0,
             "spawn zone inverse unstable particle probability": 0.95,
@@ -213,7 +213,7 @@ QualityManager.QUALITY_VALUES['lowest'] = {
 };
 UIConstants.SETTINGS_QUALITY_MAX_OPTION_HEIGHT = 200;
 UIRubbleGroup.prototype.emit = function (tank) {
-    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOW && QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOWEST) {
+    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOW && QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
         if (tank.getSpeed() != 0 || tank.getRotationSpeed() != 0) {
             this.exists = true;
             this.visible = true;
@@ -226,7 +226,7 @@ UIRubbleGroup.prototype.emit = function (tank) {
     }
 };
 Game.UIGameState.method('_addCameraShake', function (shake) {
-    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.LOWEST) {
+    if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
         this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
     } else {
         this.cameraShake = 0;
