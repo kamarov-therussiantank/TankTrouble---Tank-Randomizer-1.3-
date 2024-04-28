@@ -88,9 +88,9 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         this.settingsQualitySelect = $('<select/>');
         this.settingsQualityOptions.push($('<option selected value=\"auto\" data-imagesrc=\"' + g_url('assets/images/game/pingTimeNoConnection.png') + '\" data-imagesrcset=\"' + g_url('assets/images/game/pingTimeNoConnection@2x.png') + ' 2x\" data-description=\" (N/A fps)\">Auto</option>'));
         this.settingsQualityOptions.push($('<option value=\"high\">High</option>'));
-        this.settingsQualityOptions.push($('<option value=\"low\">Low</option>'));
-        this.settingsQualityOptions.push($('<option value=\"minimum\">Minimum</option>'));
-        this.settingsQualityOptions.push($('<option value=\"classic\">Classic</option>'));
+        this.settingsQualityOptions.push($('<option value=\"low\">Medium</option>'));
+        this.settingsQualityOptions.push($('<option value=\"minimum\">Low</option>'));
+        this.settingsQualityOptions.push($('<option value=\"lowest\">Minimum</option>'));
         this.settingsBackground = $('<div class=\"boxbackground\"></div>');
         for (var i = 0; i < this.settingsServerOptions.length; ++i) {
             this.settingsServerSelect.append(this.settingsServerOptions[i]);
@@ -147,37 +147,69 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         }, UIConstants.INITIAL_SERVER_STATS_DELAY);
     }
 };
-QualityManager.QUALITY_SETTINGS.MINIMUM = 'minimum';
-QualityManager.QUALITY_VALUES['minimum'] = {
-    'tank explosion smoke count': 0,
-    'tank explosion fragment count': 0,
-    'missile launch smoke count': 0,
-    'missile smoke frequency': 360,
-    'crate land dust count': 0,
+QualityManager.QUALITY_SETTINGS.HIGH = 'high';
+QualityManager.QUALITY_VALUES['high'] = {
+    'tank explosion smoke count': 9,
+    'tank explosion fragment count': 24,
+    'missile launch smoke count': 15,
+    'missile smoke frequency': 20,
+    'crate land dust count': 15,
     'aimer min segment length': 1,
-    'aimer off max segment length': 4,
-    'aimer on max segment length': 2,
-    'bullet puff count': 1,
-    'shield inverse bolt probability': 1,
-    'shield spark particles per emit': 0,
-    'spawn zone inverse unstable particle probability': 1,
-    'spawn zone num collapse particles': 0
-};
-QualityManager.QUALITY_SETTINGS.CLASSIC = 'classic';
-QualityManager.QUALITY_VALUES['classic'] = {
-    'tank explosion smoke count': 7,
-    'tank explosion fragment count': 20,
-    'missile launch smoke count': 25,
-    'missile smoke frequency': 30,
-    'crate land dust count': 0,
-    'aimer min segment length': 1,
-    'aimer off max segment length': 3,
+    'aimer off max segment length': 2,
     'aimer on max segment length': 1,
-    'bullet puff count': 10,
+    'bullet puff count': 5,
     'shield inverse bolt probability': 0.90,
     'shield spark particles per emit': 2,
     'spawn zone inverse unstable particle probability': 0.7,
     'spawn zone num collapse particles': 20
+};
+QualityManager.QUALITY_SETTINGS.MEDIUM = 'low';
+QualityManager.QUALITY_VALUES['low'] = {
+    "tank explosion smoke count": 6,
+            "tank explosion fragment count": 12,
+            "missile launch smoke count": 10,
+            "missile smoke frequency": 40,                             // ms / particle
+            "crate land dust count": 10,
+            "aimer min segment length": 1,                            // m
+            "aimer off max segment length": 3,                        // m
+            "aimer on max segment length": 1,                         // m
+            "bullet puff count": 3,
+            "shield inverse bolt probability": 0.95,
+            "shield spark particles per emit": 1,
+            "spawn zone inverse unstable particle probability": 0.9,
+            "spawn zone num collapse particles": 20
+};
+QualityManager.QUALITY_SETTINGS.LOW = 'minimum';
+QualityManager.QUALITY_VALUES['mimimum'] = {
+            "tank explosion smoke count": 2,
+            "tank explosion fragment count": 7,
+            "missile launch smoke count": 10,
+            "missile smoke frequency": 120,                             // ms / particle
+            "crate land dust count": 10,
+            "aimer min segment length": 0.5,                            // m
+            "aimer off max segment length": 2.0,                        // m
+            "aimer on max segment length": 1.0,                         // m
+            "bullet puff count": 4,
+            "shield inverse bolt probability": 0.99,
+            "shield spark particles per emit": 1,
+            "spawn zone inverse unstable particle probability": 0.9,
+            "spawn zone num collapse particles": 20
+};
+QualityManager.QUALITY_SETTINGS.MINIMUM = 'lowest';
+QualityManager.QUALITY_VALUES['lowest'] = {
+            "tank explosion smoke count": 1,
+            "tank explosion fragment count": 0,
+            "missile launch smoke count": 0,
+            "missile smoke frequency": 360,                             // ms / particle
+            "crate land dust count": 0,
+            "aimer min segment length": 1.0,                            // m
+            "aimer off max segment length": 4.0,                        // m
+            "aimer on max segment length": 2.0,                         // m
+            "bullet puff count": 1,
+            "shield inverse bolt probability": 0.99,
+            "shield spark particles per emit": 0,
+            "spawn zone inverse unstable particle probability": 0.95,
+            "spawn zone num collapse particles": 5
 };
 UIConstants.SETTINGS_QUALITY_MAX_OPTION_HEIGHT = 200;
 UIRubbleGroup.prototype.emit = function (tank) {
