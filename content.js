@@ -84,7 +84,7 @@ if (site.includes("tanktrouble.com")) {
         font-size: 14px;
     }
    .box .content {
-    background: #c7c7c7;
+    background: #d5d5d5;
     border-radius: 5px;
     border: #999 3px solid;
     padding: 5px;
