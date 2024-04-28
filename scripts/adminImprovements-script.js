@@ -397,9 +397,7 @@ TankTrouble.AdminPlayerLookupOverlay._update = function() {
             garageButton.text('Garage');
             var AchievementsButton = $('<button/>').attr({ 'class': 'small', type: 'button', tabindex: '-1', onclick: "OverlayManager.pushOverlay(TankTrouble.AchievementsOverlay, { playerId: '" + self.playerId + "' })" });
             AchievementsButton.text('Achievements');
-            var AltAccountsButton = $('<button/>').attr({ 'class': 'small', type: 'button', tabindex: '-1', onclick: "Ttcv2Extension.getAlternativeAccountsOfPlayer('" + self.playerId + "', function(result){TankTrouble.InfoBox.show({message:result.formatted,title:'Alternative accounts',style:'#info div.spaced{user-select:all}#info{z-index:9999}',submit:'Done',submitFunction:function(){}});}, this)" });
-            AltAccountsButton.text('Alt accounts');
-            self.details.find('div.section').eq(1).append(garageButton, AchievementsButton, AltAccountsButton);
+            self.details.find('div.section').eq(1).append(garageButton, AchievementsButton);
         } else {
             self._handleError(result);
         }
