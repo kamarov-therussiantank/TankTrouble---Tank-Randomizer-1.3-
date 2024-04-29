@@ -148,8 +148,8 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 };
 QualityManager.QUALITY_SETTINGS.HIGH = 'high';
 QualityManager.QUALITY_VALUES['high'] = {
-            "tank explosion smoke count": 9,
-            "tank explosion fragment count": 24,
+            "tank explosion smoke count": 8,
+            "tank explosion fragment count": 18,
             "missile launch smoke count": 15,
             "missile smoke frequency": 40,                              // ms / particle
             "crate land dust count": 15,
