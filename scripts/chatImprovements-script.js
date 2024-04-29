@@ -58,6 +58,8 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     animation-iteration-count: infinite;
     padding: 2px 2px 2px 2px;
     margin-left: 20px;
+    left: 0px;
+    border: none;
 }
 #chat:not(.open) form {
 	display: none;
