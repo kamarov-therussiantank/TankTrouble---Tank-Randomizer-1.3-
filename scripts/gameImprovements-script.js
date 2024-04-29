@@ -229,7 +229,7 @@ Game.UIGameState.method('_addCameraShake', function (shake) {
         if (QualityManager.getQuality() !== QualityManager.QUALITY_SETTINGS.MINIMUM) {
             this.cameraShake = Math.min(UIConstants.MAX_CAMERA_SHAKE, this.cameraShake + shake);
         } else {
-            this.cameraShake = 120;
+            this.cameraShake = 0;
         }
     });
 TankTrouble.SettingsBox.init();
