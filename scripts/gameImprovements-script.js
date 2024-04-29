@@ -148,19 +148,19 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 };
 QualityManager.QUALITY_SETTINGS.HIGH = 'high';
 QualityManager.QUALITY_VALUES['high'] = {
-    'tank explosion smoke count': 9,
-    'tank explosion fragment count': 24,
-    'missile launch smoke count': 15,
-    'missile smoke frequency': 20,
-    'crate land dust count': 15,
-    'aimer min segment length': 1,
-    'aimer off max segment length': 2,
-    'aimer on max segment length': 1,
-    'bullet puff count': 5,
-    'shield inverse bolt probability': 0.90,
-    'shield spark particles per emit': 2,
-    'spawn zone inverse unstable particle probability': 0.7,
-    'spawn zone num collapse particles': 20
+            "tank explosion smoke count": 5,
+            "tank explosion fragment count": 15,
+            "missile launch smoke count": 20,
+            "missile smoke frequency": 50,                              // ms / particle
+            "crate land dust count": 20,
+            "aimer min segment length": 0.0,                            // m
+            "aimer off max segment length": 1.0,                        // m
+            "aimer on max segment length": 0.3,                         // m
+            "bullet puff count": 10,
+            "shield inverse bolt probability": 0.95,
+            "shield spark particles per emit": 4,
+            "spawn zone inverse unstable particle probability": 0.5,
+            "spawn zone num collapse particles": 40
 };
 QualityManager.QUALITY_SETTINGS.LOW = 'low';
 QualityManager.QUALITY_VALUES['low'] = {
