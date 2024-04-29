@@ -88,9 +88,8 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         this.settingsQualitySelect = $('<select/>');
         this.settingsQualityOptions.push($('<option selected value=\"auto\" data-imagesrc=\"' + g_url('assets/images/game/pingTimeNoConnection.png') + '\" data-imagesrcset=\"' + g_url('assets/images/game/pingTimeNoConnection@2x.png') + ' 2x\" data-description=\" (N/A fps)\">Auto</option>'));
         this.settingsQualityOptions.push($('<option value=\"high\">High</option>'));
-        this.settingsQualityOptions.push($('<option value=\"medium\">Medium</option>'));
-        this.settingsQualityOptions.push($('<option value=\"low\">Low</option>'));
-        this.settingsQualityOptions.push($('<option value=\"minimum\">Minimum</option>'));
+        this.settingsQualityOptions.push($('<option value=\"low\">Medium</option>'));
+        this.settingsQualityOptions.push($('<option value=\"minimum\">Low</option>'));
         this.settingsBackground = $('<div class=\"boxbackground\"></div>');
         for (var i = 0; i < this.settingsServerOptions.length; ++i) {
             this.settingsServerSelect.append(this.settingsServerOptions[i]);
@@ -163,34 +162,18 @@ QualityManager.QUALITY_VALUES['high'] = {
     'spawn zone inverse unstable particle probability': 0.7,
     'spawn zone num collapse particles': 20
 };
-QualityManager.QUALITY_SETTINGS.MEDIUM = 'medium';
-QualityManager.QUALITY_VALUES['medium'] = {
-    "tank explosion smoke count": 6,
-            "tank explosion fragment count": 12,
-            "missile launch smoke count": 10,
-            "missile smoke frequency": 40,                             // ms / particle
-            "crate land dust count": 10,
-            "aimer min segment length": 1,                            // m
-            "aimer off max segment length": 3,                        // m
-            "aimer on max segment length": 1,                         // m
-            "bullet puff count": 3,
-            "shield inverse bolt probability": 0.95,
-            "shield spark particles per emit": 1,
-            "spawn zone inverse unstable particle probability": 0.9,
-            "spawn zone num collapse particles": 20
-};
 QualityManager.QUALITY_SETTINGS.LOW = 'low';
 QualityManager.QUALITY_VALUES['low'] = {
-            "tank explosion smoke count": 3,
-            "tank explosion fragment count": 6,
+            "tank explosion smoke count": 6,
+            "tank explosion fragment count": 12,
             "missile launch smoke count": 10,
-            "missile smoke frequency": 120,                             // ms / particle
+            "missile smoke frequency": 60,                             // ms / particle
             "crate land dust count": 10,
             "aimer min segment length": 0.5,                            // m
             "aimer off max segment length": 2.0,                        // m
             "aimer on max segment length": 1.0,                         // m
-            "bullet puff count": 4,
-            "shield inverse bolt probability": 0.99,
+            "bullet puff count": 3,
+            "shield inverse bolt probability": 0.95,
             "shield spark particles per emit": 1,
             "spawn zone inverse unstable particle probability": 0.9,
             "spawn zone num collapse particles": 20
