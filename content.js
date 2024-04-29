@@ -28,6 +28,19 @@ form {
     position: relative;
     left: 580px;
 }
+#overlay .achievements form {
+    background: none;
+    border: none;
+}
+#overlay .garage form {
+    background: none;
+    border: none;
+}
+#overlay .shop form {
+    padding-top: 20px;
+    background: none;
+    border: none;
+}
     .premium #header {
         background-image: url(../assets/images/header/background.png);
         background-size: 120px 120px;
