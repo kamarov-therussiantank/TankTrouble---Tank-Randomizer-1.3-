@@ -20,7 +20,7 @@ if (site.includes("tanktrouble.com")) {
     left: -10px;
     top: 0px;
 }
-#overlay .tankInfo form {
+form {
     background: #ddd;
     border-radius: 7px;
     border: #757575 3px solid;
