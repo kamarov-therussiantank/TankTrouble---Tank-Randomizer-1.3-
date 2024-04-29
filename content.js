@@ -20,7 +20,14 @@ if (site.includes("tanktrouble.com")) {
     left: -10px;
     top: 0px;
 }
-   
+form {
+    background: #ddd;
+    border-radius: 7px;
+    border: #757575 3px solid;
+    width: 500px;
+    position: relative;
+    left: 580px;
+}
     .premium #header {
         background-image: url(../assets/images/header/background.png);
         background-size: 120px 120px;
