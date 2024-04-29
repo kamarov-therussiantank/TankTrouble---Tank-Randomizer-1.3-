@@ -148,17 +148,17 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 };
 QualityManager.QUALITY_SETTINGS.HIGH = 'high';
 QualityManager.QUALITY_VALUES['high'] = {
-            "tank explosion smoke count": 5,
-            "tank explosion fragment count": 15,
+            "tank explosion smoke count": 9,
+            "tank explosion fragment count": 24,
             "missile launch smoke count": 20,
-            "missile smoke frequency": 50,                              // ms / particle
+            "missile smoke frequency": 90,                              // ms / particle
             "crate land dust count": 20,
-            "aimer min segment length": 0.0,                            // m
-            "aimer off max segment length": 1.0,                        // m
-            "aimer on max segment length": 0.3,                         // m
+            "aimer min segment length": 1.0,                            // m
+            "aimer off max segment length": 3.0,                        // m
+            "aimer on max segment length": 1.5,                         // m
             "bullet puff count": 10,
-            "shield inverse bolt probability": 0.95,
-            "shield spark particles per emit": 4,
+            "shield inverse bolt probability": 1.0,
+            "shield spark particles per emit": 2,
             "spawn zone inverse unstable particle probability": 0.5,
             "spawn zone num collapse particles": 40
 };
@@ -172,7 +172,7 @@ QualityManager.QUALITY_VALUES['low'] = {
             "aimer min segment length": 0.5,                            // m
             "aimer off max segment length": 2.0,                        // m
             "aimer on max segment length": 1.0,                         // m
-            "bullet puff count": 3,
+            "bullet puff count": 5,
             "shield inverse bolt probability": 0.95,
             "shield spark particles per emit": 1,
             "spawn zone inverse unstable particle probability": 0.9,
@@ -189,7 +189,7 @@ QualityManager.QUALITY_VALUES['minimum'] = {
             "aimer off max segment length": 4.0,                        // m
             "aimer on max segment length": 2.0,                         // m
             "bullet puff count": 0,
-            "shield inverse bolt probability": 0.99,
+            "shield inverse bolt probability": 0.90,
             "shield spark particles per emit": 0,
             "spawn zone inverse unstable particle probability": 0.95,
             "spawn zone num collapse particles": 5
