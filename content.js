@@ -36,6 +36,11 @@ form {
     background: none;
     border: none;
 }
+#overlay .virtualShop form {
+    padding-top: 20px;
+    background: none;
+    border: none;
+}
 #overlay .shop form {
     padding-top: 20px;
     background: none;
