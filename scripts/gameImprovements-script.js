@@ -153,12 +153,12 @@ QualityManager.QUALITY_VALUES['high'] = {
             "missile launch smoke count": 20,
             "missile smoke frequency": 90,                              // ms / particle
             "crate land dust count": 20,
-            "aimer min segment length": 1.0,                            // m
-            "aimer off max segment length": 3.0,                        // m
-            "aimer on max segment length": 1.5,                         // m
+            "aimer min segment length": 0.0,                            // m
+            "aimer off max segment length": 1.0,                        // m
+            "aimer on max segment length": 0.3,                         // m
             "bullet puff count": 10,
-            "shield inverse bolt probability": 1.0,
-            "shield spark particles per emit": 2,
+            "shield inverse bolt probability": 0.95,
+            "shield spark particles per emit": 4,
             "spawn zone inverse unstable particle probability": 0.5,
             "spawn zone num collapse particles": 40
 };
