@@ -113,6 +113,13 @@ form {
     border-radius: 5px;
     border: #999 3px solid;
     padding: 5px;
+    width: 250px;
+}
+.box .spaced {
+    padding: 5px;
+    left: 0px;
+    border: none;
+    background: none;
 }
     #overlay {
         color: #fff;
