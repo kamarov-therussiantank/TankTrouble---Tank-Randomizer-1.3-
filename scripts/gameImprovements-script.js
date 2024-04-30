@@ -17,8 +17,8 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     // More Games script
     UIConstants.GAME_ICON_POOL_SIZE = 6;
     UIConstants.GAME_ICON_COUNT = 6;
-    UIConstants.GAME_ICON_WIDTH = UIConstants.GAME_ICON_WIDTH / 1.7;
-    UIConstants.GAME_ICON_HEIGHT = UIConstants.GAME_ICON_HEIGHT /1.7;
+    UIConstants.GAME_ICON_WIDTH = UIConstants.GAME_ICON_WIDTH / 1.4;
+    UIConstants.GAME_ICON_HEIGHT = UIConstants.GAME_ICON_HEIGHT /1.4;
     UIGameIconImage.prototype.spawn = function(x, y, gameState, favouriteActiveQueuedCounts) {
         this.reset(x, y);
         this.gameId = gameState.getId();
@@ -32,8 +32,8 @@ if (window.location.hostname.includes("tanktrouble.com")) {
             this.removeTween.stop();
         }
         this.game.add.tween(this.scale).to({
-            x: UIConstants.ASSET_SCALE / 1.7,
-            y: UIConstants.ASSET_SCALE / 1.7
+            x: UIConstants.ASSET_SCALE / 1.4,
+            y: UIConstants.ASSET_SCALE / 1.4
         }, UIConstants.ELEMENT_POP_IN_TIME, Phaser.Easing.Back.Out, true, delay);
     };
 
