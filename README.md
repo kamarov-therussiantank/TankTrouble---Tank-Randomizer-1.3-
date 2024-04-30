@@ -8,7 +8,7 @@ Fetching...
 
 `Installation:`
 
-To install TTCV2 in the Browser:
+To install TTCV2:
 
 1. [Download the ZIP archive](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.zip)
 2. Extract the ZIP archive to a location of your choice.  
