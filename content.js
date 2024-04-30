@@ -1,5 +1,4 @@
-// TODO: Add more matte versions of paints and add matte versions of spray cans
-// TODO: Classic Lobby Settings (local only), Leaderboard
+// TODO: Classic Lobby Settings (local only), Leaderboard, FAQ, LAB?!
 
 // Function to dynamically add custom CSS
 const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
@@ -121,6 +120,7 @@ form {
     left: 0px;
     border: none;
     background: none;
+    box-shadow: none;
 }
     #overlay {
         color: #fff;
