@@ -31,20 +31,24 @@ form {
 #overlay .achievements form {
     background: none;
     border: none;
+    box-shadow:none;
 }
 #overlay .garage form {
     background: none;
     border: none;
+    box-shadow:none;
 }
 #overlay .virtualShop form {
     padding-top: 20px;
     background: none;
     border: none;
+    box-shadow:none;
 }
 #overlay .shop form {
     padding-top: 20px;
     background: none;
     border: none;
+    box-shadow:none;
 }
     .premium #header {
         background-image: url(../assets/images/header/background.png);
