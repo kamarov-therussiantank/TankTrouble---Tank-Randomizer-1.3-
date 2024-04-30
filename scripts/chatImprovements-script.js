@@ -61,6 +61,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     left: 0px;
     border: none;
     width: 245px;
+    box-shadow: none;
 }
 #chat:not(.open) form {
 	display: none;
