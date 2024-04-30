@@ -21,12 +21,13 @@ if (site.includes("tanktrouble.com")) {
     top: 0px;
 }
 form {
-    background: #ddd;
+    background: #aaa;
     border-radius: 7px;
-    border: #757575 3px solid;
+    border: #666 4px solid;
     width: 500px;
     position: relative;
     left: 580px;
+    box-shadow: 0 5px 7px 0 rgba(0,0,0, .5);
 }
 #overlay .achievements form {
     background: none;
@@ -131,7 +132,7 @@ form {
     #overlay .newGame .premium {
     background: #aaa;
     border: #666 4px solid;
-    border-radius: 0px;
+    border-radius: 7px;
     box-shadow: 0 5px 7px 0 rgba(0,0,0, .5);
    }
    #overlay .newGame .premium::before {
@@ -160,9 +161,10 @@ form {
      #overlay .admin .attention {
         text-shadow: none;
      }
-    .box .tab.topRight {
-        background: #999;
-    }
+#overlay .messages textarea {
+    box-sizing: border-box;
+    width: 490px;
+}
     .box .tab.right {
         background: #999;
     }
