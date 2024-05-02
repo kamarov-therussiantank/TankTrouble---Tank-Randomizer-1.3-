@@ -57,9 +57,9 @@ button.warning {
        stroke: none;
     }
 .shopItem {
-    background: #ccc;
+    background: #555;
     border-radius: 3px;
-    border: #333 3px solid;
+    border: #666 3px solid;
     box-shadow: #000 0 3px 5px 0;
     border-radius: 7px;
 }
@@ -214,9 +214,9 @@ button.warning {
 }
 .buttonGroup {
     display: inline-block;
-    background: #aaa;
+    background: #ccc;
     border-radius: 7px;
-    border: #666 4px solid;
+    border: #666 3px solid;
     margin-bottom: 10px;
 }
    `);
