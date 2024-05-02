@@ -19,36 +19,9 @@ if (site.includes("tanktrouble.com")) {
     left: -10px;
     top: 0px;
 }
-form {
-    background: #aaa;
-    border-radius: 7px;
-    border: #666 4px solid;
-    width: 500px;
-    position: relative;
-    left: 580px;
-    box-shadow: 0 5px 7px 0 rgba(0,0,0, .5);
-}
-#overlay .achievements form {
-    background: none;
-    border: none;
-    box-shadow:none;
-}
-#overlay .garage form {
-    background: none;
-    border: none;
-    box-shadow:none;
-}
-#overlay .virtualShop form {
-    padding-top: 20px;
-    background: none;
-    border: none;
-    box-shadow:none;
-}
-#overlay .shop form {
-    padding-top: 20px;
-    background: none;
-    border: none;
-    box-shadow:none;
+button.warning {
+    background: #f10808;
+    font-family: Arial;
 }
     .premium #header {
         background-image: url(../assets/images/header/background.png);
@@ -83,18 +56,19 @@ form {
        text-shadow: none;
        stroke: none;
     }
-    .shopItem {
-       background: #aaa;
-       border-radius: 3px;
-       border: #666 3px solid;
-       box-shadow: #000 0 3px 5px 0;
-    }
+.shopItem {
+    background: #1e1e1e;
+    border-radius: 3px;
+    border: #333 3px solid;
+    box-shadow: #000 0 3px 5px 0;
+    border-radius: 7px;
+}
     .shopItem.info button.info {
     width: 34px;
     float: right;
     right: 10px;
     color: white;
-    background: #3159bf;
+    background: #0097fb;
     }
     #teaser-25 .mode {
         color: red;
@@ -133,6 +107,11 @@ form {
                      -1px  1px 0 #000,
                       1px  1px 0 #000;
     }
+    #overlay {
+    color: #fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    background: #000000f5;
+}
     #overlay .newGame .premium {
     background: #aaa;
     border: #666 4px solid;
@@ -239,6 +218,13 @@ form {
 #rightBanner,
 #topBanner {
     display: none !important;
+}
+.buttonGroup {
+    display: inline-block;
+    background: #aaa;
+    border-radius: 7px;
+    border: #666 4px solid;
+    margin-bottom: 10px;
 }
    `);
 
