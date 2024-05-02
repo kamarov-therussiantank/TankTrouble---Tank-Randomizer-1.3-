@@ -101,16 +101,9 @@ button.warning {
     box-shadow: none;
 }
     #overlay {
-        color: #fff;
-        text-shadow: -1px -1px 0 #000,  
-                      1px -1px 0 #000,
-                     -1px  1px 0 #000,
-                      1px  1px 0 #000;
-    }
-    #overlay {
     color: #fff;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    background: #000000f5;
+    background-color: rgb(0 0 0 / 85%);
 }
     #overlay .newGame .premium {
     background: #aaa;
