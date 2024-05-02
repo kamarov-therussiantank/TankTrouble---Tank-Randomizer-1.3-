@@ -57,7 +57,7 @@ button.warning {
        stroke: none;
     }
 .shopItem {
-    background: #1e1e1e;
+    background: #ccc;
     border-radius: 3px;
     border: #333 3px solid;
     box-shadow: #000 0 3px 5px 0;
