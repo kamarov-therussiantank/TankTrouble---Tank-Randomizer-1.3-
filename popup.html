@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <title>TTCV2 Settings</title>
+    <!-- External CSS -->
+    <link id="stylesheet" href="" rel="stylesheet" type="text/css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- External JavaScript -->
+    <script src="popup/jquery-3.3.1.slim.min.js"></script>
+    <script src="popup/bootstrap.min.js"></script>
+    <script src="popup/popup.js"></script>
+    <script src="popup/tiptop.js"></script>
+</head>
+<body>
+    <main>
+        <!-- Title Section -->
+        <div class="title">Settings</div>
+        <div class="separator"></div>
+        <!-- Grid Box 1 -->
+        <div class="gridBox">
+            <!-- General Theme Section -->
+            <div class="section">
+                <div class="subtitle">General Theme</div>
+                <!-- Toggle Button for Dark Theme -->
+                <button type="button" id="darkTheme" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off"></button>
+                <div class="handle"></div>
+            </div>
+            <div class="separator"></div>
+            <!-- Maze Theme Section -->
+            <div class="section mazeTheme">
+                <div title="Bounded to this one" class="subtitle">Maze Theme</div>
+                <!-- Maze Theme Buttons -->
+                <div title="Classic Theme">
+                    <button id="simpleLight" value="simpleLight" class="maze" type="button" tabindex="-1" style="display: inline-block;"></button>
+                </div>
+            </div>
+        </div>
+            <div class="separator"></div>
+         <div class="gridBox">
+            <!-- Classic Mouse Control Section -->
+            <div class="section">
+                <div class="subtitle classicMouse" title="Toggle classic mouse input">Classic Mouse Control</div>
+                <!-- Toggle Button for Classic Mouse Control -->
+                <button type="button" id="classicMouse" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off"></button>
+                <div class="handle"></div>
+            </div>
+            <!-- Music Theme Section -->
+            <div class="section">
+                <div class="subtitle musicTheme" title="Russian March or Piano March">Music Theme</div>
+                <!-- Toggle Button for Music Theme -->
+                <button type="button" id="musicTheme" class="btn btn-toggle musicBtn active" data-toggle="button" aria-pressed="true" autocomplete="off"></button>
+                <div class="handle"></div>
+            </div>
+        </div>
+    </div>
+        <div class="separator"></div>
+        <!-- Grid Box 4 -->
+        <div class="gridBox">
+            <!-- Alternative Font Section -->
+            <div class="section">
+                <div class="subtitle alternativeFont" title="Allows for better readability">Alternative Font</div>
+                <!-- Toggle Button for Alternative Font -->
+                <button type="button" id="alternativeFont" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off"></button>
+                <div class="handle"></div>
+            </div>
+            <!-- High-res Tanks Section -->
+            <div class="section">
+                <div class="subtitle highResTanks" title="Render tanks in the highest available resolution">High-res tanks</div>
+                <!-- Toggle Button for High-res Tanks -->
+                <button type="button" id="highResTanks" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off"></button>
+                <div class="handle"></div>
+            </div>
+        </div>
+        <div class="separator"></div>
+    </main>
+</body>
+</html>
