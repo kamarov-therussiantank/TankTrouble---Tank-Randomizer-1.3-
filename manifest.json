@@ -1,0 +1,62 @@
+{
+	"name": "TTCV2",
+	"author": "Kamarov",
+	"version": "2024.4.30",
+	"manifest_version": 3,
+	"description": "Origin of TankTrouble Classic site. Extension that brings nostalgia back.",
+  
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "1",
+				"enabled": true,
+				"path": "colours/classicColours.json"
+			},
+			{
+				"id": "2",
+				"enabled": true,
+				"path": "game/classicGame.json"
+			},
+			{
+				"id": "3",
+				"enabled": true,
+				"path": "header/classicTabs.json"
+			},
+			{
+				"id": "4",
+				"enabled": true,
+				"path": "forum/classicForumUI.json"
+			}
+		]
+	},
+  
+	"permissions": [
+		"declarativeNetRequest",
+		"declarativeNetRequestFeedback",
+		"declarativeNetRequestWithHostAccess",
+		"storage",
+		"activeTab"
+	],
+  
+	"host_permissions": [
+		"*://*.tanktrouble.com/",
+		"*://*.raw.githubusercontent.com/"
+	],
+
+	"icons": {
+		"16": "icon/16.png",
+		"32": "icon/32.png",
+		"48": "icon/48.png",
+		"128": "icon/128.png",
+		"256": "icon/256.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.tanktrouble.com/*"],
+			"js": ["content.js", "scripts/gameImprovements-script.js", "scripts/classicMouse-script.js", "scripts/adminImprovements-script.js", "scripts/playerImprovements-script.js", "scripts/chatImprovements-script.js"],
+			"run_at": "document_idle",
+                        "world": "MAIN"
+		}
+	]
+}
