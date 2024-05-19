@@ -1,18 +1,5 @@
 // TODO: Classic Lobby Settings (local only), Leaderboard, FAQ, LAB?!
 
-// Function to fetch and apply custom CSS
-function fetchAndApplyCustomCSS(url) {
-  fetch(url)
-    .then(response => response.text())
-    .then(cssText => {
-      // Apply the fetched CSS text dynamically
-      addCustomStyle(cssText);
-    })
-    .catch(error => {
-      console.error('Error fetching CSS file:', error);
-    });
-}
-
 // Function to dynamically add custom CSS
 const addCustomStyle = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
 // Function to create a custom HTML element
@@ -26,11 +13,6 @@ function createCustomElement(tag, attr_tag, attr_name, value) {
 const site = window.location.hostname;
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
-  // Fetch and apply custom CSS
-  fetchAndApplyCustomCSS('ttcv2/css/classicStyle.css');
-
-
-   // Create a custom HTML element
    createCustomElement('div', 'id', 'statisticsSnippet', `
    <style>
     #statisticsSnippet {
