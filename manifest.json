@@ -53,8 +53,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.tanktrouble.com/*"],
-			"js": ["content.js", "scripts/gameImprovements-script.js", "scripts/classicMouse-script.js", "scripts/adminImprovements-script.js", "scripts/playerImprovements-script.js", "scripts/chatImprovements-script.js"],
-			"css": ["ttcv2/css/classicStyle.css"], 
+			"js": ["content.js", "scripts/customScripts.js"], 
 			"run_at": "document_idle",
                         "world": "MAIN"
 		}
