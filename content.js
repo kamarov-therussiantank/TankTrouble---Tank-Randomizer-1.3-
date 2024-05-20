@@ -17,15 +17,15 @@ if (site.includes("tanktrouble.com")) {
    <style>
     #statisticsSnippet {
       background: linear-gradient(to bottom, #fff, #fff);
-      border: #333 2px solid;
-      border-radius: 2px;
-      box-shadow: 0 3px 4px 0 rgba(0,0,0, .5);
+      border: #000 2px solid;
+      border-radius: 5px;
+      box-shadow: none;
       margin-bottom: 10px;
       text-align: center;
     }
     #statisticsSnippet .header {
       font-family:'TankTrouble';
-      background: #dadada;
+      background: #ccc;
       color: #fff;
       border-radius: 3px;
       border: #bababa 2px solid;
