@@ -36,12 +36,12 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 }
     .snippet {
         background: #fff;
-        border: #333 2px solid;
-        border-radius: 2px;
-        box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
+        border: #000 2px solid;
+        border-radius: 5px;
+        box-shadow: none;
     }
     .snippet .header {
-        background: #dadada;
+        background: #ccc;
         color: #fff;
         border-radius: 3px;
         border: #bababa 2px solid;
@@ -69,6 +69,14 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     border: #666 3px solid;
     box-shadow: #000 0 3px 5px 0;
     border-radius: 7px;
+}
+div#shopItem-120 {
+    background: #ebc934;
+    border: 3px #d3a310 solid;
+}
+div#shopItem-122 {
+    background: #1ab14d;
+    border: 3px #2a873b solid;
 }
     .shopItem.info button.info {
     width: 34px;
