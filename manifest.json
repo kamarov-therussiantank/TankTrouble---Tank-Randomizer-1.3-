@@ -10,22 +10,12 @@
 			{
 				"id": "1",
 				"enabled": true,
-				"path": "colours/classicColours.json"
+				"path": "ttcv2/colours/colours.json"
 			},
 			{
 				"id": "2",
 				"enabled": true,
-				"path": "game/classicGame.json"
-			},
-			{
-				"id": "3",
-				"enabled": true,
-				"path": "header/classicTabs.json"
-			},
-			{
-				"id": "4",
-				"enabled": true,
-				"path": "forum/classicForumUI.json"
+				"path": "ttcv2/game/game.json"
 			}
 		]
 	},
@@ -53,7 +43,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.tanktrouble.com/*"],
-			"js": ["content.js", "scripts/customScripts.js"], 
+			"js": ["content.js", "ttcv2/scripts/customScripts.js"], 
 			"run_at": "document_idle",
                         "world": "MAIN"
 		}
