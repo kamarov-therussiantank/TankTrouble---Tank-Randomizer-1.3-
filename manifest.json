@@ -44,6 +44,7 @@
 		{
 			"matches": ["*://*.tanktrouble.com/*"],
 			"js": ["content.js", "ttcv2/scripts/customScripts.js"], 
+			"css": ["ttcv2/css/classicStyle.css"],
 			"run_at": "document_idle",
                         "world": "MAIN"
 		}
