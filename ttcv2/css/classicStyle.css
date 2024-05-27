@@ -157,6 +157,10 @@ div#shopItem-122 {
     box-sizing: border-box;
     width: 490px;
 }
+#overlay .subheadline {
+    font-size: 20px;
+    font-family: 'ClassicTanktrouble';
+}
     .box .tab.right {
         background: #999;
     }
