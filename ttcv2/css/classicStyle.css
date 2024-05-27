@@ -371,3 +371,9 @@ div#shopItem-122 {
     background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1%402x.png) 2x);
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1%402x.png) 2x)
 }
+img.deselected {
+    padding: 60px 0 0 320px;
+}
+img.selected {
+    padding: 60px 0 0 320px;
+}
