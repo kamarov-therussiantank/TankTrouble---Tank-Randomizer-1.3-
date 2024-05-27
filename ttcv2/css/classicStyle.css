@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'YourCustomFont';
+    src:  url('ttcv2/fonts/Classic_Tank_Trouble_font.ttf') format('truetype');
+}
+
 #game {
     position: relative;
     left: -10px;
