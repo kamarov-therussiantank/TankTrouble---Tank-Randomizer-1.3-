@@ -88,9 +88,8 @@ div#shopItem-122 {
         position: relative;
     }
     .forum .bubble .header {
-	font-family: 'ClassicTankTrouble';
         font-size: 1.4em;
-        font-weight: bold;
+        font-family: 'ClassicTankTrouble';
     }
     .forum .bubble .content {
 	font-family: 'ClassicTankTrouble';
