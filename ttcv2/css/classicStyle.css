@@ -360,6 +360,8 @@ div#shopItem-122 {
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2%402x.png) 2x)
 }
 #gameTab .deselected,#gameTab .selected {
+    width:0;
+    height:0;
     background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected%402x.png) 2x);
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected%402x.png) 2x)
 }
