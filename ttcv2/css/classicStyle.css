@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'YourCustomFont';
-    src:  url('ttcv2/fonts/Classic_Tank_Trouble_font.ttf') format('truetype');
+    font-family: 'ClassicTankTrouble';
+    src:  url('ttcv2/fonts/Classic_TankTrouble_font.ttf') format('truetype');
 }
 
 #game {
@@ -32,6 +32,10 @@
                       1px -1px 0 #000,
                      -1px  1px 0 #000,
                       1px  1px 0 #000;
+    }
+    .snippet .content {
+       margin: 3px 3px 3px 3px;
+       font-family: 'ClassicTankTrouble';
     }
     #scrapyardSnippet .content {
         margin-left: 4px;
@@ -79,6 +83,10 @@ div#shopItem-122 {
         border: #333 2px solid;
         border-radius: 2px;
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
+    }
+    .forum .bubble * {
+        position: relative;
+        font-family: 'ClassicTankTrouble';
     }
     .body {
         font-size: 14px;
