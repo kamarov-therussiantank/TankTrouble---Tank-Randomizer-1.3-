@@ -25,6 +25,7 @@ if (site.includes("tanktrouble.com")) {
     }
     #statisticsSnippet .header {
       font-family:'TankTrouble';
+      font-size: 14px;
       background: #ccc;
       color: #fff;
       border-radius: 3px;
@@ -37,7 +38,9 @@ if (site.includes("tanktrouble.com")) {
                     1px  1px 0 #000;
     }
     #statisticsSnippet .content {
-      margin: 3px 2px 3px 2px;
+    margin: 3px 2px 3px 2px;
+    font-family: 'ClassicTankTrouble';
+    font-size: 1.1em;
     }
     #statisticsSnippet .content * {
       margin: 3px 2px 3px 2px;
