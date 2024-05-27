@@ -362,6 +362,7 @@ div#shopItem-122 {
 #gameTab .deselected,#gameTab .selected {
     width:0;
     height:0;
+    padding:60px 0 0 320px
     background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected%402x.png) 2x);
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected%402x.png) 2x)
 }
