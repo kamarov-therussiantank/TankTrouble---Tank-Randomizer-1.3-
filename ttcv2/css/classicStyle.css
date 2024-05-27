@@ -317,6 +317,24 @@ div#shopItem-122 {
     background: none;
     cursor: default;
 }
+box .tab.bottom {
+    left: 50%;
+    bottom: 0;
+    background: linear-gradient(-45deg, #999 70%, #999 300%);
+    -webkit-transform: scaleX(.7) rotate(45deg);
+    -ms-transform: scaleX(.7) rotate(45deg);
+    transform: scaleX(.7) rotate(45deg);
+    display: none;
+}
+box .tab.topRight {
+    left: 50%;
+    bottom: 0;
+    background: linear-gradient(-45deg, #999 70%, #999 300%);
+    -webkit-transform: scaleX(.7) rotate(45deg);
+    -ms-transform: scaleX(.7) rotate(45deg);
+    transform: scaleX(.7) rotate(45deg);
+    display: none;
+}
 #garageTab .deselected,#garageTab .selected {
     width:0;
     height:0;
