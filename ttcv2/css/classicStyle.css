@@ -3,11 +3,6 @@
     src:  url('ttcv2/fonts/Classic_TankTrouble_font.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'Atkinson';
-    src:  url('ttcv2/fonts/Atkinson-Hyperlegible.ttf') format('truetype');
-}
-
 #game {
     position: relative;
     left: -10px;
