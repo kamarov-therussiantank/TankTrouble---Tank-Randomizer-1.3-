@@ -95,6 +95,11 @@ div#shopItem-122 {
 	font-family: 'ClassicTankTrouble';
         font-size: 14.3px;
     }
+    .forum .page img {
+        display: none;
+        position: relative;
+        padding: 0px;
+    }
     .body {
         font-size: 14px;
     }
