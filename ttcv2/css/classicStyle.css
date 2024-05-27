@@ -323,7 +323,7 @@ div#shopItem-122 {
     background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5%402x.png) 2x);
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5%402x.png) 2x)
 }
-#forumTab .deselected,#garageTab .selected {
+#forumTab .deselected,#forumTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
@@ -335,7 +335,7 @@ div#shopItem-122 {
     background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4%402x.png) 2x);
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4%402x.png) 2x)
 }
-#newsTab .deselected,#garageTab .selected {
+#newsTab .deselected,#newsTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
@@ -347,7 +347,7 @@ div#shopItem-122 {
     background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3%402x.png) 2x);
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3%402x.png) 2x)
 }
-#shopTab .deselected,#garageTab .selected {
+#shopTab .deselected,#shopTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
@@ -359,7 +359,7 @@ div#shopItem-122 {
     background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2%402x.png) 2x);
     background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2%402x.png) 2x)
 }
-#gameTab .deselected,#garageTab .selected {
+#gameTab .deselected,#gameTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
