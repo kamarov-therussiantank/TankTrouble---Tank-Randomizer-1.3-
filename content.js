@@ -40,7 +40,7 @@ if (site.includes("tanktrouble.com")) {
     #statisticsSnippet .content {
     margin: 3px 2px 3px 2px;
     font-family: 'ClassicTankTrouble';
-    font-size: 1.1em;
+    font-size: 1.05em;
     }
     #statisticsSnippet .content * {
       margin: 3px 2px 3px 2px;
