@@ -79,6 +79,7 @@ div#shopItem-122 {
         border: #333 2px solid;
         border-radius: 2px;
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
+	font-family: 'ClassicTankTrouble';
     }
     .forum .bubble * {
         position: relative;
