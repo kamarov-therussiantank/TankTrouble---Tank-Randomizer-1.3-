@@ -43,7 +43,7 @@ if (site.includes("tanktrouble.com")) {
     font-size: 1.05em;
     }
     #statisticsSnippet .content * {
-      margin: 3px 2px 3px 2px;
+      margin: 3px 0 3px 0;
     }
     #statisticsSnippet .content #visits {
       font-size: 13px;
