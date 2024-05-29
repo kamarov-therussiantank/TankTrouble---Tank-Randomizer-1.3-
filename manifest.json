@@ -16,6 +16,11 @@
 				"id": "2",
 				"enabled": true,
 				"path": "ttcv2/game/game.json"
+			},
+			{
+				"id": "3",
+				"enabled": true,
+				"path": "images/accessories/accessories.json"
 			}
 		]
 	},
