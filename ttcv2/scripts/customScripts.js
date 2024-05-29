@@ -52,14 +52,6 @@ if (window.location.hostname.includes("tanktrouble.com")) {
                      -1px  1px 0 #000,
                       1px  1px 0 #000;
     }
-    #scrapyardSnippet .content {
-        margin-left: 4px;
-        margin-right: 4px;
-    }
-    #scrapyardSnippet {
-        width: 133px;
-        padding: 3px;
-    }
     .shopItem svg text {
        text-shadow: none;
        stroke: none;
