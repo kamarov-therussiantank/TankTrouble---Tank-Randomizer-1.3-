@@ -38,12 +38,12 @@ if (site.includes("tanktrouble.com")) {
                     1px  1px 0 #000;
     }
     #statisticsSnippet .content {
-    margin: 3px 2px 3px 2px;
+    margin: 3px 1px 3px 1px;
     font-family: 'ClassicTankTrouble';
     font-size: 1.05em;
     }
     #statisticsSnippet .content * {
-      margin: 3px 2px 3px 2px;
+      margin: 3px 1px 3px 1px;
     }
     #statisticsSnippet .content #visits {
       font-size: 13px;
