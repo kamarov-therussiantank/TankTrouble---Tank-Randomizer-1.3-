@@ -5,7 +5,7 @@ TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual
 `Features:`
 1. Classic Textures
 <div align="left">
-  <img width="200" height="150" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/image1.png">
+  <img width="200" height="140" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/image1.png">
 </div>
 
 and more...
