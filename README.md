@@ -8,6 +8,8 @@ TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual
   <img width="200" height="140" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/image1.png">
 </div>
 
+2. Classic Graphics
+3. Classic UI
 and more...
 
 ****
