@@ -10,6 +10,7 @@ TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual
 
 2. Classic Graphics
 3. Classic UI
+4. 
 and more...
 
 ****
