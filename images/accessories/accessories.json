@@ -179,8 +179,8 @@
     "condition": {
       "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/accessories/front162-140@2x.png",
       "resourceTypes": ["image"]
-    },
-    {
+  },
+  {
     "id": 14,
     "priority": 1,
     "action": {
@@ -192,7 +192,6 @@
     "condition": {
       "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/accessories/front162-200@2x.png",
       "resourceTypes": ["image"]
-    }
   },
   {
     "id": 15,
