@@ -5,7 +5,7 @@ TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual
 `Features:`
 <div align="center">
   <img width="200" height="150" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/image1.png">
-  
+</div>
 1. Classic Tank Trouble UI
 3. Classic Tank Trouble Graphics
 4. Classic Tank Trouble Textures
