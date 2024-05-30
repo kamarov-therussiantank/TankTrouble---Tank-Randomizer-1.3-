@@ -27,7 +27,7 @@
       "resourceTypes": ["image"]
     }
   },
-   {
+  {
     "id": 3,
     "priority": 1,
     "action": {
@@ -55,7 +55,7 @@
       "resourceTypes": ["image"]
     }
   },
-   {
+  {
     "id": 5,
     "priority": 1,
     "action": {
