@@ -278,7 +278,6 @@ div#shopItem-122 {
     cursor: inherit;
 }
 #chat textarea {
-    font-family: 'ClassicTankTrouble';
     font-weight: bold;
     position: relative;
     left: 5px;
