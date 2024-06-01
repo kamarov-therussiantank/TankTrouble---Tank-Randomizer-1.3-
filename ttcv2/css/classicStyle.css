@@ -88,8 +88,18 @@ div#shopItem-122 {
     color: white;
     background: #0097fb;
     }
+    div#teaser-25 {
+    background: red;
+    color: white;
+    border: 2px red solid;
+    }
+    #teaser-25 .header {
+    background: none;
+    border: none;
+    text-shadow: none;
+    }
     #teaser-25 .mode {
-        color: red;
+        color: white;
     }
     .forum .bubble {
         background-color: #f2f2f2;
