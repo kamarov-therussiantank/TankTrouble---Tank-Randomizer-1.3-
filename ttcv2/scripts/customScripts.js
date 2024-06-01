@@ -295,7 +295,6 @@ div#shopItem-122 {
 }
        `);
 
-chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
     // Check if the requested URL is for an audio file
     if (details.type === "media" && details.url.includes("https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/audio/PanzerPolka.mp3")) {
