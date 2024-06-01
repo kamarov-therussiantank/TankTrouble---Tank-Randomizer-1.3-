@@ -294,17 +294,6 @@ div#shopItem-122 {
     cursor: default;
 }
        `);
-
-  function ClassicAudio(details) {
-    // Check if the requested URL is for an audio file
-    if (details.type === "media" && details.url.includes("https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/audio/PanzerPolka.mp3")) {
-      // Redirect the request to a different URL
-      return { redirectUrl: "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/audio/RussianMarch.m4a" };
-    }
-  },
-  { urls: ["https://tanktrouble.com/"] },
-  ["blocking"] // Block the request until redirection is done
-);
 	    
 //Classic Mouse script
     Tank.method('_computeRotationSpeed', function() {
