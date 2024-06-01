@@ -86,9 +86,6 @@ div#shopItem-122 {
     color: white;
     background: #0097fb;
     }
-    #teaser-25 .mode {
-        color: red;
-    }
     .forum .bubble {
         background-color: #f2f2f2;
         border: #333 2px solid;
