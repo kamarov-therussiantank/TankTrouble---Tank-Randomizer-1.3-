@@ -21,11 +21,6 @@
 				"id": "3",
 				"enabled": true,
 				"path": "images/accessories/accessories.json"
-			},
-			{
-				"id": "4",
-				"enabled": true,
-				"path": "ttcv2/audio/audio.json"
 			}
 		]
 	},
