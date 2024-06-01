@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/audio/RussianMarch.m4a"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/audio/PanzerPolka.m4a",
+      "resourceTypes": ["audio"]
+    }
+  }
+]
