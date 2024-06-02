@@ -41,11 +41,7 @@
         border-radius: 3px;
         border: #bababa 2px solid;
         margin-bottom: 5px;
-        text-shadow: -1px -1px 0 #000,  
-                      1px -1px 0 #000,
-                     -1px  1px 0 #000,
-                      1px  1px 0 #000;
-    }
+	}
     .snippet .content {
        margin: 3px 3px 3px 3px;
        font-family: 'ClassicTankTrouble';
@@ -55,13 +51,22 @@
         margin-right: 4px;
     }
     #scrapyardSnippet {
-        width: 133px;
+        width: 135px;
         padding: 3px;
     }
     #scrapyardSnippet .header {
     background: none;
     border: none;
     }
+#messagesSnippet {
+    cursor: pointer;
+    border: 3px #ccc solid;
+}
+div#messagesSnippet .header {
+    text-shadow: none;
+    border: 2px #ccc solid;
+    background: #ccc;
+}
     .shopItem svg text {
        text-shadow: none;
        stroke: none;
@@ -91,7 +96,7 @@ div#shopItem-122 {
     div#teaser-25 {
     background: red;
     color: white;
-    border: 2px red solid;
+    border: 3px red solid;
     }
     #teaser-25 .header {
     background: none;
