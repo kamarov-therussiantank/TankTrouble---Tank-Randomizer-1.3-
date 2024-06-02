@@ -52,10 +52,6 @@ if (window.location.hostname.includes("tanktrouble.com")) {
                      -1px  1px 0 #000,
                       1px  1px 0 #000;
     }
-    #scrapyardSnippet {
-        width: 133px;
-        padding: 3px;
-    }
     #scrapyardSnippet .header {
     background: none;
     border: none;
