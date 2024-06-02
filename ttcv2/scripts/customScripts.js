@@ -31,6 +31,23 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     left: -10px;
     top: 0px;
 }
+#secondaryContent {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 130px;
+}
+#tertiaryContent {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 130px;
+}
+#red_infiltration {
+    position: absolute;
+    top: 109px;
+    right: -135px;
+}
     .premium #header {
         background-image: url(../assets/images/header/background.png);
         background-size: 120px 120px;
