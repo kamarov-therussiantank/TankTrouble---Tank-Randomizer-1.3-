@@ -50,10 +50,12 @@
         margin-left: 4px;
         margin-right: 4px;
     }
-    #scrapyardSnippet {
-        width: 135px;
-        padding: 3px;
-    }
+#scrapyardSnippet {
+    background: #000;
+    color: #fff;
+    box-sizing: unset;
+    padding: 2px;
+}
     #scrapyardSnippet .header {
     background: none;
     border: none;
