@@ -17,7 +17,7 @@ if (site.includes("tanktrouble.com")) {
    <style>
     #statisticsSnippet {
       background: linear-gradient(to bottom, #fff, #fff);
-      border: #000 2px solid;
+      border: #ccc 3px solid;
       border-radius: 5px;
       box-shadow: none;
       margin-bottom: 10px;
@@ -29,13 +29,9 @@ if (site.includes("tanktrouble.com")) {
       background: #ccc;
       color: #fff;
       border-radius: 3px;
-      border: #bababa 2px solid;
+      border: #ccc 2px solid;
       margin-bottom: 5px;
       padding: 5px 0 3px 0;
-      text-shadow: -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                   -1px  1px 0 #000,
-                    1px  1px 0 #000;
     }
     #statisticsSnippet .content {
     margin: 3px 1px 3px 1px;
