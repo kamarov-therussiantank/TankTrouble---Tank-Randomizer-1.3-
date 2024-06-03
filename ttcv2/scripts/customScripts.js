@@ -310,6 +310,16 @@ div#shopItem-122 {
     cursor: default;
 }
        `);
+
+	const addHyperlinks = (_threadOrReply, threadOrReplyElement) => {
+		const threadOrReplyContent = threadOrReplyElement.find('.bubble .content');
+
+		if (threadOrReplyContent.length) {
+			const urlRegex = /(?<_>https?:\/\/[\w\-_]+(?:\.[\w\-_]+)+(?:[\w\-.,@?^=%&amp;:/~+#]*[\w\-@?^=%&amp;/~+#])?)/gu;
+			const messageWithLinks = threadOrReplyContent.html().replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+			threadOrReplyContent.html(messageWithLinks);
+		}
+	};
 	    
 //Classic Mouse script
     Tank.method('_computeRotationSpeed', function() {
