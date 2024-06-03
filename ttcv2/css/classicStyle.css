@@ -372,61 +372,61 @@ div#shopItem-122 {
     width:0;
     height:0;
     padding:60px 0 0 120px;
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5Selected%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5Selected%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicT5Selected%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5Selected%402x.png) 2x)
 }
 
 #garageTab .deselected {
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab5%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab5%402x.png) 2x)
 }
 #forumTab .deselected,#forumTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4Selected%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4Selected%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4Selected%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4Selected%402x.png) 2x)
 }
 
 #forumTab .deselected {
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab4%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab4%402x.png) 2x)
 }
 #newsTab .deselected,#newsTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3Selected%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3Selected%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3Selected%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3Selected%402x.png) 2x)
 }
 
 #newsTab .deselected {
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab3%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab3%402x.png) 2x)
 }
 #shopTab .deselected,#shopTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 120px;
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2Selected%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2Selected%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2Selected%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2Selected%402x.png) 2x)
 }
 
 #shopTab .deselected {
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab2%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab2%402x.png) 2x)
 }
 #gameTab .deselected,#gameTab .selected {
     width:0;
     height:0;
     padding:60px 0 0 320px
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1Selected%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1Selected%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1Selected.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1Selected%402x.png) 2x)
 }
 
 #gameTab .deselected {
-    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1%402x.png) 2x);
-    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/tab1%402x.png) 2x)
+    background-image:-webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1%402x.png) 2x);
+    background-image:image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1.png) 1x,url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/header/classicTab1%402x.png) 2x)
 }
 img.deselected {
     padding: 60px 0 0 320px;
