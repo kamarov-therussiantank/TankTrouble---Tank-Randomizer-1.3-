@@ -434,3 +434,6 @@ img.deselected {
 img.selected {
     padding: 60px 0 0 320px;
 }
+#overlay .controls img.selected {
+    padding: 0px;
+}
