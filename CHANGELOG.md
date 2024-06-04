@@ -15,3 +15,26 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 **2024.4.18** - Classic UI improvements, Chat remake, Bug fixes...
 
 **2024.4.30** - More UI improvements, More matte versions of paints (Warfare Paints), Bug fixes.
+
+**2024.5.6** - Whats new? 
+
+1. Complete rework of in game assets:
+   - Tank sprites REWORKED
+   - Laser sprites REWORKED
+   - Homing missile sprites REWORKED
+   - Shotgun sprites REWORKED
+   - Base weapon sprites REWORKED
+   - Double Trouble sprites REWORKED
+   - Booby Traps REWORKED
+   - Maze tiles REWORKED
+   - Walls sprites REWORKED
+
+2. Complete rework of Classic UI:
+   - Statistic Snippet REWORKED
+   - Battle Mode Snippet REWORKED
+   - Scrapyard Snippet REWORKED
+   - Message the Lab Snippet REWORKED
+   - Added FAQ Snippet
+   - Navigation tab icons REWORKED
+   - Removed Retro Forum icons
+   ...
