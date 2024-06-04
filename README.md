@@ -5,7 +5,7 @@ TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual
 
 `What does it bring?`
 
-TTCV2 extension is the based on the [Classic TankTrouble](https://classic.tanktrouble.com/), very fist version of this beautiful game called [TankTrouble](https://tanktrouble.com/). As the time passed TankTrouble improved alot. Each upgrade brought something new to it. As the upgrades were happening, Classic TankTrouble got completely replaced. Fear of losing such it forever. I have made something this extension to bring back that nostalgic game back to life. Bringing back old but gold: textures, graphics, UI and much much much more.... Let me show you how did TankTrouble looked like back in the old days!
+TTCV2 extension is the based on the [Classic TankTrouble](https://classic.tanktrouble.com/), very fist version of this beautiful game called [TankTrouble](https://tanktrouble.com/). As the time passed TankTrouble improved alot. Each upgrade brought something new to it. As the upgrades were happening, Classic TankTrouble got completely replaced. Fear of losing it forever. I have made something this extension to bring back that nostalgic game back to life. Bringing back old but gold: textures, graphics, UI and much much much more.... Let me show you how did TankTrouble looked like back in the old days!
 
 
 ****
