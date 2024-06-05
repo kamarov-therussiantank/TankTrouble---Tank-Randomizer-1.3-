@@ -29,3 +29,4 @@ if (site.includes("tanktrouble.com")) {
       <div style="color: #fff;"><a href="https://tinyurl.com/ttrulesdoc" target="_blank">Check the FAQ</a></div>
     </div>
   `);
+}
