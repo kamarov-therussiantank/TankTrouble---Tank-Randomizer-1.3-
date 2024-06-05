@@ -69,6 +69,32 @@ div#messagesSnippet .header {
     border: 2px #ccc solid;
     background: #ccc;
 }
+#helpSnippet {
+      background: linear-gradient(to bottom, #000, #000);
+      border: #000 3px solid;
+      border-radius: 5px;
+      box-shadow: none;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    #helpSnippet .header {
+      font-family:'TankTrouble';
+      font-size: 14px;
+      background: #000;
+      border: 2px #000 solid;
+      color: #fff;
+      border-radius: 3px;
+      margin-bottom: 5px;
+      padding: 5px 0 3px 0;
+    }
+    #helpSnippet .content {
+    margin: 3px 1px 3px 1px;
+    font-family: 'ClassicTankTrouble';
+    font-size: 1.05em;
+    }
+    #helpSnippet .content * {
+      margin: 3px 1px 3px 1px;
+    }
     .shopItem svg text {
        text-shadow: none;
        stroke: none;
