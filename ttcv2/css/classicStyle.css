@@ -69,32 +69,6 @@ div#messagesSnippet .header {
     border: 2px #ccc solid;
     background: #ccc;
 }
-#helpSnippet {
-      background: linear-gradient(to bottom, #000, #000);
-      border: #000 3px solid;
-      border-radius: 5px;
-      box-shadow: none;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    #helpSnippet .header {
-      font-family:'TankTrouble';
-      font-size: 14px;
-      background: #000;
-      border: 2px #000 solid;
-      color: #fff;
-      border-radius: 3px;
-      margin-bottom: 5px;
-      padding: 5px 0 3px 0;
-    }
-    #helpSnippet .content {
-    margin: 3px 1px 3px 1px;
-    font-family: 'ClassicTankTrouble';
-    font-size: 1.05em;
-    }
-    #helpSnippet .content * {
-      margin: 3px 1px 3px 1px;
-    }
     .shopItem svg text {
        text-shadow: none;
        stroke: none;
@@ -283,7 +257,7 @@ div#shopItem-122 {
     #overlay input[type="checkbox"]+label::before {
     content: '';
     background: red;
-    border: 2px solid #fff;
+    border: 2px solid #bf0000;
     transition: background .3s;
     border-radius: 5px;
     font-size: 35px;
@@ -296,7 +270,7 @@ div#shopItem-122 {
     margin-right: 5px;
 }
 #overlay input[type="checkbox"]:checked+label::before {
-    border-color: #fff !important;
+    border-color: #00df4e !important;
     background: limegreen;
 }
 #content {
