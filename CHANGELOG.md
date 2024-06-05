@@ -16,7 +16,7 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 
 **2024.4.30** - More UI improvements, More matte versions of paints (Warfare Paints), Bug fixes.
 
-**2024.5.6** - Whats new? 
+**2024.6.5** - Whats new? 
 
 1. Complete rework of in game assets:
    - Tank sprites REWORKED
@@ -37,4 +37,7 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
    - Added FAQ Snippet
    - Navigation tab icons REWORKED
    - Removed Retro Forum icons
+  
+3. Backdoor Accessories are back (but not usable)
+4. SECRETS!
    ...
