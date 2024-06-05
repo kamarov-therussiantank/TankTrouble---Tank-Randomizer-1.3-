@@ -119,7 +119,7 @@ div#shopItem-122 {
     #overlay {
     color: #fff;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    background-color: rgb(0 0 0 / 85%);
+    background-color: rgb(255 255 255);
 }
    #overlay .newGame .premium::before {
     content: "";
@@ -195,7 +195,7 @@ div#shopItem-122 {
     #overlay input[type="checkbox"]+label::before {
     content: '';
     background: red;
-    border: 2px solid #fff;
+    border: 2px solid #bf0000;
     transition: background .3s;
     border-radius: 5px;
     font-size: 35px;
@@ -208,7 +208,7 @@ div#shopItem-122 {
     margin-right: 5px;
 }
 #overlay input[type="checkbox"]:checked+label::before {
-    border-color: #fff !important;
+    border-color: #00df4e !important;
     background: limegreen;
 }
 #content {
