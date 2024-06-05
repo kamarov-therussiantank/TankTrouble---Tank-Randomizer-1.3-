@@ -20,7 +20,7 @@ const site = window.location.hostname;
 // JavaScript codes for TankTrouble
 if (site.includes("tanktrouble.com")) {
   // Load external CSS file
-  loadCSS('URL_TO_YOUR_EXTERNAL_CSS_FILE');
+  loadCSS('ttcv2/css/classicStyle.css');
   
   // Create custom HTML element
   createCustomElement('div', 'id', 'helpSnippet', `
