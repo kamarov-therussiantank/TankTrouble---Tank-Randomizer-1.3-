@@ -4,7 +4,7 @@ function createCustomElement(tag, attr_tag, attr_name, value) {
   const custom_element = document.createElement(tag);
   custom_element.setAttribute(attr_tag, attr_name);
   custom_element.innerHTML = value;
-  document.getElementById('secondaryContent').appendChild(custom_element);
+  document.getElementById('tertiaryContent').appendChild(custom_element);
 }
 // Get the hostname of the current website
 const site = window.location.hostname;
