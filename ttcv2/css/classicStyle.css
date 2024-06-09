@@ -139,6 +139,13 @@ div#shopItem-122 {
         font-family: 'TankTrouble';
         font-size: 14px;
     }
+    .forum .tank div {
+    width: 150px;
+    height: 20px;
+    left: -5px;
+    top: -19px;
+    position: relative;
+    }
     .forum .thread:not(.liked) .like:not(:active) .standard, .forum .thread:not(.liked) .like:active :not(.selected).active, .forum .thread.liked .like:not(:active) .selected:not(.active), .forum .thread.liked .like:active .selected.active, .forum .reply:not(.liked) .like:not(:active) .standard, .forum .reply:not(.liked) .like:active :not(.selected).active, .forum .reply.liked .like:not(:active) .selected:not(.active), .forum .reply.liked .like:active .selected.active, .forum .edit:not(:active) .standard, .forum .edit:active .active, .forum .acceptEdit:not(:active) .standard, .forum .acceptEdit:active .active, .forum .cancelEdit:not(:active) .standard, .forum .cancelEdit:active .active {
     display: inherit;
     padding: 0;
