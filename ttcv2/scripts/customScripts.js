@@ -102,6 +102,13 @@ div#shopItem-122 {
         font-family: 'TankTrouble';
         font-size: 14px;
     }
+    .forum .tank div {
+    width: 150px;
+    height: 20px;
+    left: -5px;
+    top: -19px;
+    position: relative;
+   }
    .box .content {
     background: #d5d5d5;
     border-radius: 5px;
