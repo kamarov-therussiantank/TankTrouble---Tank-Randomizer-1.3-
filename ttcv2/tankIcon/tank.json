@@ -5,11 +5,11 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/baseShade-140%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/classicBaseShade-140%402x.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-140@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-140@2x.png",
       "resourceTypes": ["image"]
     }
   },
@@ -19,11 +19,11 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/baseShade-140.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/classicBaseShade-140.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-140.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-140.png",
       "resourceTypes": ["image"]
     }
   },
@@ -33,11 +33,11 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/baseShade-200%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/classicBaseShade-200%402x.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-200@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-200@2x.png",
       "resourceTypes": ["image"]
     }
   },
@@ -47,11 +47,11 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/baseShade-200.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/classicBaseShade-200.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-140.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-200.png",
       "resourceTypes": ["image"]
     }
   },
@@ -61,11 +61,11 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/baseShade-320%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/classicBaseShade-320%402x.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-320@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-320@2x.png",
       "resourceTypes": ["image"]
     }
   },
@@ -75,11 +75,11 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/baseShade-320.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/tankIcon/classicBaseShade-320.png"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-320.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-320.png",
       "resourceTypes": ["image"]
     }
   },
@@ -135,7 +135,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/turretShade-140.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/turretShade-200.png",
       "resourceTypes": ["image"]
     }
   },
@@ -219,7 +219,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/barrelShade-140.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/barrelShade-200.png",
       "resourceTypes": ["image"]
     }
   },
