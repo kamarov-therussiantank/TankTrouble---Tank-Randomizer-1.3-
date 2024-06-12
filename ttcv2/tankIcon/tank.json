@@ -9,7 +9,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-140@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-140@2x.png",
       "resourceTypes": ["image"]
     }
   },
@@ -23,7 +23,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-140.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-140.png",
       "resourceTypes": ["image"]
     }
   },
@@ -37,7 +37,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-200@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-200@2x.png",
       "resourceTypes": ["image"]
     }
   },
@@ -51,7 +51,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-200.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-200.png",
       "resourceTypes": ["image"]
     }
   },
@@ -65,7 +65,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-320@2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-320@2x.png",
       "resourceTypes": ["image"]
     }
   },
@@ -79,7 +79,7 @@
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/classicBaseShade-320.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/tankIcon/baseShade-320.png",
       "resourceTypes": ["image"]
     }
   },
