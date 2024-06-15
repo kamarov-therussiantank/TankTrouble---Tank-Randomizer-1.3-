@@ -1599,22 +1599,50 @@ TankTrouble.AccountOverlay.hide = function() {
     this.accountPlayerId.empty();
 };
 
+//Chat improvements
+	    
 var TankTroubleAddons = TankTroubleAddons || {};
 
-// Function to check if system messages are enabled
-TankTroubleAddons.isSystemMessageEnabled = function() {
+TankTroubleAddons.isSystemMessageEnabled = function () {
     return !eval(localStorage.getItem('systemMessages')) ? true : false;
 };
 
-// Function to send a chat message
-TankTrouble.ChatBox._sendChat = function(message) {
+TankTrouble.ChatBox.bannedMessage = 'You are temporarily banned from chatting';
+
+TankTrouble.ChatBox._addChatLink = function (message, svg, playerId, username) {
+    var self = this;
+    var chatUser = $('[class=' + playerId + '-messageUsername]', svg.root());
+
+    chatUser.click(function (event) {
+        if (!self.chatInput.prop('disabled')) {
+            if (Users.getHighestGmLevel() >= UIConstants.ADMIN_LEVEL_PLAYER_LOOKUP) {
+                if (event.shiftKey) {
+                    OverlayManager.pushOverlay(TankTrouble.AdminPlayerLookupOverlay, {
+                        adminId: Users.getHighestGmUser(),
+                        playerId: playerId
+                    });
+                    return;
+                }
+            }
+            self.addRecipient(playerId);
+        }
+    });
+
+    chatUser.css('cursor', 'pointer');
+    chatUser.tooltipster({
+        content: 'Whisper to ' + username,
+        position: 'bottom'
+    });
+};
+
+TankTrouble.ChatBox._sendChat = function (message) {
     if (message !== '') {
         this.chat.addClass('send');
         this._updateInputBackground(true);
         this.blur();
         this.chatInput.prop('disabled', true);
         var self = this;
-        setTimeout(function() {
+        setTimeout(function () {
             if (self.chatInput.prop('disabled')) {
                 self._handleChatSendReceipt('success');
             }
@@ -1622,6 +1650,11 @@ TankTrouble.ChatBox._sendChat = function(message) {
 
         if (this.globalMessage) {
             this._notifyEventListeners(TankTrouble.ChatBox.EVENTS.GLOBAL_CHAT, message);
+        } else if (this.recipientPlayerIds.length > 0) {
+            this._notifyEventListeners(TankTrouble.ChatBox.EVENTS.USER_CHAT, {
+                recipientPlayerIds: this.recipientPlayerIds,
+                message: message
+            });
         } else {
             this._notifyEventListeners(TankTrouble.ChatBox.EVENTS.CHAT, message);
         }
@@ -1630,49 +1663,409 @@ TankTrouble.ChatBox._sendChat = function(message) {
     }
 };
 
-// Function to handle sending chat messages
-TankTrouble.ChatBox.sendChat = function() {
+TankTrouble.ChatBox._renderChatMessage = function (from, to, usernameMap, addRecipients, textColor, strokeColor, message, chatMessageId, reported, animateHeight, animateFadeIn) {
+    var chatMessage = $('<div class=\"chatMessage message-' + chatMessageId + '\"></div>');
+    chatMessage.svg({ settings: { width: 0, height: 0 } });
+    var chatSvg = chatMessage.svg('get');
+    var wordX = 1;
+    var wordY = 12;
+    var svgWidth = 1;
+    var svgHeight = wordY + 5;
+
+    for (var i = 0; i < from.length; ++i) {
+        var fromUser = from[i];
+        var word = usernameMap[fromUser];
+        if (i < from.length - 1) {
+            word += ',';
+        } else {
+            word += addRecipients ? ' @' : ':';
+        }
+        var wordWidth = Utils.measureSVGText(word, { fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12 });
+        if (wordX + wordWidth > this.chatBody.width()) {
+            wordX = 1;
+            wordY += 14;
+            svgHeight = wordY + 5;
+        }
+        chatSvg.text(wordX, wordY, word, { 'class': fromUser + '-messageUsernameStroke', fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12, fill: 'none', stroke: 'white', strokeLineJoin: 'round', strokeWidth: 3 });
+        chatSvg.text(wordX, wordY, word, { 'class': fromUser + '-messageUsername', fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12, fill: 'black' });
+        wordX += wordWidth + 4;
+        svgWidth = Math.max(wordX, svgWidth);
+    }
+
+    if (addRecipients) {
+        for (var i = 0; i < to.length; ++i) {
+            var word = usernameMap[to[i]];
+            if (i < to.length - 1) {
+                word += ',';
+            } else {
+                word += ':';
+            }
+            var wordWidth = Utils.measureSVGText(word, { fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12 });
+            if (wordX + wordWidth > this.chatBody.width()) {
+                wordX = 1;
+                wordY += 14;
+                svgHeight = wordY + 5;
+            }
+            chatSvg.text(wordX, wordY, word, { 'class': to[i] + '-messageUsernameStroke', fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12, fill: 'none', stroke: 'white', strokeLineJoin: 'round', strokeWidth: 3 });
+            chatSvg.text(wordX, wordY, word, { 'class': to[i] + '-messageUsername', fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12, fill: 'black' });
+            wordX += wordWidth + 4;
+            svgWidth = Math.max(wordX, svgWidth);
+        }
+    }
+
+    var words = message.split(' ');
+    for (var i = 0; i < words.length; ++i) {
+        var text = words[i];
+        if (text.includes('։')) {
+            var imgSrc = text.slice(1, -1);
+            var word = '  ';
+            var wordWidth = 5.8;
+            if (wordX + wordWidth > this.chatBody.width()) {
+                wordX = 1;
+                wordY += 14;
+                svgHeight = wordY + 5;
+            }
+            chatSvg.image(wordX + (wordWidth / 2 - 7), wordY - 11, 14, 14, imgSrc);
+        } else {
+            var wordWidth = Utils.measureSVGText(words[i], { fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12 });
+            if (wordWidth > this.chatBody.width()) {
+                var fract = Math.floor((this.chatBody.width() - wordX) / wordWidth * words[i].length + 1);
+                words.splice(i + 1, 0, words[i].substr(fract));
+                words[i] = words[i].substr(0, fract);
+                wordWidth = Utils.measureSVGText(words[i], { fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12 });
+            }
+            if (wordX + wordWidth > this.chatBody.width()) {
+                wordX = 1;
+                wordY += 14;
+                svgHeight = wordY + 5;
+            }
+            chatSvg.text(wordX, wordY, words[i], { fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12, fill: 'none', stroke: strokeColor, strokeLineJoin: 'round', strokeWidth: 3 });
+            chatSvg.text(wordX, wordY, words[i], { fontFamily: 'Arial', fontWeight: 'bold', fontSize: 12, fill: textColor });
+        }
+        wordX += wordWidth + 4;
+        svgWidth = Math.max(wordX, svgWidth);
+    }
+
+    chatSvg.configure({ width: svgWidth, height: svgHeight });
+    this.chatBody.prepend(chatMessage);
+    chatMessage.css({ display: 'none', opacity: 0, position: 'relative', zIndex: this.nextZIndex++ });
+
+    if (animateHeight) {
+        chatMessage.show(200);
+    } else {
+        chatMessage.show();
+    }
+
+    if (animateFadeIn) {
+        chatMessage.animate({ opacity: 1 }, 200);
+    } else {
+        chatMessage.css({ opacity: 1 });
+    }
+
+    this._updatePlayerDetails(from);
+
+    if (addRecipients) {
+        this._updatePlayerDetails(to);
+    }
+
+    var self = this;
+    var prettyUsernames = '';
+    var foundForeignUser = false;
+
+    for (var i = 0; i < from.length; ++i) {
+        var fromUser = from[i];
+        if (!Users.isAnyUser(fromUser)) {
+            prettyUsernames += usernameMap[fromUser];
+            if (i == from.length - 2) {
+                prettyUsernames += ' and ';
+            } else if (i < from.length - 2) {
+                prettyUsernames += ', ';
+            }
+            foundForeignUser = true;
+            this._addChatLink(chatMessage, chatSvg, fromUser, usernameMap[fromUser]);
+        }
+    }
+
+    if (foundForeignUser) {
+        chatMessageWhistle.css('left', wordX + 'px');
+        chatMessageWhistle.hide();
+        chatMessageWhistle.tooltipster({ position: 'right', offsetX: 5 });
+        chatMessage.append(chatMessageWhistle);
+        this._updateWhistle(chatMessageId, reported);
+    }
+
+    var regex = /(?:(?:http[s]?|ftp|file):\/\/|www\.|ftp\.)?(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$?!:,.])/gim;
+    message.replace(regex, function (url) {
+        var texts = chatMessage.find('text');
+        for (var i = 2; i < texts.length; i++) {
+            var text = texts[i];
+            if (url.includes(text.textContent) && text.parentElement && text.parentElement.tagName !== 'a' && text.textContent.length > 5) {
+                if (!url.includes('https:')) {
+                    url = 'https://' + url;
+                }
+                text.outerHTML = '<a href=\"' + url + '\" target=\"_blank\">' + text.outerHTML + '</a>';
+            }
+        }
+    });
+};
+
+TankTrouble.ChatBox.addSystemMessage = function (playerIds, message) {
+    if (TankTroubleAddons.isSystemMessageEnabled()) {
+        if (playerIds.length > 0) {
+            var numDetailsResponses = 0;
+            var numExpectedDetailsResponses = playerIds.length;
+            var usernameMap = {};
+            var tempBanMap = [];
+
+            for (var i = 0; i < playerIds.length; ++i) {
+                usernameMap[playerIds[i]] = '<ERROR>';
+            }
+
+            var self = this;
+
+            Backend.getInstance().getNewestTempBanValidities(function (result) {
+                for (var playerId in result) {
+                    tempBanMap.push(result[playerId]);
+                }
+            }, function (result) {
+            }, function (result) {
+            }, playerIds, Caches.getTempBanValidityCache());
+
+            for (var i = 0; i < playerIds.length; ++i) {
+                Backend.getInstance().getPlayerDetails(function (result) {
+                    if (typeof result == 'object') {
+                        var username = Utils.maskUnapprovedUsername(result);
+                        usernameMap[result.getPlayerId()] = username;
+                    }
+                }, function (result) {
+                }, function (result) {
+                    ++numDetailsResponses;
+                    if (numDetailsResponses == numExpectedDetailsResponses) {
+                        if (tempBanMap.length > 0) {
+                            var tempBanEpoch = Math.max.apply(Math, tempBanMap);
+                            if (message == self.bannedMessage) {
+                                if (tempBanEpoch > 0) {
+                                    var timeUntilUnban = Math.round((tempBanEpoch - Math.round(Date.now() / 1e3)) / 3600);
+                                    switch (timeUntilUnban) {
+                                        case 0:
+                                            timeUntilUnban++;
+                                            timeUntilUnban = 'less than ' + timeUntilUnban + ' hour';
+                                            break;
+                                        case 1:
+                                            timeUntilUnban += ' hour';
+                                            break;
+                                        default:
+                                            timeUntilUnban += ' hours';
+                                            break;
+                                    }
+                                    self._addSystemMessage(playerIds, usernameMap, 'You will be unbanned from chatting in ' + timeUntilUnban);
+                                    return false;
+                                } else {
+                                }
+                            } else {
+                            }
+                        } else {
+                        }
+                        self._addSystemMessage(playerIds, usernameMap, message);
+                    }
+                }, playerIds[i], Caches.getPlayerDetailsCache());
+            }
+        } else {
+            this._addSystemMessage([], undefined, message);
+        }
+    }
+};
+
+TankTrouble.ChatBox.sendChat = function () {
     if (this.chatInput.prop('disabled')) {
         return;
     }
-
     var message = this._parseChat();
-
-    // Handle commands
     if (message.substr(0, 1) === '/') {
+        var isCommand = false;
         if (message.substr(0, 6) === '/ttcv2') {
-            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 GitHup page');
+            isCommand = true;
+            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 GitHub page');
             window.open('https://github.com/kamarov-therussiantank/TTCV2', '_blank');
         } else if (message.substr(0, 7) === '/help') {
-            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 tutorial documentation');
+            isCommand = true;
+            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 documentation');
             window.open('https://bit.ly/TTCV2-tutorial', '_blank');
         }
-        this.chatInput.val('');
-        this.blur();
-        return;
+        if (isCommand) {
+            this.chatInput.val('');
+            this.blur();
+            this._parseChat();
+            return;
+        }
     }
-
-    // Send regular chat message
-    this._sendChat(message);
+    if (this.ignoreeUsernames.length > 0) {
+        var usernames = this.ignoreeUsernames;
+        var numUsernameResponses = 0;
+        var numExpectedUsernameResponses = this.ignoreeUsernames.length;
+        var adminPlayerIds = [];
+        var playerIdsIgnoringThemselves = [];
+        var newlyChangedIgnoreePlayerIds = [];
+        var playerIdMap = {};
+        for (var i = 0; i < usernames.length; ++i) {
+            playerIdMap[usernames[i]] = null;
+        }
+        var self = this;
+        var correctlyCasedUsernames = [];
+        for (var i = 0; i < usernames.length; ++i) {
+            Backend.getInstance().getPlayerDetailsByUsername(function (result) {
+                if (typeof result == 'object') {
+                    if (!Users.isAnyUser(result.getPlayerId())) {
+                        playerIdMap[result.getUsername()] = result.getPlayerId();
+                        if (result.getGmLevel() === null) {
+                            correctlyCasedUsernames.push(result.getUsername());
+                        } else {
+                            adminPlayerIds.push(result.getPlayerId());
+                        }
+                    } else if (self.addingToIgnoreList) {
+                        playerIdsIgnoringThemselves.push(result.getPlayerId());
+                    }
+                } else {
+                    self.addSystemMessage([], 'Could not find user ' + result);
+                }
+            }, function (result) {
+            }, function (result) {
+                ++numUsernameResponses;
+                if (numUsernameResponses == numExpectedUsernameResponses) {
+                    for (var j = 0; j < correctlyCasedUsernames.length; ++j) {
+                        if (playerIdMap[correctlyCasedUsernames[j]]) {
+                            if (self.addingToIgnoreList) {
+                                if (self.ignoredPlayerIds.indexOf(playerIdMap[correctlyCasedUsernames[j]]) == -1) {
+                                    self.ignoredPlayerIds.push(playerIdMap[correctlyCasedUsernames[j]]);
+                                    newlyChangedIgnoreePlayerIds.push(playerIdMap[correctlyCasedUsernames[j]]);
+                                }
+                            } else {
+                                if (self.ignoredPlayerIds.indexOf(playerIdMap[correctlyCasedUsernames[j]]) >= 0) {
+                                    self.ignoredPlayerIds.splice(self.ignoredPlayerIds.indexOf(playerIdMap[correctlyCasedUsernames[j]]), 1);
+                                    newlyChangedIgnoreePlayerIds.push(playerIdMap[correctlyCasedUsernames[j]]);
+                                }
+                            }
+                        }
+                    }
+                    if (adminPlayerIds.length > 0) {
+                        self.addSystemMessage(adminPlayerIds, 'You cannot ignore admins ( @  )');
+                    }
+                    if (playerIdsIgnoringThemselves.length > 0) {
+                        self.addSystemMessage(playerIdsIgnoringThemselves, 'It\'s not healthy to ignore [yourself,|yourselves,] @ ');
+                    }
+                    if (newlyChangedIgnoreePlayerIds.length > 0) {
+                        if (self.addingToIgnoreList) {
+                            self.addSystemMessage(newlyChangedIgnoreePlayerIds, 'You are now ignoring @ ');
+                        } else {
+                            self.addSystemMessage(newlyChangedIgnoreePlayerIds, 'You can now hear @  again');
+                        }
+                    }
+                    self.chatInput.val('');
+                    self.blur();
+                    self._parseChat();
+                }
+            }, usernames[i], Caches.getPlayerDetailsByUsernameCache());
+        }
+    } else if (this.recipientUsernames.length > 0) {
+        var usernames = this.recipientUsernames;
+        var numUsernameResponses = 0;
+        var numExpectedUsernameResponses = this.recipientUsernames.length;
+        var playerIdsTalkingToThemselves = [];
+        var playerIdMap = {};
+        for (var i = 0; i < usernames.length; ++i) {
+            playerIdMap[usernames[i]] = null;
+        }
+        var self = this;
+        var correctlyCasedUsernames = [];
+        for (var i = 0; i < usernames.length; ++i) {
+            Backend.getInstance().getPlayerDetailsByUsername(function (result) {
+                if (typeof result == 'object') {
+                    if (!Users.isAnyUser(result.getPlayerId())) {
+                        playerIdMap[result.getUsername()] = result.getPlayerId();
+                        correctlyCasedUsernames.push(result.getUsername());
+                    } else {
+                        playerIdsTalkingToThemselves.push(result.getPlayerId());
+                    }
+                } else {
+                    self.addSystemMessage([], 'Could not find user ' + result);
+                }
+            }, function (result) {
+            }, function (result) {
+                ++numUsernameResponses;
+                if (numUsernameResponses == numExpectedUsernameResponses) {
+                    for (var j = 0; j < correctlyCasedUsernames.length; ++j) {
+                        if (playerIdMap[correctlyCasedUsernames[j]]) {
+                            if (self.recipientPlayerIds.indexOf(playerIdMap[correctlyCasedUsernames[j]]) == -1) {
+                                self.recipientPlayerIds.push(playerIdMap[correctlyCasedUsernames[j]]);
+                            }
+                        }
+                    }
+                    if (playerIdsTalkingToThemselves.length > 0) {
+                        self.addSystemMessage(playerIdsTalkingToThemselves, 'Why are you talking to [yourself,|yourselves,] @  ?');
+                    }
+                    if (self.recipientPlayerIds.length > 0) {
+                        self._sendChat(message);
+                    } else {
+                        self.chatInput.val('');
+                        self.blur();
+                        self._parseChat();
+                    }
+                }
+            }, usernames[i], Caches.getPlayerDetailsByUsernameCache());
+        }
+    } else {
+        this._sendChat(message);
+    }
 };
 
-// Function to parse the chat input and handle special cases
-TankTrouble.ChatBox._parseChat = function() {
+TankTrouble.ChatBox._parseChat = function () {
+    this.ignoreeUsernames = [];
+    this.recipientPlayerIds = [];
+    this.recipientUsernames = [];
+    this.globalMessage = false;
+    this.chat.removeClass('global user');
     var message = this.chatInput.val().trim();
-
-    // Handle commands
     if (message.substr(0, 6) === '/ttcv2') {
         return '/ttcv2';
     } else if (message.substr(0, 7) === '/help') {
         return '/help';
+    } else if (message.charAt(0) === '#') {
+        this.globalMessage = true;
+        this.chat.addClass('global');
+        return message.substr(1);
+    } else if (message.substr(0, 2) === '/r' && this.lastPrivateSenderPlayerIds) {
+        this.recipientPlayerIds = this.lastPrivateSenderPlayerIds;
+        this.chat.addClass('user');
+        return message.substr(2);
+    } else if ((message.substr(0, 2) === '/i' || message.substr(0, 2) === '/u') && message.length > 2) {
+        this.addingToIgnoreList = message.substr(0, 2) === '/i';
+        var tokens = message.substr(2).split(' ');
+        for (var i = 0; i < tokens.length; ++i) {
+            var ignoree = tokens[i];
+            if (ignoree !== '' && $.inArray(ignoree, this.ignoreeUsernames) === -1) {
+                this.ignoreeUsernames.push(ignoree);
+            }
+        }
+        return '';
     } else {
-        return message;
+        var tokens = message.split(' ');
+        var i = 0;
+        for (; i < tokens.length; ++i) {
+            var firstChar = tokens[i].charAt(0);
+            if (firstChar === '@') {
+                var recipient = tokens[i].substr(1);
+                if (recipient !== '' && $.inArray(recipient, this.recipientUsernames) === -1) {
+                    this.recipientUsernames.push(recipient);
+                }
+            } else if (firstChar !== '') {
+                break;
+            }
+        }
+        if (this.recipientPlayerIds.length > 0 || this.recipientUsernames.length > 0) {
+            this.chat.addClass('user');
+        }
+        return tokens.slice(i).join(' ');
     }
-};
-
-// Export the TankTroubleAddons and TankTrouble objects
-window.TankTroubleAddons = TankTroubleAddons;
-window.TankTrouble = TankTrouble;
-
+};  
     }
 }
