@@ -1,4 +1,6 @@
-`TCV2-v2024.6.5`
+<a href="https://github.com/ttcv2_animatedText.svg">
+  <img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/src/ttcv2_animatedText.svg"/>
+</a>
 
 TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual aesthetics of Classic TankTrouble within the framework of TankTrouble Multiplayer Online. By resurrecting historical graphics and textures, this project aspires to evoke a scientifically crafted nostalgia, providing users with a meticulously curated journey into the cherished past of TankTrouble gaming.
 ****
