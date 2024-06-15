@@ -1598,5 +1598,81 @@ TankTrouble.AccountOverlay.hide = function() {
     this.suicides.empty();
     this.accountPlayerId.empty();
 };
+
+var TankTroubleAddons = TankTroubleAddons || {};
+
+// Function to check if system messages are enabled
+TankTroubleAddons.isSystemMessageEnabled = function() {
+    return !eval(localStorage.getItem('systemMessages')) ? true : false;
+};
+
+// Function to send a chat message
+TankTrouble.ChatBox._sendChat = function(message) {
+    if (message !== '') {
+        this.chat.addClass('send');
+        this._updateInputBackground(true);
+        this.blur();
+        this.chatInput.prop('disabled', true);
+        var self = this;
+        setTimeout(function() {
+            if (self.chatInput.prop('disabled')) {
+                self._handleChatSendReceipt('success');
+            }
+        }, 2000);
+
+        if (this.globalMessage) {
+            this._notifyEventListeners(TankTrouble.ChatBox.EVENTS.GLOBAL_CHAT, message);
+        } else {
+            this._notifyEventListeners(TankTrouble.ChatBox.EVENTS.CHAT, message);
+        }
+    } else {
+        this.blur();
+    }
+};
+
+// Function to handle sending chat messages
+TankTrouble.ChatBox.sendChat = function() {
+    if (this.chatInput.prop('disabled')) {
+        return;
+    }
+
+    var message = this._parseChat();
+
+    // Handle commands
+    if (message.substr(0, 1) === '/') {
+        if (message.substr(0, 6) === '/ttcv2') {
+            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 GitHup page');
+            window.open('https://github.com/kamarov-therussiantank/TTCV2', '_blank');
+        } else if (message.substr(0, 7) === '/help') {
+            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 tutorial documentation');
+            window.open('https://bit.ly/TTCV2-tutorial', '_blank');
+        }
+        this.chatInput.val('');
+        this.blur();
+        return;
+    }
+
+    // Send regular chat message
+    this._sendChat(message);
+};
+
+// Function to parse the chat input and handle special cases
+TankTrouble.ChatBox._parseChat = function() {
+    var message = this.chatInput.val().trim();
+
+    // Handle commands
+    if (message.substr(0, 6) === '/ttcv2') {
+        return '/ttcv2';
+    } else if (message.substr(0, 7) === '/help') {
+        return '/help';
+    } else {
+        return message;
+    }
+};
+
+// Export the TankTroubleAddons and TankTrouble objects
+window.TankTroubleAddons = TankTroubleAddons;
+window.TankTrouble = TankTrouble;
+
     }
 }
