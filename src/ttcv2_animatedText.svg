@@ -10,7 +10,7 @@
     <path id="path0">
         <animate id="d0" attributeName="d" begin="0s;d1.end" dur="7500ms" values="m0,22 h0 ; m0,22 h400 ; m0,22 h400 ; m0,22 h0" keyTimes="0;0.8;0.8;1"/>
     </path>
-    <text font-family="TankTrouble;" fill="#e75480" font-size="48" dominant-baseline="middle" x="0%" text-anchor="start">
+    <text font-family="TankTrouble" fill="#e75480" font-size="48" dominant-baseline="middle" x="0%" text-anchor="start">
         <textPath xlink:href="#path0">
             TTCV2
         </textPath>
@@ -19,7 +19,7 @@
     <path id="path1">
         <animate id="d1" attributeName="d" begin="d0.end" dur="7500ms" values="m0,22 h0 ; m0,22 h400 ; m0,22 h400 ; m0,22 h0" keyTimes="0;0.8;0.8;1"/>
     </path>
-    <text font-family="TankTrouble;" fill="#e75480" font-size="48" dominant-baseline="middle" x="0%" text-anchor="start">
+    <text font-family="TankTrouble" fill="#e75480" font-size="48" dominant-baseline="middle" x="0%" text-anchor="start">
         <textPath xlink:href="#path1">
             TTCV2
         </textPath>
