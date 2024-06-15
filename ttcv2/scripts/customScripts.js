@@ -1885,12 +1885,12 @@ TankTrouble.ChatBox.sendChat = function () {
         var isCommand = false;
         if (message.substr(0, 6) === '/ttcv2') {
             isCommand = true;
-            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 GitHub page');
-            window.open('https://github.com/kamarov-therussiantank/TTCV2', '_blank');
-        } else if (message.substr(0, 7) === '/help') {
+            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 home page');
+            window.open('https://ttcv2.pages.dev/', '_blank');
+        } else if (message.substr(0, 7) === '/rules') {
             isCommand = true;
-            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 documentation');
-            window.open('https://bit.ly/TTCV2-tutorial', '_blank');
+            this._addSystemMessage([], [], 'Redirecting you to the TankTrouble Community Standards');
+            window.open('tinyurl.com/ttrulesdoc', '_blank');
         }
         if (isCommand) {
             this.chatInput.val('');
@@ -2027,8 +2027,8 @@ TankTrouble.ChatBox._parseChat = function () {
     var message = this.chatInput.val().trim();
     if (message.substr(0, 6) === '/ttcv2') {
         return '/ttcv2';
-    } else if (message.substr(0, 7) === '/help') {
-        return '/help';
+    } else if (message.substr(0, 7) === '/rules') {
+        return '/rules';
     } else if (message.charAt(0) === '#') {
         this.globalMessage = true;
         this.chat.addClass('global');
