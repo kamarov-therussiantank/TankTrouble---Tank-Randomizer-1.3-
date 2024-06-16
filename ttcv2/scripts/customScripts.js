@@ -1885,12 +1885,12 @@ TankTrouble.ChatBox.sendChat = function () {
         var isCommand = false;
         if (message.substr(0, 6) === '/ttcv2') {
             isCommand = true;
-            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 home page');
+            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 website');
             window.open('https://ttcv2.pages.dev/', '_blank');
         } else if (message.substr(0, 7) === '/rules') {
             isCommand = true;
             this._addSystemMessage([], [], 'Redirecting you to the TankTrouble Community Standards');
-            window.open('tinyurl.com/ttrulesdoc', '_blank');
+            window.open('https://docs.google.com/document/d/1xu7XeKKbfo1XLyIAYHs04GkqCZBLOeldp8raFX6Uy1Q/edit?fbclid=IwAR3TaDIgTncLmpMa_XKwawbuXDXCxmPnOwiVhx9ZFS42F3KuAgyITswvRdw', '_blank');
         }
         if (isCommand) {
             this.chatInput.val('');
