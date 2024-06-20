@@ -28,7 +28,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 
 #game {
     position: relative;
-    left: -10px;
+    left: -15px;
     top: 0px;
 }
     .premium #header {
