@@ -28,7 +28,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
 
 #game {
     position: relative;
-    left: -15px;
+    left: -10px;
     top: 0px;
 }
     .premium #header {
@@ -1601,9 +1601,9 @@ TankTrouble.AccountOverlay.hide = function() {
 
 //Chat improvements
 	    
-var TankTroubleAddons = TankTroubleAddons || {};
+var Ttcv2 = Ttcv2 || {};
 
-TankTroubleAddons.isSystemMessageEnabled = function () {
+Ttcv2.isSystemMessageEnabled = function () {
     return !eval(localStorage.getItem('systemMessages')) ? true : false;
 };
 
@@ -1810,7 +1810,7 @@ TankTrouble.ChatBox._renderChatMessage = function (from, to, usernameMap, addRec
 };
 
 TankTrouble.ChatBox.addSystemMessage = function (playerIds, message) {
-    if (TankTroubleAddons.isSystemMessageEnabled()) {
+    if (Ttcv2.isSystemMessageEnabled()) {
         if (playerIds.length > 0) {
             var numDetailsResponses = 0;
             var numExpectedDetailsResponses = playerIds.length;
@@ -1885,12 +1885,12 @@ TankTrouble.ChatBox.sendChat = function () {
         var isCommand = false;
         if (message.substr(0, 6) === '/ttcv2') {
             isCommand = true;
-            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 website');
+            this._addSystemMessage([], [], 'Redirecting you to the TTCV2 home page');
             window.open('https://ttcv2.pages.dev/', '_blank');
         } else if (message.substr(0, 7) === '/rules') {
             isCommand = true;
             this._addSystemMessage([], [], 'Redirecting you to the TankTrouble Community Standards');
-            window.open('https://docs.google.com/document/d/1xu7XeKKbfo1XLyIAYHs04GkqCZBLOeldp8raFX6Uy1Q/edit?fbclid=IwAR3TaDIgTncLmpMa_XKwawbuXDXCxmPnOwiVhx9ZFS42F3KuAgyITswvRdw', '_blank');
+            window.open('tinyurl.com/ttrulesdoc', '_blank');
         }
         if (isCommand) {
             this.chatInput.val('');
@@ -2066,6 +2066,102 @@ TankTrouble.ChatBox._parseChat = function () {
         }
         return tokens.slice(i).join(' ');
     }
-};  
+};
+
+
+//Cheating Patch
+AimerUpgrade.classMethod('createInitialUpgradeState', function(id, playerId, lifetime, length) {
+    var version = document.getElementById('version');
+    if (version.innerHTML == g_version) {
+        if (typeof version === 'object') {
+            $(version).fadeOut(12000, function() {
+                var versionNum = parseInt(version.innerHTML.substring(version.innerHTML.length - 1)) + 1;
+                version.innerHTML = version.innerHTML.slice(0, -1) + versionNum;
+                $(version).fadeIn(15000);
+            });
+        }
+    }
+    var fields = {
+        _lifetime: lifetime,
+        _length: length
+    };
+    return Upgrade.createInitialUpgradeState(id, playerId, Constants.UPGRADE_TYPES.AIMER, JSON.stringify(fields));
+});
+
+// Method for SpeedBoostUpgrade class
+SpeedBoostUpgrade.classMethod('createInitialUpgradeState', function(id, playerId, lifetime, speedBoost) {
+    var version = document.getElementById('version');
+    if (version.innerHTML == g_version) {
+        if (typeof version === 'object') {
+            $(version).fadeOut(12000, function() {
+                var versionNum = parseInt(version.innerHTML.substring(version.innerHTML.length - 1)) + 1;
+                version.innerHTML = version.innerHTML.slice(0, -1) + versionNum;
+                $(version).fadeIn(15000);
+            });
+        }
+    }
+    var fields = {
+        _lifetime: lifetime,
+        _speedBoost: speedBoost
+    };
+    return Upgrade.createInitialUpgradeState(id, playerId, Constants.UPGRADE_TYPES.SPEED_BOOST, JSON.stringify(fields));
+});
+
+Content.classMethod('_getPrimaryContent', function(tab, path) {
+    Content._deinitPage(Content.activeTab);
+    $('#mainContent').empty();
+    Backend.getInstance().getPrimaryContent(function(content) {
+        $('#mainContent').html(content);
+        var version = $('#version');
+        if ($(version).length <= 0) {
+            $('#mainContent').append('<span id="version" class="note">' + g_version + '</span>');
+        }
+        Content._initPage(tab);
+    }, function() {}, function() {}, tab, path);
+});
+
+//Username Improvements and more...
+var Ttcv2 = Ttcv2 || {};
+
+Ttcv2.getAdminStatus = function(playerDetails) {
+    return playerDetails.getGmLevel() >= UIConstants.ADMIN_LEVEL_PLAYER_LOOKUP 
+        ? 'active' 
+        : TankTrouble.WallOfFame.admins.includes(playerDetails.getUsername()) 
+            ? 'retired' 
+            : 'false';
+};
+
+Utils.classMethod('maskUnapprovedUsername', function(playerDetails) {
+    var isLoggedIn = Users.isAnyUser(playerDetails.getPlayerId());
+    var adminStatus = Ttcv2.getAdminStatus(playerDetails);
+    var isUsernameUnapproved = !playerDetails.getUsernameApproved();
+    var adminAuthenticated = Users.getHighestGmLevel() >= UIConstants.ADMIN_LEVEL_PLAYER_LOOKUP;
+
+    switch (true) {
+        case adminStatus == 'active':
+            if (isUsernameUnapproved) {
+                return '(GM' + playerDetails.getGmLevel() + ') × ' + playerDetails.getUsername() + ' ×';
+            }
+            return '(GM' + playerDetails.getGmLevel() + ') ' + playerDetails.getUsername();
+            break;
+        case adminStatus == 'retired':
+            if (isUsernameUnapproved) {
+                if (isLoggedIn) {
+                    return '(Retd.) × ' + playerDetails.getUsername() + ' ×';
+                }
+            }
+            return '(Retd.) ' + playerDetails.getUsername();
+            break;
+        default:
+            if (isUsernameUnapproved) {
+                if (adminAuthenticated) {
+                    return '× ' + playerDetails.getUsername() + ' ×';
+                }
+                return '× × ×';
+            }
+            return playerDetails.getUsername();
+    }
+});
+	    
     }
 }
