@@ -4,7 +4,7 @@
 	"author": "kamarov",
 	"version": "2024.7.1",
 	"manifest_version": 3,
-	"description": "Old Tank mayhem is back. Ready to roll in?.",
+	"description": "Old Tank mayhem is back. Ready to roll in?...",
   
 	"declarative_net_request": {
 		"rule_resources": [
