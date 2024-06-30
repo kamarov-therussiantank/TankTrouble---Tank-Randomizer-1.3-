@@ -1,9 +1,10 @@
 {
 	"name": "TTCV2",
-	"author": "Kamarov",
-	"version": "2024.6.16",
+	"short_name": "TankTroubleClassicV2",
+	"author": "kamarov",
+	"version": "2024.7.1",
 	"manifest_version": 3,
-	"description": "Origin of TankTrouble Classic site. Extension that brings nostalgia back.",
+	"description": "Old Tank mayhem is back. Ready to roll in?.",
   
 	"declarative_net_request": {
 		"rule_resources": [
@@ -49,6 +50,8 @@
 		"48": "icon/icon48.png",
 		"128": "icon/icon128.png"
 	},
+
+	"default_title": "TTCV2",
 
 	"content_scripts": [
 		{
