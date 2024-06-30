@@ -29,19 +29,19 @@
         background-image: url(../assets/images/header/background.png);
         background-size: 120px 120px;
 }
-    .snippet {
-        background: #fff;
-        border: #000 2px solid;
-        border-radius: 5px;
-        box-shadow: none;
-    }
+    snippet {
+    background: #fff;
+    border: #ccc 3px solid;
+    border-radius: 5px;
+    box-shadow: none;
+}
     .snippet .header {
-        background: #ccc;
-        color: #fff;
-        border-radius: 3px;
-        border: #bababa 2px solid;
-        margin-bottom: 5px;
-	}
+    background: #ccc;
+    color: #fff;
+    border-radius: 3px;
+    border: #ccc 2px solid;
+    margin-bottom: 5px;
+}
     .snippet .content {
        margin: 3px 3px 3px 3px;
        font-family: 'ClassicTankTrouble';
@@ -51,15 +51,21 @@
         margin-right: 4px;
     }
 #scrapyardSnippet {
-    background: #000;
-    color: #fff;
-    box-sizing: unset;
-    padding: 2px;
+    width: 133px;
+    padding: 3px;
+    border: #000 3px solid;
 }
     #scrapyardSnippet .header {
     background: none;
     border: none;
-    }
+}
+#wallOfFameSnippet {
+    background: #000;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 4px;
+    border: none;
+}
 #messagesSnippet {
     cursor: pointer;
     border: 3px #ccc solid;
