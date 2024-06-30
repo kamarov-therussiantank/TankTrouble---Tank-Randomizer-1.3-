@@ -56,7 +56,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     #scrapyardSnippet .header {
     background: none;
     border: none;
-    }
+}
     #wallOfFameSnippet {
     background: #000;
     cursor: pointer;
