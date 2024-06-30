@@ -51,8 +51,6 @@
 		"128": "icon/icon128.png"
 	},
 
-	"default_title": "TTCV2",
-
 	"content_scripts": [
 		{
 			"matches": ["*://*.tanktrouble.com/*"],
