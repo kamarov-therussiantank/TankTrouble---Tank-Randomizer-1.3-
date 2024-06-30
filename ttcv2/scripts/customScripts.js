@@ -35,31 +35,35 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         background-image: url(../assets/images/header/background.png);
         background-size: 120px 120px;
 }
-    .snippet {
-        background: #fff;
-        border: #000 2px solid;
-        border-radius: 5px;
-        box-shadow: none;
-    }
+    snippet {
+    background: #fff;
+    border: #ccc 3px solid;
+    border-radius: 5px;
+    box-shadow: none;
+}
     .snippet .header {
-        background: #ccc;
-        color: #fff;
-        border-radius: 3px;
-        border: #bababa 2px solid;
-        margin-bottom: 5px;
-        text-shadow: -1px -1px 0 #000,  
-                      1px -1px 0 #000,
-                     -1px  1px 0 #000,
-                      1px  1px 0 #000;
-    }
+    background: #ccc;
+    color: #fff;
+    border-radius: 3px;
+    border: #ccc 2px solid;
+    margin-bottom: 5px;
+}
     #scrapyardSnippet {
-        width: 133px;
-        padding: 3px;
-    }
+    width: 133px;
+    padding: 3px;
+    border: #000 3px solid;
+}
     #scrapyardSnippet .header {
     background: none;
     border: none;
     }
+    #wallOfFameSnippet {
+    background: #000;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 4px;
+    border: none;
+}
     .shopItem svg text {
        text-shadow: none;
        stroke: none;
