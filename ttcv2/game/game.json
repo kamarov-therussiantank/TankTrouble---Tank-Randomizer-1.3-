@@ -5,7 +5,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/game/game%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/game/classicGame%402x.png"
       }
     },
     "condition": {
@@ -19,7 +19,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/game/game.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/ttcv2/game/classicGame.png"
       }
     },
     "condition": {
