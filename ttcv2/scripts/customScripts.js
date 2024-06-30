@@ -35,7 +35,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
         background-image: url(../assets/images/header/background.png);
         background-size: 120px 120px;
 }
-    snippet {
+    .snippet {
     background: #fff;
     border: #ccc 3px solid;
     border-radius: 5px;
