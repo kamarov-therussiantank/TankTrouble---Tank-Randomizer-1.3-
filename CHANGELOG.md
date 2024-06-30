@@ -48,3 +48,9 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
    2. /rules - It will directly open TankTrouble Community Standards documentation
  
 - TTCV2 Official home page. Yes you heard me right!
+
+
+**2024.7.1** - Bug fixes, features gone, bot?
+1. BUG FIXES: - chat whistle is not appearing, no message sent sound, chat is not disappearing...
+2. Commands got removed
+3. TTCV2 is getting an chabot! Like a test. If it does its job good enough he will be fully implemented.
