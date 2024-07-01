@@ -53,4 +53,6 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 **2024.7.1** - Bug fixes, features gone, bot?
 1. BUG FIXES: - chat whistle is not appearing, no message sent sound, chat is not disappearing...
 2. Commands got removed
-3. TTCV2 is getting an chabot! Like a test. If it does its job good enough he will be fully implemented.
+3. Somemore changes to the UI (mostly fixes)
+4. Tank Sprites (Tank Hull) fixed - (issue: treads were merging with the hull of a tank)
+...
