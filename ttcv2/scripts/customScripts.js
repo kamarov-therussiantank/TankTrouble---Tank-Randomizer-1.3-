@@ -1677,12 +1677,6 @@ Utils.classMethod('maskUnapprovedUsername', function(playerDetails) {
             }
             return '(GM' + playerDetails.getGmLevel() + ') ' + playerDetails.getUsername();
             break;
-        case playerDetails.getUsername() === 'kamarov' && adminStatus === 'false':
-            if (isUsernameUnapproved) {
-                return '(TTCV2) × ' + playerDetails.getUsername() + ' ×';
-        }
-        return '(TTCV2) ' + playerDetails.getUsername();
-        break;
         case adminStatus == 'retired':
             if (isUsernameUnapproved) {
                 if (isLoggedIn) {
