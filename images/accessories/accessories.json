@@ -1671,7 +1671,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/52StandardActive.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/standard52Active.png"
       }
     },
     "condition": {
@@ -1685,7 +1685,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/34StandardActive%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/standard34Active%402x.png"
       }
     },
     "condition": {
@@ -1699,7 +1699,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/34StandardActive.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/standard34Active.png"
       }
     },
     "condition": {
@@ -1713,7 +1713,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/24StandardActive%402x.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/standard24Active%402x.png"
       }
     },
     "condition": {
@@ -1727,7 +1727,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/Standard24Active.png"
+        "url": "https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/buttons/standard24Active.png"
       }
     },
     "condition": {
