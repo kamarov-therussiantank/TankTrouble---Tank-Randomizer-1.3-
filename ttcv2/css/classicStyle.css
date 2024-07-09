@@ -246,12 +246,46 @@ div#shopItem-122 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     background-color: rgb(255 255 255 / 99%)
     }
-    #overlay .newGame .premium {
-    background: #ededed;
-    border: #afafaf 3px solid;
-    border-radius: 7px;
-    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .5);
-    }
+#overlay .newGame .premium {
+    display: inline-block;
+    border: 3px solid gray;
+    border-radius: 8px;
+    position: relative;
+    padding: 40px 40px 30px;
+    margin: 80px 20px 20px;
+    box-shadow: 0px 10px 20px #000;
+}
+button.large {
+    padding: 0 20px 0 20px;
+    font-size: 2.0em;
+    min-width: 52px;
+    line-height: 52px;
+    background: #58c96f;
+    color: #fff;
+    border-radius: 0px;
+    border: 3px #000 solid;
+}
+button.medium {
+    padding: 0 10px 0 10px;
+    font-size: 1.2em;
+    min-width: 34px;
+    line-height: 34px;
+    background: #ccc url(https://code.jquery.com/ui/1.11.4/themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+    color: #000
+}
+button.warning {
+    background: linear-gradient(to bottom, red, maroon);
+    border: none;
+    color: #fff;
+}
+button:disabled {
+    background: #999 url(https://code.jquery.com/ui/1.11.4/themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;;
+    cursor: default;
+    color: #8b8b8b;
+}
+.buttonGroup div.selected button {
+    text-shadow: 0 0 4px #ffffff, 0 0 4px #fff700, 0 0 5px #ffda00, 0 0 10px #ffe237;
+}
    #overlay .newGame .premium::before {
     content: "";
     width: 160px;
