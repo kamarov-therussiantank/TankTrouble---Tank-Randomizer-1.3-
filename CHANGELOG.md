@@ -50,9 +50,16 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 - TTCV2 Official home page. Yes you heard me right!
 
 
-**2024.7.1** - Bug fixes, features gone, bot?
+**2024.7.1** - Bug fixes, features gone
 1. BUG FIXES: - chat whistle is not appearing, no message sent sound, chat is not disappearing...
 2. Commands got removed
 3. Somemore changes to the UI (mostly fixes)
 4. Tank Sprites (Tank Hull) fixed - (issue: treads were merging with the hull of a tank)
-...
+
+
+**2024.7.9** - UI Changes
+1. Old but fresh look for buttons
+2. Game settings (when creating new game)
+3. Overlay is less laggy
+4. Text glow (from white to gold)
+5. Text has new Font (ClassicTankTrouble font, original one!)
