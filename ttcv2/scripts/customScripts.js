@@ -56,13 +56,20 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     #scrapyardSnippet .header {
     background: none;
     border: none;
-    }
+}
     #wallOfFameSnippet {
     background: #000;
     cursor: pointer;
     box-sizing: border-box;
     padding: 4px;
     border: none;
+    width: 135px;
+}
+    #appStoreSnippet {
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 135px;
 }
     .shopItem svg text {
        text-shadow: none;
@@ -1735,6 +1742,44 @@ Utils.classMethod('maskUnapprovedUsername', function(playerDetails) {
             return playerDetails.getUsername();
     }
 });
-	    
+
+// Define the function
+function s3creT(input) {
+    const secretCommand = '1970';
+    const expectedAnswer = 'Red Recruit';
+    const additionalExpectedAnswer = '1970198020072019'; // Define the second expected answer
+    const successUrl = 'https://ttcv2.pages.dev/bppt'; // Replace with your desired URL
+
+    if (input === secretCommand) {
+        // Prompt the user for the first answer
+        const userAnswer = prompt('Unknown: "I see that you found us, please tell us your name"');
+        
+        // Check if the user's first answer matches the expected answer
+        if (userAnswer === expectedAnswer) {
+            alert('Unknown: "You are one of us. Please provide one more answer to gain full access."');
+            
+            // Prompt the user for the second answer
+            const secondAnswer = prompt('Unknown: "Enter the additional code to confirm your identity:"');
+            
+            // Check if the second answer matches the additional expected answer
+            if (secondAnswer === additionalExpectedAnswer) {
+                // Show an alert and redirect to the success URL
+                alert('Unknown: "Access granted. Welcome home recruit!"');
+                window.location.href = successUrl; // Redirect to the success URL
+            } else {
+                alert('Unknown: "The additional code is incorrect. Access denied."');
+            }
+        } else {
+            alert('I knew that you are not one of us! Get lost!');
+        }
+    } else {
+        console.log('Error inalid command');
+    }
+}
+
+// Usage
+// Call this function in the console with the command
+// s3creT('1970');
+
     }
 }
