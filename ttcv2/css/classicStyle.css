@@ -82,7 +82,7 @@
 }
 #red_infiltration {
     position: absolute;
-    top: 109px;
+    top: 110px;
     right: -135px;
 }
     .premium #header {
@@ -125,6 +125,13 @@
     box-sizing: border-box;
     padding: 4px;
     border: none;
+    width: 135px;
+}
+#appStoreSnippet {
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 135px;
 }
 #messagesSnippet {
     cursor: pointer;
