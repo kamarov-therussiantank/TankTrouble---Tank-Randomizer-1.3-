@@ -49,7 +49,7 @@ if (window.location.hostname.includes("tanktrouble.com")) {
     margin-bottom: 5px;
 }
     #scrapyardSnippet {
-    width: 133px;
+    width: 135px;
     padding: 3px;
     border: #000 3px solid;
 }
