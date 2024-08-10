@@ -1,20 +1,18 @@
-<a href="https://github.com/ttcv2_animatedText.svg">
-  <img src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/0bb10b5e95c81d2c05045667878d0ae8bc803a01/src/ttcv2_animatedText.svg"/>
-</a>
+<div align="center">
+  <img width="25%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/banner.svg">
+</div>
 
-**v2024.8.8**
+---
 
-TTCV2, an chromium based extension, seeks to meticulously reconstruct the visual aesthetics of Classic TankTrouble within the framework of TankTrouble Multiplayer Online. By resurrecting historical graphics and textures, this project aspires to evoke a scientifically crafted nostalgia, providing users with a meticulously curated journey into the cherished past of TankTrouble gaming.
-****
+TTCV2 is a Chrome extension which seeks to reconstruct the visual aesthetic of [TankTrouble Classic](https://classic.tanktrouble.com) — to bring the old to the new.
 
-`What does it bring?`
+## What does the add-on bring?
 
-TTCV2 extension is the based on the [Classic TankTrouble](https://classic.tanktrouble.com/), very fist version of this beautiful game called [TankTrouble](https://tanktrouble.com/). As the time passed TankTrouble improved alot. Each upgrade brought something new to it. As the upgrades were happening, Classic TankTrouble got completely replaced. Fear of losing it forever. I have made something, I have made this extension to bring back that nostalgic game back to life. Bringing back old but gold: textures, graphics, UI and much much much more.... Let me show you how did TankTrouble looked like back in the old days!
+TTCV2 extension is the based on the [Classic TankTrouble](https://classic.tanktrouble.com/), very first version of this beautiful game called [TankTrouble](https://tanktrouble.com/). As the time passed TankTrouble improved alot. Each upgrade brought something new to it. As the upgrades were happening, Classic TankTrouble got completely replaced. Fear of losing it forever. I have made something, I have made this extension to bring back that nostalgic game back to life. Bringing back old but gold: textures, graphics, UI and much much much more.... Let me show you how did TankTrouble looked like back in the old days!
 
+## Installation
 
-****
-
-`Installation:`
+<!-- FIXME: automated github action -->
 
 To install TTCV2:
 
@@ -27,9 +25,8 @@ To install TTCV2:
 7. Open it and click "TTCV2-main"  
 8. Click "Select Folder"
 
-Still having a hard time getting it? Here you go, this documentation will help you for sure: [ttcv2-tutorial](https://bit.ly/TTCV2-tutorial)
+Still having problems with installation? Try the full documentation: [ttcv2-tutorial](https://bit.ly/TTCV2-tutorial)
 
-****
-`Changelog:`
+## Changelog
 
-If you are interested about the progression of TTCV2. [You can visit its Changelog](https://github.com/kamarov-therussiantank/TTCV2/blob/main/CHANGELOG.md)
+Interested in the full release log of TTCV2? [Visit the changelog](https://github.com/kamarov-therussiantank/TTCV2/blob/main/CHANGELOG.md)
