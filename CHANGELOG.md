@@ -18,7 +18,11 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 
 **2024.4.18** - Classic UI improvements, Chat remake, Bug fixes...
 
-**2024.4.30** - More UI improvements, More matte versions of paints (Warfare Paints), Bug fixes.
+**2024.4.30** - More improvements
+1. More UI improvements
+2. More game assets improvements
+3. bug fixes
+
 
 **2024.6.5** - Whats new? 
 
@@ -43,7 +47,7 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
    - Removed Retro Forum icons
   
 3. Backdoor Accessories are back (but not usable)
-4. SECRETS!
+
    
 **2024.6.16** - New new new? 
 
