@@ -1,4 +1,8 @@
-**TTCV2 - CHANGELOG**
+<div align="center">
+  <img width="25%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/banner.svg">
+</div>
+
+---
 
 **2024.1.5** - Extension launched, bringing our most loved paints back in game, matte paints.
 
