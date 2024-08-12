@@ -52,8 +52,8 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 **2024.6.16** - New new new? 
 
 - Custom commands:
-   1. /ttcv2 - It will directly open official TTCV2 home page
-   2. /rules - It will directly open TankTrouble Community Standards documentation
+   1.  /ttcv2 - It will directly open official TTCV2 home page
+   2.  /rules - It will directly open TankTrouble Community Standards documentation
  
 - TTCV2 Official home page. Yes you heard me right!
 
