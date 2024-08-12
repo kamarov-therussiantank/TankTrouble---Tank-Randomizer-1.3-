@@ -16,7 +16,7 @@ TTCV2 extension is the based on the [Classic TankTrouble](https://classic.tanktr
 
 To install TTCV2:
 
-1. [Download the ZIP archive](https://github.com/kamarov-therussiantank/ClassicTankTrouble-V2/archive/refs/heads/main.zip)
+1. [Download the ZIP archive](https://github.com/kamarov-therussiantank/TTCV2/archive/refs/heads/main.zip)
 2. Extract the ZIP archive to a location of your choice.  
 3. Navigate to your browser's extension menu.  
 4. Find the "Developer mode" button and turn it on.  
