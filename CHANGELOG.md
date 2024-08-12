@@ -68,9 +68,13 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 4. Text glow (from white to gold)
 5. Text has new Font (ClassicTankTrouble font, original one!)
 
-**2024.8.8** - Old Functions 
+
+**2024.8.8** - Old Functions and more...
 1. Need Help? Check the FAQ!
 2. Tell a Friend! Let them know about TankTrouble.
 3. NEW SECRET! 
 4. Bug Fixes
 5. Better optimized
+6. Code overwrite
+7. Removed assets that are not used
+
