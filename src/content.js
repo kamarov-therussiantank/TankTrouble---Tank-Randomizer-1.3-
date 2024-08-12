@@ -233,7 +233,7 @@
 		<div class="content">
 		<div class="header">Tell a Friend</div>
 		<img
-			src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/images/snippets/tellAFriend.png"
+			src="/assets/snippets/tellAFriend.png"
 			style="position: relative; top: 3px; left: 14px; pointer-events: none; width: 125px;"
 		>
 	</div>`, 'tertiaryContent');
