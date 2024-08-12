@@ -81,4 +81,5 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 5. Better optimized
 6. Code overwrite
 7. Removed assets that are not used
+8. Classic buttons are removed (feels muvh better with the original ones)
 
