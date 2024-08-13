@@ -462,10 +462,11 @@ button:disabled {
     cursor: inherit;
 }
 #chat textarea {
-    font-family: 'Arial';
+    font-family: 'ClassicTankTrouble';
+    font-size: 12px;
     font-weight: bold;
     position: relative;
-    left: 5px;
+    left: 1px;
     width: 0;
     min-height: 16px !important;
     opacity: 0;
@@ -480,7 +481,7 @@ button:disabled {
 }
 #chat text {
     font-family: 'ClassicTankTrouble';
-    font-size: 14px;
+    font-size: 13px;
 }
 .box.topRight .tab.topRight {
     display: inherit;
