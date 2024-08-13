@@ -241,7 +241,7 @@ div#shopItem-122 {
         font-family: 'TankTrouble';
     }
     .forum .bubble .header {
-        font-size: 1.4em;
+        font-size: 1.4em !important;
         font-weight: bold;
         font-family: 'ClassicTankTrouble' !important;
     }
