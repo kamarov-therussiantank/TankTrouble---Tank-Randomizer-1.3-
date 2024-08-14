@@ -78,6 +78,8 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 2. Tell a Friend! Let them know about TankTrouble.
 3. NEW SECRET! 
 4. Bug Fixes
+   - Forum is merging with Admin Log (phew! players are not able to interact with those functions!)
+   - Chat cannot load ClassicTankTrouble font, and no text spacing
 5. Better optimized
 6. Code overwrite
 7. Removed assets that are not used
