@@ -105,6 +105,7 @@
     .snippet .content {
        margin: 3px 3px 3px 3px;
        font-family: 'ClassicTankTrouble';
+       font-size: 13px !important;
     }
     #scrapyardSnippet .content {
         margin-left: 4px;
@@ -192,13 +193,13 @@ div#shopItem-122 {
         position: relative;
     }
     .forum .bubble .header {
-        font-size: 1.0em;
+        font-size: 1.4em !important;
         font-weight: 100;
-        font-family: 'system-ui';
+        font-family: 'ClassicTankTrouble';
     }
     .forum .bubble .content {
 	font-family: 'ClassicTankTrouble';
-        font-size: 14.3px;
+    font-size: 13px !important;
     }
     .forum .page img {
         display: none;
@@ -232,18 +233,14 @@ div#shopItem-122 {
     resize: none;
     outline: none;
     width: 100%;
-    font-family: ClassicTankTrouble;
+    font-family: 'ClassicTankTrouble';
+    font-size: 13px !important;
     }
     .forum .synchronization {
         font-size: .8em;
         margin-top: 10px;
         text-align: center;
         font-family: 'TankTrouble';
-    }
-    .forum .bubble .header {
-        font-size: 1.4em !important;
-        font-weight: bold;
-        font-family: 'ClassicTankTrouble' !important;
     }
    .box .content {
     background: #d5d5d5;
