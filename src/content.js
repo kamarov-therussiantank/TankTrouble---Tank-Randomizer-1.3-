@@ -40,7 +40,7 @@
 			#statisticsSnippet .content {
 				margin: 3px 1px 3px 1px;
 				font-family: 'ClassicTankTrouble';
-				font-size: 13px !important;
+				font-size: 13px;
 			}
 			#statisticsSnippet .content * {
 				margin: 3px 1px 3px 1px;
@@ -189,7 +189,7 @@
 			#helpSnippet .content {
 				margin: 3px 1px 3px 1px;
 				font-family: 'ClassicTankTrouble';
-				font-size: 13px !important;
+				font-size: 13px;
 			}
 			#helpSnippet .content * {
 				margin: 3px 1px 3px 1px;
@@ -227,7 +227,7 @@
 			#tellAFriendSnippet .content {
 				margin: 3px 1px 3px 1px;
 				font-family: 'ClassicTankTrouble';
-				font-size: 13px !important;
+				font-size: 13px;
 			}
 		</style>
 		<div class="content">
