@@ -473,8 +473,8 @@ button:disabled {
     cursor: inherit;
 }
 #chat textarea {
-    font-family: 'ClassicTankTrouble';
-    font-size: 13px !important;
+    font-family: 'Arial';
+    font-size: 12px !important;
     font-weight: bold;
     position: relative;
     left: 1px !important;
@@ -491,8 +491,8 @@ button:disabled {
     cursor: default;
 }
 #chat text {
-    font-family: 'ClassicTankTrouble';
-    font-size: 13.5px !important;
+    font-family: 'Arial';
+    font-size: 12px !important;
 }
 .box.topRight .tab.topRight {
     display: inherit;
