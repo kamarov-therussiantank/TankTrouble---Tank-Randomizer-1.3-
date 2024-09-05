@@ -1,5 +1,5 @@
 <div align="center">
-<img width="25%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/banner.svg">
+<img width="35%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/ttcv2ClBanner.png"> 
 
 </div>
 
@@ -114,8 +114,9 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
  - Game Sprites:
    - Maze walls
    - Tank Shading
-   - Turret Shading (Laser weapon, Shotgun weapon, Double Trouble weapon, Homing Missile weapon, Booby Traps   weapon)
- - Overlay
+   - Turret Shading (Laser weapon, Shotgun weapon, Double Trouble weapon, Homing Missile weapon, Booby Traps weapon)
+   - Weapon Crates
+ - Overlay 
  - Tank Image Shading (no more high contrast tanks)
  - Secret (its more approachable now)
  - "**Message the Laboratory snippet got replaced by**" "**Got Feedback Snippet**" (function is still the same)
