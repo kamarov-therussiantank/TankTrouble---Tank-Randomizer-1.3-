@@ -114,7 +114,8 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
  - Game Sprites:
    - Maze walls
    - Tank Shading
-   - Turret Shading (Laser weapon, Shotgun weapon, Double Trouble weapon, Homing Missile weapon, Booby Traps   weapon)
+   - Turret Shading (Laser weapon, Shotgun weapon, Double Trouble weapon, Homing Missile weapon, Booby Traps weapon)
+   - Weapon Crates
  - Overlay
  - Tank Image Shading (no more high contrast tanks)
  - Secret (its more approachable now)
