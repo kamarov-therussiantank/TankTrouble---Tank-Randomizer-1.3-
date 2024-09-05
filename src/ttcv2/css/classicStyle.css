@@ -200,15 +200,9 @@ div#teaser-25 {
 .forum .bubble * {
         position: relative;
     }
-<<<<<<< HEAD
 .forum .bubble .header {
         font-size: 1.1em !important;
         font-weight: 800 !important;
-=======
-    .forum .bubble .header {
-        font-size: 1.4em !important;
-        font-weight: 100;
->>>>>>> ec78b6d4652a9e7c62e8ab02c932bcb15b58e268
         font-family: 'ClassicTankTrouble';
     }
 .forum .bubble .content {
@@ -249,15 +243,6 @@ div#teaser-25 {
     width: 100%;
     font-family: 'ClassicTankTrouble';
     font-size: 13px !important;
-<<<<<<< HEAD
-=======
-    }
-    .forum .synchronization {
-        font-size: .8em;
-        margin-top: 10px;
-        text-align: center;
-        font-family: 'TankTrouble';
->>>>>>> ec78b6d4652a9e7c62e8ab02c932bcb15b58e268
     }
 .forum .synchronization {
         font-size: .8em;
