@@ -81,9 +81,10 @@
     width: 130px;
 }
 #red_infiltration {
-    position: absolute;
-    top: 110px;
-    right: -135px;
+    display: none !important;
+}
+#red_infiltration img {
+    display: none !important;
 }
     .premium #header {
         background-image: url(../assets/images/header/background.png);
@@ -97,13 +98,13 @@
 }
     .snippet .header {
     background: #ccc;
-    color: #fff;
+    color: #ffffff;
     border-radius: 3px;
     border: #ccc 2px solid;
     margin-bottom: 5px;
 }
     .snippet .content {
-       margin: 3px 3px 3px 3px;
+       margin: 0 !important;
        font-family: 'ClassicTankTrouble';
        font-size: 13px !important;
     }
@@ -116,7 +117,7 @@
     padding: 3px;
     border: #000 3px solid;
 }
-    #scrapyardSnippet .header {
+#scrapyardSnippet .header {
     background: none;
     border: none;
 }
@@ -133,15 +134,22 @@
     border: none;
     background: none;
     width: 135px;
+    display: none !important;
 }
 #messagesSnippet {
     cursor: pointer;
-    border: 3px #ccc solid;
+    border: 3px #000000 solid;
+    display: none !important;
 }
 div#messagesSnippet .header {
     text-shadow: none;
-    border: 2px #ccc solid;
-    background: #ccc;
+    border: 2px #000000 solid;
+    background: #000000;
+    color: #ffffff !important;
+    font-size: 14px;
+}
+div#messagesSnippet .content {
+       color: #777;
 }
     .shopItem svg text {
        text-shadow: none;
@@ -162,65 +170,71 @@ div#shopItem-122 {
     background: #1ab14d;
     border: 3px #2a873b solid;
 }
-    .shopItem.info button.info {
+.shopItem.info button.info {
     width: 34px;
     float: right;
     right: 10px;
     color: white;
     background: #0097fb;
     }
-    div#teaser-25 {
+div#teaser-25 {
     background: red;
     color: white;
     border: 3px red solid;
     }
-    #teaser-25 .header {
+#teaser-25 .header {
     background: none;
     border: none;
     text-shadow: none;
     }
-    #teaser-25 .mode {
+#teaser-25 .mode {
         color: white;
     }
-    .forum .bubble {
+.forum .bubble {
         background-color: #f2f2f2;
         border: #333 2px solid;
         border-radius: 2px;
         box-shadow: 0 3px 4px 0 rgba(0,0,0, .5);
 	    font-family: 'ClassicTankTrouble';
     }
-    .forum .bubble * {
+.forum .bubble * {
         position: relative;
     }
+<<<<<<< HEAD
+.forum .bubble .header {
+        font-size: 1.1em !important;
+        font-weight: 800 !important;
+=======
     .forum .bubble .header {
         font-size: 1.4em !important;
         font-weight: 100;
+>>>>>>> ec78b6d4652a9e7c62e8ab02c932bcb15b58e268
         font-family: 'ClassicTankTrouble';
     }
-    .forum .bubble .content {
+.forum .bubble .content {
 	font-family: 'ClassicTankTrouble';
     font-size: 13px !important;
     }
-    .forum .page img {
+.forum .page img {
         display: none;
         position: relative;
         padding: 0px;
     }
-    .body {
+.body {
         font-size: 14px;
     }
-    .forum .tank {
+.forum .tank {
         font-family: 'TankTrouble';
         font-size: 14px;
     }
-    .forum .tank div {
+.forum .tank div {
     width: 150px;
     height: 20px;
     left: -5px;
     top: -19px;
     position: relative;
     }
-    .forum .thread:not(.liked) .like:not(:active) .standard, .forum .thread:not(.liked) .like:active :not(.selected).active, .forum .thread.liked .like:not(:active) .selected:not(.active), .forum .thread.liked .like:active .selected.active, .forum .reply:not(.liked) .like:not(:active) .standard, .forum .reply:not(.liked) .like:active :not(.selected).active, .forum .reply.liked .like:not(:active) .selected:not(.active), .forum .reply.liked .like:active .selected.active, .forum .edit:not(:active) .standard, .forum .edit:active .active, .forum .acceptEdit:not(:active) .standard, .forum .acceptEdit:active .active, .forum .cancelEdit:not(:active) .standard, .forum .cancelEdit:active .active {
+.forum .thread:not(.liked) .like:not(:active) .standard, .forum .thread:not(.liked) .like:active :not(.selected).active, .forum .thread.liked .like:not(:active) .selected:not(.active), .forum .thread.liked .like:active .selected.active, .forum .reply:not(.liked) .like:not(:active) .standard, .forum .reply:not(.liked) .like:active :not(.selected).active, .forum .reply.liked .like:not(:active) .selected:not(.active), .forum .reply.liked .like:active .selected.active, .forum .edit:not(:active) .standard, .forum .edit:active .active, .forum .acceptEdit:not(:active) .standard, .forum .acceptEdit:active .active, .forum .cancelEdit:not(:active) .standard, .forum .cancelEdit:active .active {
     display: inherit;
     padding: 0;
     }
@@ -235,30 +249,39 @@ div#shopItem-122 {
     width: 100%;
     font-family: 'ClassicTankTrouble';
     font-size: 13px !important;
+<<<<<<< HEAD
+=======
     }
     .forum .synchronization {
         font-size: .8em;
         margin-top: 10px;
         text-align: center;
         font-family: 'TankTrouble';
+>>>>>>> ec78b6d4652a9e7c62e8ab02c932bcb15b58e268
     }
-   .box .content {
+.forum .synchronization {
+        font-size: .8em;
+        margin-top: 10px;
+        text-align: center;
+        font-family: 'TankTrouble';
+    }
+.box .content {
     background: #d5d5d5;
     border-radius: 5px;
     border: #999 3px solid;
     padding: 5px;
     width: 250px;
 }
-   .box .spaced {
+.box .spaced {
     padding: 5px;
     left: 0px;
     border: none;
     background: none;
     box-shadow: none;
     }
-    #overlay {
-    color: #fff;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+#overlay {
+    color: #555;
+    text-shadow: none;
     background-color: rgb(255 255 255 / 99%)
     }
 #overlay .newGame .premium {
@@ -270,36 +293,36 @@ div#shopItem-122 {
     margin: 80px 20px 20px;
     box-shadow: 0px 10px 20px #000;
 }
-button.large {
-    padding: 0 20px 0 20px;
-    font-size: 2.0em;
-    min-width: 52px;
-    line-height: 52px;
-    background: #58c96f;
-    color: #fff;
-    border-radius: 0px;
-    border: 3px #000 solid;
+#overlay .subheadline {
+    font-size: 1.5em;
+    color: #555;
+    text-shadow: none;
 }
-button.medium {
-    padding: 0 10px 0 10px;
-    font-size: 1.2em;
-    min-width: 34px;
-    line-height: 34px;
-    background: #ccc url(https://code.jquery.com/ui/1.11.4/themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
-    color: #000
+#overlay .headline {
+    display: flex;
+    font-size: 2.0em;
+    margin: 10px 0 10px 0;
+    background: #ccc;
+    width: 460px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    left: 601px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px 0px #00000090;
 }
 button.warning {
     background: linear-gradient(to bottom, red, maroon);
     border: none;
     color: #fff;
 }
-button:disabled {
-    background: #999 url(https://code.jquery.com/ui/1.11.4/themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;;
-    cursor: default;
-    color: #8b8b8b;
-}
 .buttonGroup div.selected button {
-    text-shadow: 0 0 4px #ffffff, 0 0 4px #fff700, 0 0 5px #ffda00, 0 0 10px #ffe237;
+    text-shadow: 0 0 4px #ccc, 0 0 4px #fff700, 0 0 5px #ffda00, 0 0 10px #ffe237;
+}
+.buttonGroup div.selected button:disabled {
+    text-shadow: 0 0 4px #ccc, 0 0 4px #fff700, 0 0 5px #ffda00, 0 0 10px #ffe237;
 }
    #overlay .newGame .premium::before {
     content: "";
@@ -312,36 +335,42 @@ button:disabled {
     background-image: url(https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/tankInfo/accountActive@2x.png);
     background-size: 160px 180px;
 }
-    #overlay .messages .message {
+#overlay .messages .div {
+    font-family: cursive !important;
+    font-size: 14px;
+    color: #555;
+    text-shadow: none;
+}
+#overlay .messages .message {
         background: #1ad72a;
         color: #fff;
         border-radius: 2px;
         text-shadow: none;
     }
-    #overlay .messages .message.important {
+#overlay .messages .message.important {
         background: #e01f1f;
         color: #fff;
         border-radius: 2px;
         text-shadow: none;
      }
-     #overlay .admin .attention {
+#overlay .admin .attention {
         text-shadow: none;
      }
-    #overlay .messages textarea {
+#overlay .messages textarea {
         box-sizing: border-box;
         width: 490px;
     }
-    #overlay .subheadline {
+#overlay .subheadline {
         font-size: 20px;
         font-family: 'ClassicTanktrouble';
     }
-    .box .tab.right {
+.box .tab.right {
         background: #999;
     }
-    .box .tab.left {
+.box .tab.left {
         background: #999;
     }
-   #tankinfo .username {
+#tankinfo .username {
     position: relative;
     z-index: 1;
     height: 28px;
@@ -349,7 +378,7 @@ button:disabled {
     border: 3px #0000002e solid;
     border-radius: 4px;
 }
-   #tankinfo .icon {
+#tankinfo .icon {
     position: absolute;
     width: 320px;
     height: 192px;
@@ -359,24 +388,24 @@ button:disabled {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-     .achievement.unlockedAndSeen {
+.achievement.unlockedAndSeen {
         background: linear-gradient(to bottom, #ccc, #666);
         box-shadow: #000 0px 3px 3px 0px;
         text-shadow: none;
         color: #000;
     }
-    .achievement {
+.achievement {
         background: #666;
         text-shadow: none;
         color: #fff;
     }
-    .achievement .progress {
+.achievement .progress {
         background: linear-gradient(to bottom, #e5c766, #a68826);
     }
-    .note {
+.note {
         color: #000;
     }
-    #overlay input[type="checkbox"]+label::before {
+#overlay input[type="checkbox"]+label::before {
     content: '';
     background: red;
     border: 2px solid #bf0000;

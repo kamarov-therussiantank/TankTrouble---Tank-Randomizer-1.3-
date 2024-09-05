@@ -37,30 +37,15 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "extensionPath": "/assets/game/gameLobby@2x.png"
+        "extensionPath": "/assets/game/game.json"
       }
     },
     "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/lobby/game2x.png",
+      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/game/game.json",
       "resourceTypes": [
-        "image"
-      ]
-    }
-  },
-  {
-    "id": 4,
-    "priority": 1,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/assets/game/gameLobby.png"
-      }
-    },
-    "condition": {
-      "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/lobby/game.png",
-      "resourceTypes": [
-        "image"
-      ]
+      "main_frame",
+      "sub_frame"
+    ]
     }
   }
 ]

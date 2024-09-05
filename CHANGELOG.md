@@ -1,5 +1,6 @@
 <div align="center">
-  <img width="45%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/clBanner.png">
+<img width="25%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/banner.svg">
+
 </div>
 
 ---
@@ -27,23 +28,23 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 **2024.6.5** - Whats new? 
 
 1. Complete rework of in game assets:
-   - Tank sprites REWORKED
-   - Laser sprites REWORKED
-   - Homing missile sprites REWORKED
-   - Shotgun sprites REWORKED
-   - Base weapon sprites REWORKED
-   - Double Trouble sprites REWORKED
-   - Booby Traps REWORKED
-   - Maze tiles REWORKED
-   - Walls sprites REWORKED
+   - Tank sprites ((REWORKED))
+   - Laser sprites (REWORKED)
+   - Homing missile sprites (REWORKED)
+   - Shotgun sprites (REWORKED)
+   - Base weapon sprites (REWORKED)
+   - Double Trouble sprites (REWORKED)
+   - Booby Traps (REWORKED)
+   - Maze tiles (REWORKED)
+   - Walls sprites (REWORKED)
 
 2. Complete rework of Classic UI:
-   - Statistic Snippet REWORKED
-   - Battle Mode Snippet REWORKED
-   - Scrapyard Snippet REWORKED
-   - Message the Lab Snippet REWORKED
+   - Statistic Snippet (REWORKED)
+   - Battle Mode Snippet (REWORKED)
+   - Scrapyard Snippet (REWORKED)
+   - Message the Lab Snippet (REWORKED)
    - Added FAQ Snippet
-   - Navigation tab icons REWORKED
+   - Navigation tab icons (REWORKED)
    - Removed Retro Forum icons
   
 3. Backdoor Accessories are back (but not usable)
@@ -73,9 +74,10 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 5. Text has new Font (ClassicTankTrouble font, original one!)
 
 
-**2024.8.8** - Old Functions and more...
-1. Need Help? Check the FAQ!
-2. Tell a Friend! Let them know about TankTrouble.
+
+**2024.8.8** - Old Functions...
+1. **Need Help? Check the FAQ!**
+2. **Tell a Friend**! Let them know about TankTrouble.
 3. NEW SECRET! 
 4. Bug Fixes
    - Forum is merging with Admin Log (phew! players are not able to interact with those functions!)
@@ -83,5 +85,43 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 5. Better optimized
 6. Code overwrite
 7. Removed assets that are not used
-8. Classic buttons are removed (feels much better with the original ones)
+8. Classic buttons are removed
+
+
+**2024.9.5** - Big Changes
+1. New Content Setup for both Tertiary and Secondary content
+2. **Visits** Snippet is the real deal, tracks down: 
+ - Visits (total - Since 2007-12-16)
+ - Visits (today)
+ - Total Online Players
+ - Total Tank Owners
+ - Logged In Players (including Guests)
+
+3. Removed:
+ - Statistic Snippet (replaced by **Visits Snippet**)
+ - Admin Improvements
+ - Admin Chat Log Improvements
+ - Cheating Patch
+ - 6 Games In the Lobby 
+ - Classic Mouse
+ - Forum Improvements (Dont worry, no Forum didnt lose classic style)
+ - Quality Improvements (Auto, High, Medium, Low -> Auto, High, Low)
+ - Account Overlay
+ - Username Improvements
+
+4. Reworks:
+ - Classic UI
+ - Game Sprites:
+   - Maze walls
+   - Tank Shading
+   - Turret Shading (Laser weapon, Shotgun weapon, Double Trouble weapon, Homing Missile weapon, Booby Traps   weapon)
+ - Overlay
+ - Tank Image Shading (no more high contrast tanks)
+ - Secret (its more approachable now)
+ - "**Message the Laboratory snippet got replaced by**" "**Got Feedback Snippet**" (function is still the same)
+
+5. Added:
+ - New Loading Image
+ - New Menu Image
+ - Game Sprites
 
