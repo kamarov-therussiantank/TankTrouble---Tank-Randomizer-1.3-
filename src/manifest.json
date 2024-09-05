@@ -4,7 +4,7 @@
 	"author": "kamarov",
 	"version": "2024.9.5",
 	"manifest_version": 3,
-	"description": "Old Tank mayhem is back. Ready to roll in?...",
+	"description": "Ready to roll back in? If so! Do it in classic style!",
 	"icons": {
 		"16": "icon/icon16.png",
 		"32": "icon/icon32.png",
@@ -38,6 +38,11 @@
 				"id": "5",
 				"enabled": true,
 				"path": "assets/accessories.json"
+			},
+			{
+				"id": "6",
+				"enabled": true,
+				"path": "assets/other.json"
 			}
 		]
 	},
@@ -139,7 +144,12 @@
 			"assets/tankIcon/classicBaseShade-320@2x.png", "assets/tankIcon/classicBaseShade-320.png", "assets/tankIcon/turretShade-140@2x.png", "assets/tankIcon/turretShade-140.png",
 			"assets/tankIcon/turretShade-200@2x.png", "assets/tankIcon/turretShade-200.png", "assets/tankIcon/turretShade-320@2x.png", "assets/tankIcon/turretShade-320.png",
 			"assets/tankIcon/barrelShade-140@2x.png", "assets/tankIcon/barrelShade-140.png", "assets/tankIcon/barrelShade-200@2x.png", "assets/tankIcon/barrelShade-200.png",
-			"assets/tankIcon/barrelShade-320@2x.png", "assets/tankIcon/barrelShade-320.png"
+			"assets/tankIcon/barrelShade-320@2x.png", "assets/tankIcon/barrelShade-320.png",
+
+			"/assets/other/waiting@2x.png", "/assets/other/waiting.png", "/assets/snippets/unseenMarker@2x.png",
+			"/assets/other/dimitrisEmporium@2x.png", "/assets/other/dimitrisEmporium.png",
+			"/assets/other/background@2x.png", "/assets/other/background.png",
+			"/assets/other/dimitri@2x.png", "/assets/other/dimitri.png"
 		],
 		"matches": [ "*://*.tanktrouble.com/*" ]
 	}]
