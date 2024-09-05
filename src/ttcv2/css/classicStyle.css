@@ -327,11 +327,12 @@ button.warning {
     text-shadow: none;
 }
 #overlay .messages .message {
-        background: #1ad72a;
-        color: #fff;
-        border-radius: 2px;
-        text-shadow: none;
-    }
+    background: #a3a3a3bd;
+    color: #000000;
+    border-radius: 2px;
+    text-shadow: none;
+    box-shadow: 7px 9px 15px 0 #000000;
+}
 #overlay .messages .message.important {
         background: #e01f1f;
         color: #fff;
