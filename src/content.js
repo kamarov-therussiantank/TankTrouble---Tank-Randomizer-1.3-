@@ -1,4 +1,4 @@
-// TODO: Classic Lobby Settings (local only), Old Weapons?! 
+// TODO: Classic Lobby Settings (local only), Old Weapons?!  
 
 window.onload = function() {
 	if (!window.location.hostname.endsWith('tanktrouble.com')) return;
