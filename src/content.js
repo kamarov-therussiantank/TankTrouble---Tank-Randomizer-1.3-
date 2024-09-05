@@ -44,10 +44,9 @@ window.onload = function() {
                 position: relative; /* Needed for positioning the tooltip */
 				cursor: default;
 			}
-<<<<<<< HEAD
 			#visitsSnippet #stats1, #stats2 {
 				color: #777;
-=======
+			}	
 			#statisticsSnippet .content {
 				margin: 3px 1px 3px 1px;
 				font-family: 'ClassicTankTrouble';
@@ -60,7 +59,6 @@ window.onload = function() {
 				font-size: 13px;
 				font-weight: 600;
 				margin-top: 5px;
->>>>>>> ec78b6d4652a9e7c62e8ab02c932bcb15b58e268
 				margin-bottom: 5px;
 			}
 		#stats1 {
