@@ -1,5 +1,5 @@
 <div align="center">
-<img width="25%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/ttcv2ClBanner.svg"> 
+<img width="25%" src="https://github.com/kamarov-therussiantank/TTCV2/raw/main/.github/ttcv2ClBanner.png"> 
 
 </div>
 
