@@ -46,6 +46,7 @@ window.onload = function() {
 			}
 			#visitsSnippet #stats1, #stats2 {
 				color: #777;
+				margin-bottom: 6px;
 			}	
 			#statisticsSnippet .content {
 				margin: 3px 1px 3px 1px;
