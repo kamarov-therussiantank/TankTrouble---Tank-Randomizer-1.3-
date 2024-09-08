@@ -312,5 +312,52 @@ button.warning {
 }
 	   `);
 
+// Halloween theme loader
+PremiumManager.classMethod('_updatePremium', function(hasPremium) {
+    const today = new Date();
+    const isHalloween = today.getMonth() === 9;
+
+    $('body').removeClass();
+
+    if (hasPremium) {
+        $('body').addClass('premium');
+    }
+
+    if (isHalloween) {
+        $('body').addClass('halloween');
+    }
+});
+
+PremiumManager._updatePremium(PremiumManager.hasPremium);
+
+// Apply more halloween content
+function applySeasonalStyles() {
+	var currentMonth = new Date().getMonth();
+	var header = document.getElementById('header');
+	var gameTabDeselected = document.querySelector('#gameTab .deselected');
+	var gameTabSelected = document.querySelector('#gameTab .selected');
+
+	if (currentMonth === 9) { 
+		var style = document.createElement('style');
+		style.textContent = `
+			#gameTab .deselected, #gameTab .selected {
+				width:0;
+				height:0;
+				padding:60px 0 0 320px;
+				background-image: -webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2Selected.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2Selected@2x.png) 2x);
+				background-image: image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2Selected.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2Selected@2x.png) 2x);
+			}
+
+			#gameTab .deselected {
+				background-image: -webkit-image-set(url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/1x/tab3.png) 1x, url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/2x/tab3@2x.png) 2x);
+				background-image: image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2@2x.png) 2x);
+			}
+		`;
+		document.head.appendChild(style);
+	}
+}
+
+// Call the function when the page loads
+window.addEventListener('load', applySeasonalStyles);
 
 })();
