@@ -513,3 +513,15 @@ button.warning {
 #overlay .controls img.selected {
     padding: 0px;
 }
+.premium.halloween #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background2%402x.png) !important
+}
+.premium.halloween #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background2.png) !important
+}
+.halloween #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background2%402x.png) !important
+}
+.halloween #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background2.png) !important
+}
