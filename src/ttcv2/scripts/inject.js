@@ -1,3 +1,4 @@
+
 (() => {
 	if (!window.location.hostname.endsWith('tanktrouble.com')) return;
 
