@@ -313,10 +313,11 @@ button.warning {
 }
 	   `);
 
-// Halloween theme loader
+// Halloween and Christams theme loader
 PremiumManager.classMethod('_updatePremium', function(hasPremium) {
     const today = new Date();
     const isHalloween = today.getMonth() === 9;
+	const isChristmas = today.getMonth() === 11;
 
     $('body').removeClass();
 
@@ -327,11 +328,15 @@ PremiumManager.classMethod('_updatePremium', function(hasPremium) {
     if (isHalloween) {
         $('body').addClass('halloween');
     }
+
+	if (isChristmas) {
+        $('body').addClass('christmas');
+    }
 });
 
 PremiumManager._updatePremium(PremiumManager.hasPremium);
 
-// Apply more halloween content
+// Apply more halloween and christams content
 function applySeasonalStyles() {
 	var currentMonth = new Date().getMonth();
 	var header = document.getElementById('header');
@@ -350,12 +355,32 @@ function applySeasonalStyles() {
 			}
 
 			#gameTab .deselected {
-				background-image: -webkit-image-set(url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/1x/tab3.png) 1x, url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/2x/tab3@2x.png) 2x);
+				background-image: -webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2.png) 2x);
 				background-image: image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-2@2x.png) 2x);
 			}
 		`;
 		document.head.appendChild(style);
 	}
+
+	if (currentMonth === 11) { 
+		var style = document.createElement('style');
+		style.textContent = `
+			#gameTab .deselected, #gameTab .selected {
+				width:0;
+				height:0;
+				padding:60px 0 0 320px;
+				background-image: -webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3Selected.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3Selected@2x.png) 2x);
+				background-image: image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3Selected.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3Selected@2x.png) 2x);
+			}
+
+			#gameTab .deselected {
+				background-image: -webkit-image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3.png) 2x);
+				background-image: image-set(url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3.png) 1x, url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/tab1-3@2x.png) 2x);
+			}
+		`;
+		document.head.appendChild(style);
+	}
+
 }
 
 // Call the function when the page loads
