@@ -525,3 +525,15 @@ button.warning {
 .halloween #header {
     background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background2.png) !important
 }
+.premium.christams #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background3%402x.png) !important
+}
+.premium.christams #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background3.png) !important
+}
+.christmas #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background3%402x.png) !important
+}
+.christams #header {
+    background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background3.png) !important
+}
