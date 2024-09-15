@@ -138,5 +138,61 @@
           "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/dimitri/dimitri@2x.png",
           "resourceTypes": ["image"]
         }
+      },
+      {
+        "id": 11,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/other/chat@2x.png"
+        }
+      },
+        "condition": {
+          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chat@2x.png",
+          "resourceTypes": ["image"]
+        }
+      },
+      {
+        "id": 12,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/other/chat.png"
+        }
+      },
+        "condition": {
+          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chat.png",
+          "resourceTypes": ["image"]
+        }
+      },
+      {
+        "id": 13,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/other/chatDisabled@2x.png"
+        }
+      },
+        "condition": {
+          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chatDisabled@2x.png",
+          "resourceTypes": ["image"]
+        }
+      },
+      {
+        "id": 14,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/other/chatDisabled.png"
+        }
+      },
+        "condition": {
+          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chatDisabled.png",
+          "resourceTypes": ["image"]
+        }
       }
 ]
