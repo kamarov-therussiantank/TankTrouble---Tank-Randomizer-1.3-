@@ -120,7 +120,8 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
  - Tank Image Shading (no more high contrast tanks)
  - Secret (its more approachable now)
  - "**Message the Laboratory snippet got replaced by**" "**Got Feedback Snippet**" (function is still the same)
-
+ - Chat Textures
+ -  
 5. Added:
  - New Loading Image
  - New Menu Image
