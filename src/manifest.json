@@ -43,6 +43,11 @@
 				"id": "6",
 				"enabled": true,
 				"path": "assets/other.json"
+			},
+			{
+				"id": "7",
+				"enabled": true,
+				"path": "ttcv2/scripts/Constants.json"
 			}
 		]
 	},
@@ -63,7 +68,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.tanktrouble.com/*"],
-			"js": ["content.js", "ttcv2/scripts/inject.js"], 
+			"js": ["content.js", "ttcv2/scripts/inject.js", "ttcv2/scripts/B2DUtils.js"], 
 			"css": ["ttcv2/css/classicStyle.css"],
 			"run_at": "document_idle",
                         "world": "MAIN"
