@@ -131,6 +131,8 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 
 **2024.9.29** - Underground Laboratory
 **The Lab**
+
+
 The Lab is a place where unstable prototypes and brave tank drivers rule, where you become a guinea pig and where we keep the odd stuff.
 
 1. Added:
