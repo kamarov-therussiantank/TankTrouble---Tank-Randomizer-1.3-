@@ -264,12 +264,7 @@ div#teaser-25 {
     border: none;
     background: none;
     box-shadow: none;
-    }
-#overlay {
-    color: #555;
-    text-shadow: none;
-    background-color: rgb(255 255 255 / 99%)
-    }
+}
 #overlay .newGame .premium {
     display: inline-block;
     border: 3px solid gray;
@@ -283,21 +278,6 @@ div#teaser-25 {
     font-size: 1.5em;
     color: #555;
     text-shadow: none;
-}
-#overlay .headline {
-    display: flex;
-    font-size: 2.0em;
-    margin: 10px 0 10px 0;
-    background: #ccc;
-    width: 460px;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    position: relative;
-    left: 601px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 0px 0px #00000090;
 }
 button.warning {
     background: linear-gradient(to bottom, red, maroon);
@@ -537,4 +517,11 @@ button.warning {
 }
 .christams #header {
     background-image: url(https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/main/src/assets/header/background3.png) !important
+}
+#navigation .shadow {
+    background-image: none !important;
+}
+b {
+    font-weight: bold;
+    display: none !important;
 }

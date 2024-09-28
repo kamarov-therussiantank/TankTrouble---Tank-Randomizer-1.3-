@@ -90,6 +90,7 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
 
 **2024.9.5** - Big Changes
 1. New Content Setup for both Tertiary and Secondary content
+
 2. **Visits** Snippet is the real deal, tracks down: 
  - Visits (total - Since 2007-12-16)
  - Visits (today)
@@ -97,7 +98,12 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
  - Total Tank Owners
  - Logged In Players (including Guests)
 
-3. Removed:
+3. Added:
+ - New Loading Image
+ - New Menu Image
+ - Game Sprites
+
+4. Removed:
  - Statistic Snippet (replaced by **Visits Snippet**)
  - Admin Improvements
  - Admin Chat Log Improvements
@@ -109,7 +115,7 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
  - Account Overlay
  - Username Improvements
 
-4. Reworks:
+5. Reworks:
  - Classic UI
  - Game Sprites:
    - Maze walls
@@ -121,9 +127,19 @@ In TTCV2, we don't just bring back colors; we unravel the artistry of TankTroubl
  - Secret (its more approachable now)
  - "**Message the Laboratory snippet got replaced by**" "**Got Feedback Snippet**" (function is still the same)
  - Chat Textures
- -  
-5. Added:
- - New Loading Image
- - New Menu Image
- - Game Sprites
+
+
+**2024.9.29** - Underground Laboratory
+**The Lab**
+The Lab is a place where unstable prototypes and brave tank drivers rule, where you become a guinea pig and where we keep the odd stuff.
+
+1. Added:
+- New tab: The Lab
+- Classic Weapon assets
+
+2. Reworked:
+- Homing Missile Turret asset
+- Shop tab
+- Overlay
+
 
