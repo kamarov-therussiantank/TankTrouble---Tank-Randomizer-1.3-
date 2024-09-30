@@ -413,9 +413,6 @@ if (window.location.href === 'https://tanktrouble.com/lab') {
             <tbody>
                 <tr>
                     <td>
-                        <img style="width: 150px; margin-right: 10px;" src="https://turtlesteak.github.io/TLR/media/icons/TLR_logo.png" alt="TLR Team Logo">
-                    </td>
-                    <td>
                         <br>                  
 	                    This, independent newspaper reports all things TankTrouble - news, subterranean leaks, reviews, latest insights and rumours, tips and tricks, puzzles, competitions and more.
                         <br>
@@ -442,103 +439,31 @@ insertElement('div', {
 <div style="margin-top: 30px; clear: both;">
 	<img style="float: left; margin-right: 15px; margin-bottom: 30px; margin-left: 60px; width: 200px;" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/refs/heads/main/src/assets/other/TTTradingCardsSeriesISpread.png">
 	<span style="font-size: 18px; font-family: 'TankTrouble';">TankTrouble Trading Cards</span><br>
-	The classic trump card game with notorious tanks. Print them for your own deck of portable destruction. Special thanks goes for TLR Team for development.<br>
+	The classic trump card game with notorious tanks. Print them for your own deck of portable destruction. Special thanks goes for TLR Team for development.<br><br>
+    <a href="https://drive.google.com/file/d/1RsTjGg2ZCMWzKTXmWt02PldxvJvfplM-/view" target="_blank">Right click here to download series I</a><br>
+	<a href="https://drive.google.com/file/d/1jbOKhs6BXFougHo5iXT3KHu7-lr-PtJy/view" target="_blank">Right click here to download series II</a><br>
+	<a href="https://drive.google.com/file/d/1pue7F1QCeEeL6OlhC2hf8M-FssDN9C3p/view" target="_blank">Right click here to download series III</a><br>
+	<a href="https://drive.google.com/file/d/1yKroGO_YiCwaMaWtcyfvH1MKVjLbcH8_/view" target="_blank">Right click here to download series IV</a><br>
+	<a href="https://drive.google.com/file/d/1oOnM-dj-v5kHrhwUpjtG7DR3fzFBLf9I/view" target="_blank">Right click here to download series V</a><br>
+	<a href="https://drive.google.com/file/d/1TwztT7ZRR8dlkSC4VyI94zjvWcuUMGNy/view" target="_blank">Right click here to download series VI</a><br>
 </div>
     `, 'mainContent');
 
     insertElement('div', {
-        id: 'seriesPart1',
+        id: 'latecomersShop',
     }, `
         <style>
-            #seriesPart1 {
-                text-decoration: none !important;
-                display: flex;
-            }
-        </style>
-    <div style="margin-top: 30px; clear: both;">
-	<img style="float: left; margin-right: 30px; margin-bottom: 30px; width: 200px;" src="https://turtlesteak.github.io/TLR/media/special/Trading_Cards/Series_1_card_spread.png">
-	<span style="font-size: 18px; margin-right: 15px; font-weight: 600">Series I</span><br>
-    <br>
-	<a href="https://drive.google.com/file/d/1RsTjGg2ZCMWzKTXmWt02PldxvJvfplM-/view" target="_blank">Right click here to download series I</a><br>
-	</div>
-    <div style="margin-top: 30px; clear: both;">
-	<img style="float: left; margin-right: 30px; margin-bottom: 30px; width: 200px;" src="https://turtlesteak.github.io/TLR/media/special/Trading_Cards/Series_2_card_spread.png">
-	<span style="font-size: 18px; margin-right: 15px; font-weight: 600">Series II</span><br>
-    <br>
-	<a href="https://drive.google.com/file/d/1jbOKhs6BXFougHo5iXT3KHu7-lr-PtJy/view" target="_blank">Right click here to download series II</a><br>
-	</div>
-    <div style="margin-top: 30px; clear: both;">
-	<img style="float: left; margin-right: 30px; margin-bottom: 30px; width: 200px;" src="https://turtlesteak.github.io/TLR/media/special/Trading_Cards/Series_3_card_spread.png">
-	<span style="font-size: 18px; margin-right: 15px; font-weight: 600">Series III</span><br>
-    <br>
-	<a href="https://drive.google.com/file/d/1pue7F1QCeEeL6OlhC2hf8M-FssDN9C3p/view" target="_blank">Right click here to download series III</a><br>
-	</div>
-    `, 'mainContent');
-
-    insertElement('div', {
-        id: 'seriesPart2',
-    }, `
-        <style>
-            #seriesPart2 {
-                text-decoration: none !important;
-                display: flex;
-                margin-left: 280px;
-                margin-bottom: 30px
-            }
-        </style>
-    <div style="margin-top: 30px; clear: both;">
-	<img style="float: left; margin-right: 30px; margin-bottom: 30px; width: 200px;" src="https://turtlesteak.github.io/TLR/media/special/Trading_Cards/Series_4_card_spread.png">
-	<span style="font-size: 18px; margin-right: 15px; font-weight: 600">Series IV</span><br>
-    <br>
-	<a href="https://drive.google.com/file/d/1yKroGO_YiCwaMaWtcyfvH1MKVjLbcH8_/view" target="_blank">Right click here to download series IV</a><br>
-	</div>
-    <div style="margin-top: 30px; clear: both;">
-	<img style="float: left; margin-right: 30px; margin-bottom: 30px; width: 200px;" src="https://turtlesteak.github.io/TLR/media/special/Trading_Cards/Series_5_card_spread.png">
-	<span style="font-size: 18px; margin-right: 15px; font-weight: 600">Series V</span><br>
-    <br>
-	<a href="https://drive.google.com/file/d/1oOnM-dj-v5kHrhwUpjtG7DR3fzFBLf9I/view" target="_blank">Right click here to download series V</a><br>
-	</div>
-    <div style="margin-top: 30px; clear: both;">
-	<img style="float: left; margin-right: 30px; margin-bottom: 30px; width: 200px;" src="https://turtlesteak.github.io/TLR/media/special/Trading_Cards/Series_6_card_spread.png">
-	<span style="font-size: 18px; margin-right: 15px; font-weight: 600">Series VI</span><br>
-    <br>
-	<a href="https://drive.google.com/file/d/1TwztT7ZRR8dlkSC4VyI94zjvWcuUMGNy/view" target="_blank">Right click here to download series VI</a><br>
-	</div>
-    `, 'mainContent');
-
-    insertElement('div', {
-        id: 'TTShop',
-    }, `
-        <style>
-            #TTShop {
+            #latecomersShop {
                 text-decoration: none !important;
             }
         </style>
-        <table style="width: 500px; margin: 0 auto; margin-bottom: 30px;">
-        <div style="font-size: 20px; text-align: center; font-family: 'TankTrouble';">Kickstarter Latecomers' Shop</div>
-            <tbody>
-                <tr>
-                    <td>
-                        <img style="width: 300px;" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/refs/heads/main/src/assets/other/LatecomersLogo.png" alt="TTShop Logo">
-                    </td>
-                    <td>
-                        <br>
-                        <br>
-                        Please go to the new shop to purchase a backer box, exclusive memberships or cool merchandise.
-                        <br>
-                        <br>
-                        But what about those cool things beside the Backer Box? You may want to click here:
-                        <br>
-                        <br>
-                        <a href="https://tanktrouble.myspreadshop.com/" target="_blank">https://tanktrouble.myspreadshop.com/</a>
-                        <br>
-                        <br>
-                        <br>
-                        All purchases contribute to the ongoing development of TankTrouble. Thanks for your support!<br>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="margin-top: 30px; clear: both;">
+	<img style="float: left; margin-right: 15px; margin-bottom: 30px; margin-left: 60px; width: 200px;" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/refs/heads/main/src/assets/other/LatecomersLogo.png">
+	<span style="font-size: 18px; font-family: 'TankTrouble';">TankTrouble Trading Cards</span><br>
+	Please go to the new shop to purchase a backer box, exclusive memberships or cool merchandise.<br>
+    But what about those cool things beside the Backer Box? You may want to click here:<br><br>
+	<a href="https://tanktrouble.myspreadshop.com/" target="_blank">https://tanktrouble.myspreadshop.com/</a><br><br>
+	All purchases contribute to the ongoing development of TankTrouble. Thanks for your support!</div>
     `, 'mainContent');
 
 
