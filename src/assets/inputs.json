@@ -1,0 +1,352 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "redirect",
+        "redirect": {
+          "extensionPath": "/assets/inputs/arrowKeys@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeys@2x.png",
+        "resourceTypes": ["image"]
+      }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/arrowKeys.png"
+          }
+        },
+        "condition": {
+          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeys.png",
+          "resourceTypes": ["image"]
+        }
+      },
+      {
+        "id": 3,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/arrowKeysActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeysActive@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 4,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/arrowKeysActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeysActive.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 5,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeys@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeys@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 6,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeys.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeys.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 7,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeysActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeysActive@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 8,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeysActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeysActive.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 9,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouse@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouse@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 10,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouse.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouse.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 11,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouseActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouseActive@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 12,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouseActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouseActive.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 13,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouseActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouseDown@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 14,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouseActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouseDown.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 15,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouseActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouseActive@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 16,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouseActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouseSelected@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 17,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/mouseActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/mouseSelected.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 18,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeysActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeysDown@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 19,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeysActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeysDown.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 20,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeysActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeysSelected@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 21,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/WASDKeysActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/WASDKeysSelected.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 22,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/arrowKeysActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeysDown@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 23,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/arrowKeysActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeysDown.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 24,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/arrowKeysActive@2x.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeysSelected@2x.png",
+        "resourceTypes": ["image"]
+      }
+      },
+      {
+        "id": 25,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "extensionPath": "/assets/inputs/arrowKeysActive.png"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/inputs/arrowKeysSelected.png",
+        "resourceTypes": ["image"]
+      }
+      }
+]

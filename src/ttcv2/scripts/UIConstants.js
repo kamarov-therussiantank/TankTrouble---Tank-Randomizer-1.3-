@@ -1,0 +1,2 @@
+UIConstants.LASER_WIDTH = 6
+UIConstants.AIMER_WIDTH = 6

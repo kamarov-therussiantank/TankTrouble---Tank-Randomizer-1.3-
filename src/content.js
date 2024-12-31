@@ -119,6 +119,7 @@ if (isLabPage) {
 				cursor: default;
 			}
 			#visitsSnippet #stats1, #stats2 {
+            font-family:'OpenSans';
 				color: #777;
 				margin-bottom: 6px;
                 font-size: 13px;
@@ -128,13 +129,14 @@ if (isLabPage) {
         }
         #stats2 > div, #stats2 > span {
             display: inline-block;
-            vertical-align: middle; 
-            margin-right: 5px;
+            vertical-align: middle;
         }
         #visitsToday, #playersOnline, #tankOwners, #loggedIn {
+            font-family:'TTCV2';
 			color: #777;
         }
 		#visits {
+            font-family:'TTCV2';
             font-size: 16px;
 			margin-bottom: 5px;
 			color: #777;
@@ -162,7 +164,7 @@ if (isLabPage) {
 		</style>
 		<div class="content">
         <div class="header">Visits
-		<div id="about" style="position: absolute; left: 115px; top: -1px; cursor: pointer;" title="Website details">
+		<div id="about" style="position: absolute; left: 115px; top: -1px; cursor: pointer;" title="Shows website details">
 			<a style="text-decoration: none; font-weight: 800; color: #555;">?</a>
 		</div>
 		</div>
@@ -459,13 +461,12 @@ insertElement('div', {
         </style>
         <div style="margin-top: 30px; clear: both;">
 	<img style="float: left; margin-right: 15px; margin-bottom: 30px; margin-left: 60px; width: 200px;" src="https://raw.githubusercontent.com/kamarov-therussiantank/TTCV2/refs/heads/main/src/assets/other/LatecomersLogo.png">
-	<span style="font-size: 18px; font-family: 'TankTrouble';">TankTrouble Trading Cards</span><br>
+	<span style="font-size: 18px; font-family: 'TankTrouble';">Kickstarter Latecomer's Shop</span><br>
 	Please go to the new shop to purchase a backer box, exclusive memberships or cool merchandise.<br>
     But what about those cool things beside the Backer Box? You may want to click here:<br><br>
 	<a href="https://tanktrouble.myspreadshop.com/" target="_blank">https://tanktrouble.myspreadshop.com/</a><br><br>
 	All purchases contribute to the ongoing development of TankTrouble. Thanks for your support!</div>
     `, 'mainContent');
-
-
 }
+ 
 });

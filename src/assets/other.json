@@ -145,11 +145,11 @@
         "action": {
           "type": "redirect",
           "redirect": {
-            "extensionPath": "/assets/other/chat@2x.png"
+            "extensionPath": "/assets/other/67Unlocked@2x.png"
         }
       },
         "condition": {
-          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chat@2x.png",
+          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/achievements/67Unlocked@2x.png",
           "resourceTypes": ["image"]
         }
       },
@@ -159,39 +159,11 @@
         "action": {
           "type": "redirect",
           "redirect": {
-            "extensionPath": "/assets/other/chat.png"
+            "extensionPath": "/assets/other/67Unlocked.png"
         }
       },
         "condition": {
-          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chat.png",
-          "resourceTypes": ["image"]
-        }
-      },
-      {
-        "id": 13,
-        "priority": 1,
-        "action": {
-          "type": "redirect",
-          "redirect": {
-            "extensionPath": "/assets/other/chatDisabled@2x.png"
-        }
-      },
-        "condition": {
-          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chatDisabled@2x.png",
-          "resourceTypes": ["image"]
-        }
-      },
-      {
-        "id": 14,
-        "priority": 1,
-        "action": {
-          "type": "redirect",
-          "redirect": {
-            "extensionPath": "/assets/other/chatDisabled.png"
-        }
-      },
-        "condition": {
-          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/chat/chatDisabled.png",
+          "urlFilter": "https://cdn.tanktrouble.com/*/assets/images/achievements/67Unlocked.png",
           "resourceTypes": ["image"]
         }
       }

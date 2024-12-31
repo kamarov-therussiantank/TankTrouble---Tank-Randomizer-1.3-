@@ -1,4 +1,3 @@
-
 (() => {
 	if (!window.location.hostname.endsWith('tanktrouble.com')) return;
 
@@ -7,11 +6,6 @@
 
 	// Add Classic UI to it
 	addStyle(`
-@font-face {
-	font-family: 'ClassicTankTrouble';
-	src:  url('ttcv2/fonts/Classic_TankTrouble_font.ttf') format('truetype');
-}
-
 #game {
 	position: relative;
 	left: -10px;
@@ -58,45 +52,26 @@
 .shopItem svg text {
 	   text-shadow: none;
 	   stroke: none;
-	}
+}
 .shopItem {
-	background: #555;
-	border-radius: 3px;
-	border: #666 3px solid;
-	box-shadow: #000 0 3px 5px 0;
-	border-radius: 7px;
+    background: #ccc;
+    border-radius: 3px;
+    border: #bbb 3px solid;
+    box-shadow: #000 0 3px 5px 0;
+    border-radius: 7px;
 }
-div#shopItem-120 {
-	background: #ebc934;
-	border: 3px #d3a310 solid;
+.shopItem .soldOut text {
+    font-size: 20pt;
+    stroke-width: 2px;
+    transform: translate(70px, 150px) rotate(0deg);
 }
-div#shopItem-122 {
-	background: #1ab14d;
-	border: 3px #2a873b solid;
-}
-.shopItem.info button.info {
-	width: 34px;
-	float: right;
-	right: 10px;
+#teaser-25 .mode {
 	color: white;
-	background: #0097fb;
-	}
-	#teaser-25 .mode {
-		color: white;
-	}
-	.forum .bubble {
-		background-color: #f2f2f2;
-		border: #333 2px solid;
-		border-radius: 2px;
-		box-shadow: 0 3px 4px 0 rgba(0,0,0, .5)
-	}
-	.body {
-		font-size: 14px;
-	}
-	.forum .tank {
-		font-family: 'TankTrouble';
-		font-size: 14px;
-	}
+}
+.forum .tank {
+	font-family: 'TankTrouble';
+	font-size: 14px;
+}
 .forum .tank div {
 	width: 150px;
 	height: 20px;
@@ -123,7 +98,7 @@ div#shopItem-122 {
     text-shadow: none;
     background-color: rgb(255 255 255 / 99%)
     }
-   #overlay .newGame .premium::before {
+#overlay .newGame .premium::before {
 	content: "";
 	width: 160px;
 	height: 180px;
@@ -134,21 +109,21 @@ div#shopItem-122 {
 	background-image: url(https://cdn.tanktrouble.com/RELEASE-2023-09-06-01/assets/images/tankInfo/accountActive@2x.png);
 	background-size: 160px 180px;
 }
-	#overlay .messages .message {
-		background: #1ad72a;
-		color: #fff;
-		border-radius: 2px;
-		text-shadow: none;
-	}
-	#overlay .messages .message.important {
-		background: #e01f1f;
-		color: #fff;
-		border-radius: 2px;
-		text-shadow: none;
-	 }
-	 #overlay .admin .attention {
-		text-shadow: none;
-	 }
+#overlay .messages .message {
+	background: #1ad72a;
+	color: #fff;
+	border-radius: 2px;
+	text-shadow: none;
+}
+#overlay .messages .message.important {
+	background: #e01f1f;
+	color: #fff;
+	border-radius: 2px;
+	text-shadow: none;
+}
+#overlay .admin .attention {
+	text-shadow: none;
+}
 #overlay .messages textarea {
 	box-sizing: border-box;
 	width: 490px;
@@ -173,13 +148,13 @@ button.warning {
 .buttonGroup div.selected button:disabled {
     text-shadow: 0 0 4px #ccc, 0 0 4px #fff700, 0 0 5px #ffda00, 0 0 10px #ffe237;
 }
-	.box .tab.right {
-		background: #999;
-	}
-	.box .tab.left {
-		background: #999;
-	}
-   #tankinfo .username {
+.box .tab.right {
+	background: #999;
+}
+.box .tab.left {
+	background: #999;
+}
+#tankinfo .username {
 	position: relative;
 	z-index: 1;
 	height: 28px;
@@ -187,7 +162,7 @@ button.warning {
 	border: 3px #0000002e solid;
 	border-radius: 4px;
 }
-   #tankinfo .icon {
+#tankinfo .icon {
 	position: absolute;
 	width: 320px;
 	height: 192px;
@@ -197,24 +172,24 @@ button.warning {
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
-	 .achievement.unlockedAndSeen {
+.achievement.unlockedAndSeen {
 		background: linear-gradient(to bottom, #ccc, #666);
 		box-shadow: #000 0px 3px 3px 0px;
 		text-shadow: none;
 		color: #000;
+}
+.achievement {
+	background: #666;
+	text-shadow: none;
+	color: #fff;
 	}
-	.achievement {
-		background: #666;
-		text-shadow: none;
-		color: #fff;
-	}
-	.achievement .progress {
-		background: linear-gradient(to bottom, #e5c766, #a68826);
-	}
-	.note {
-		color: #000;
-	}
-	#overlay input[type="checkbox"]+label::before {
+.achievement .progress {
+	background: linear-gradient(to bottom, #e5c766, #a68826);
+}
+.note {
+	color: #000;
+}
+#overlay input[type="checkbox"]+label::before {
 	content: '';
 	background: red;
 	border: 2px solid #bf0000;
@@ -259,8 +234,6 @@ button.warning {
 	padding: 2px 2px 2px 5px;
 }
 #chat .content {
-	font-family: 'ClassicTankTrouble';
-	font-size: 10pt;
 	width: 0;
 	pointer-events: none;
 	transition: width .3s .2s;
