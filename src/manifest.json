@@ -2,9 +2,9 @@
 	"name": "TTCV2",
 	"short_name": "TankTroubleClassicV2",
 	"author": "kamarov",
-	"version": "2024.9.29",
+	"version": "2025.1.1",
 	"manifest_version": 3,
-	"description": "Ready to roll back in? If so! Do it in classic style!",
+	"description": "Ready to roll back in? If so! Do it in OG style!",
 	"icons": {
 		"16": "icon/icon16.png",
 		"32": "icon/icon32.png",
