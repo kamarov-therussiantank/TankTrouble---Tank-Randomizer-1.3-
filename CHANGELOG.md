@@ -145,3 +145,13 @@ The Lab is a place where unstable prototypes and brave tank drivers rule, where 
 - Overlay
 
 
+**2025.1.1** - Final
+
+
+We have finaly made to the last update for this year, and maybe for the extension it self. I cant confirm that yet, but as it seems, I have brought all possible assets back, there is nothing more to do. I am soo happy to see this project alove and loved by the community, much love :-)
+
+
+Soo what does the last update brings?
+
+
+It mostly reworks the game UI, giving it more classic look then before. Some weird bugs have been fixed and better optimization, for better gaming experience.
